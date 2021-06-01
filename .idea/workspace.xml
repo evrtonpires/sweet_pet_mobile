@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="78b748d0-d0cb-410a-848d-e65c6dccff74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +55,31 @@
       <option name="project" value="LOCAL" />
       <updated>1622583515137</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ajustando Projeto para Arquitetura Modular">
+      <created>1622585511741</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622585511741</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeiro Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeiro Commit" />
+    <MESSAGE value="Ajustando Projeto para Arquitetura Modular" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando Projeto para Arquitetura Modular" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="13" key="CommitChangelistDialog2" timestamp="1622583512106">
+    <state x="319" y="13" key="CommitChangelistDialog2" timestamp="1622585508445">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="319" y="13" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1622583512106" />
+    <state x="319" y="13" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1622585508445" />
+    <state x="361" y="139" key="Vcs.Push.Dialog.v2" timestamp="1622585513423">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="139" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1622585513423" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1622583293362">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
