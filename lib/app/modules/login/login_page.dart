@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:sweet_pet_mobile/app/modules/home/home_store.dart';
+import 'package:sweet_pet_mobile/app/modules/login/login_store.dart';
 
-class HomePage extends StatefulWidget {
+class LoginPage extends StatefulWidget {
   final String title;
 
-  const HomePage({this.title = "Home"});
+  const LoginPage({this.title = "Login"});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeStore> {
+class _LoginPageState extends ModularState<LoginPage, LoginStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

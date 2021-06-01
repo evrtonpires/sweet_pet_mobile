@@ -1,10 +1,10 @@
 import 'package:mobx/mobx.dart';
 
-part 'home_store.g.dart';
+part 'login_store.g.dart';
 
-class HomeStore = HomeStoreBase with _$HomeStore;
+class LoginStore = LoginStoreBase with _$LoginStore;
 
-abstract class HomeStoreBase with Store {
+abstract class LoginStoreBase with Store {
   @observable
   int counter = 0;
 
