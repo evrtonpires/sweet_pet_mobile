@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-void main() {
-  runApp(MyApp());
-}
+import 'app/app_module.dart';
+import 'app/app_widget.dart';
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(),
-    );
-  }
-}
+void main() => runApp(ModularApp(module: AppModule(), child: AppWidget()));
