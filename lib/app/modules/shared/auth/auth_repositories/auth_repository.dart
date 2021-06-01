@@ -1,4 +1,4 @@
-import 'package:sweet_pet_mobile/app/auth/auth_repositories/auth_repository_interface.dart';
+import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_repositories/auth_repository_interface.dart';
 
 class AuthRepository implements IAuthRepository {
   @override
