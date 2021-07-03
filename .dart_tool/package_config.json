@@ -158,6 +158,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "ffi",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/ffi-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "file",
       "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/file-6.1.1",
       "packageUri": "lib/",
@@ -218,8 +224,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "google_fonts",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/google_fonts-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "graphs",
       "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/graphs-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/http-0.13.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -302,14 +320,62 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "path_provider",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_linux",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_macos",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "pedantic",
       "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
+      "name": "platform",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/platform-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "pool",
       "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/pool-1.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "process",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/process-4.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -434,6 +500,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "win32",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/win32-2.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.13"
+    },
+    {
+      "name": "xdg_directories",
+      "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "yaml",
       "rootUri": "file:///C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/yaml-3.1.0",
       "packageUri": "lib/",
@@ -446,7 +524,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-06-01T23:15:49.321067Z",
+  "generated": "2021-07-03T00:36:32.514154Z",
   "generator": "pub",
   "generatorVersion": "2.13.1"
 }

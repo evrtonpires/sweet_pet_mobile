@@ -2,7 +2,7 @@
     package="com.example.sweet_pet_mobile">
 
     <application
-        android:label="sweet_pet_mobile"
+        android:label="Sweet Pet"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

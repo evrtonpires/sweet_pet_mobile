@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78b748d0-d0cb-410a-848d-e65c6dccff74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/app/app_module.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/app_module.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/auth/auth_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/shared/auth/auth_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/auth/auth_controller.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/shared/auth/auth_controller.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/auth/auth_repositories/auth_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/shared/auth/auth_repositories/auth_repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/auth/auth_repositories/auth_repository_interface.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/shared/auth/auth_repositories/auth_repository_interface.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/build/entrypoint/.packageLocations" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/build/entrypoint/build.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/build/entrypoint/build.dart.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/build/fcd1995bc647fb959e82ea360c6c2c9a/asset_graph.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/build/generated/sweet_pet_mobile/lib/app/modules/login/login_store.store_generator.g.part" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/build/generated/sweet_pet_mobile/lib/app/modules/shared/auth/auth_controller.store_generator.g.part" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/build_resolvers/sdk.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/build_resolvers/sdk.sum.deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/pub/bin/build_runner/build_runner.dart-2.13.1.snapshot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/app_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/app_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/login/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet_pet_mobile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet_pet_mobile.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +61,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/util/widgets" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\prisc\AndroidStudioProjects\sweet_pet_mobile\lib\util\theme" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\prisc\AndroidStudioProjects\sweet_pet_mobile\lib\util\widgets" />
+      <recent name="C:\Users\prisc\AndroidStudioProjects\sweet_pet_mobile\lib\app\modules\login\util" />
+      <recent name="C:\Users\prisc\AndroidStudioProjects\sweet_pet_mobile\lib\util" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -87,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622591595895</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajuste na Arquitetura do Projeto">
+      <created>1622591846020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622591846020</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -95,7 +130,8 @@
     <MESSAGE value="Ajustando Projeto para Arquitetura Modular" />
     <MESSAGE value="Adicionando configuração dos scripts" />
     <MESSAGE value="Ajustando Interface e Repository de Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustando Interface e Repository de Login" />
+    <MESSAGE value="Ajuste na Arquitetura do Projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste na Arquitetura do Projeto" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -103,25 +139,59 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="667" y="282" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.834@0.0.1536.834" timestamp="1622589060732" />
+    <state x="2560" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1624716206475">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2560" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1624716206475" />
     <state x="439" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622591719525">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="439" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1622591719525" />
-    <state x="319" y="13" key="CommitChangelistDialog2" timestamp="1622591592148">
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625255795143">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="319" y="13" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1622591592148" />
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625255795143" />
+    <state x="319" y="13" key="CommitChangelistDialog2" timestamp="1622591842679">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="319" y="13" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1622591842678" />
+    <state x="592" y="222" key="FileChooserDialogImpl" timestamp="1625258521136">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="592" y="222" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625258521136" />
+    <state x="2660" y="280" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625249594121" />
+    <state width="1877" height="331" key="GridCell.Tab.0.bottom" timestamp="1625268765572">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1491" height="219" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625254398969" />
+    <state width="1877" height="331" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625268765572" />
+    <state width="1877" height="331" key="GridCell.Tab.0.center" timestamp="1625268765557">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1491" height="219" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625254398967" />
+    <state width="1877" height="331" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625268765557" />
+    <state width="1877" height="331" key="GridCell.Tab.0.left" timestamp="1625268765557">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1491" height="219" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625254398967" />
+    <state width="1877" height="331" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625268765557" />
+    <state width="1877" height="331" key="GridCell.Tab.0.right" timestamp="1625268765557">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1491" height="219" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625254398967" />
+    <state width="1877" height="331" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625268765557" />
     <state x="393" y="67" key="SettingsEditor" timestamp="1622590422123">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="393" y="67" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1622590422123" />
-    <state x="361" y="139" key="Vcs.Push.Dialog.v2" timestamp="1622591598188">
+    <state x="361" y="139" key="Vcs.Push.Dialog.v2" timestamp="1622591847643">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="139" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1622591598188" />
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1622583293362">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="361" y="139" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1622591847643" />
+    <state x="2501" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1625245447765">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="2501" y="303" key="com.intellij.ide.util.TipDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625245447765" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1622583293362" />
     <state x="399" y="114" width="738" height="606" key="find.popup" timestamp="1622583299398">
       <screen x="0" y="0" width="1536" height="834" />
