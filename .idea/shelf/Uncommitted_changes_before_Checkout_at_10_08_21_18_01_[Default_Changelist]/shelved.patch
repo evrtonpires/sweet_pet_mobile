@@ -1,0 +1,119 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"78b748d0-d0cb-410a-848d-e65c6dccff74\" name=\"Default Changelist\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.metadata\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/README.md\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/.gitignore\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/build.gradle\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/kotlin/com/example/sweet_pet_mobile/MainActivity.kt\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/drawable-v21/launch_background.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/main/res/values/styles.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/build.gradle\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/gradle.properties\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/android/settings.gradle\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/.gitignore\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Flutter/AppFrameworkInfo.plist\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Flutter/Debug.xcconfig\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Flutter/Release.xcconfig\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/AppDelegate.swift\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Base.lproj/LaunchScreen.storyboard\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Base.lproj/Main.storyboard\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Info.plist\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/ios/Runner/Runner-Bridging-Header.h\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/lib/main.dart\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/pubspec.lock\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/pubspec.yaml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/test/widget_test.dart\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/web/favicon.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/web/icons/Icon-192.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/web/icons/Icon-512.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/web/index.html\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/web/manifest.json\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\n      <list>\n        <option value=\"Everton Pires\" />\n      </list>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1tMeByNx4JLCUAQpakgcT9uxW0E\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showExcludedFiles\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"dart.analysis.tool.window.force.activate\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"show.migrate.to.gradle.popup\" value=\"false\" />\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"78b748d0-d0cb-410a-848d-e65c6dccff74\" name=\"Default Changelist\" comment=\"\" />\n      <created>1622583254521</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1622583254521</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Primeiro Commit\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Primeiro Commit\" />\n    <option name=\"REFORMAT_BEFORE_PROJECT_COMMIT\" value=\"true\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"319\" y=\"13\" key=\"CommitChangelistDialog2\" timestamp=\"1622583512106\">\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\n    </state>\n    <state x=\"319\" y=\"13\" key=\"CommitChangelistDialog2/0.0.1536.834@0.0.1536.834\" timestamp=\"1622583512106\" />\n    <state x=\"465\" y=\"241\" key=\"com.intellij.ide.util.TipDialog\" timestamp=\"1622583293362\">\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\n    </state>\n    <state x=\"465\" y=\"241\" key=\"com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834\" timestamp=\"1622583293362\" />\n    <state x=\"399\" y=\"114\" width=\"738\" height=\"606\" key=\"find.popup\" timestamp=\"1622583299398\">\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"834\" />\n    </state>\n    <state x=\"399\" y=\"114\" width=\"738\" height=\"606\" key=\"find.popup/0.0.1536.834@0.0.1536.834\" timestamp=\"1622583299398\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 7edbf1c43740c261ac9d14957beca0b94a5252a4)
++++ .idea/workspace.xml	(date 1628629255917)
+@@ -1,76 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="NONE" />
++  </component>
+   <component name="ChangeListManager">
+     <list default="true" id="78b748d0-d0cb-410a-848d-e65c6dccff74" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.metadata" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/sweet_pet_mobile/MainActivity.kt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Base.lproj/Main.storyboard" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/ios/Runner/Runner-Bridging-Header.h" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/web/favicon.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/web/icons/Icon-192.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/web/icons/Icon-512.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/web/manifest.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -89,14 +24,16 @@
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showExcludedFiles" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
+     <property name="dart.analysis.tool.window.force.activate" value="false" />
++    <property name="dart.analysis.tool.window.visible" value="false" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="settings.editor.selected.configurable" value="flutter.settings" />
+     <property name="show.migrate.to.gradle.popup" value="false" />
+   </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="SvnConfiguration">
+     <configuration />
+   </component>
+@@ -120,6 +57,10 @@
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
+     <state x="319" y="13" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1622583512106" />
++    <state x="229" y="98" key="SettingsEditor" timestamp="1628629253363">
++      <screen x="0" y="25" width="1440" height="875" />
++    </state>
++    <state x="229" y="98" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1628629253363" />
+     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1622583293362">
+       <screen x="0" y="0" width="1536" height="834" />
+     </state>
