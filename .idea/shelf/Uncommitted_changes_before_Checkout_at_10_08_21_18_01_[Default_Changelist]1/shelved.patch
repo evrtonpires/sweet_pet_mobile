@@ -1,0 +1,276 @@
+Index: .idea/libraries/Dart_Packages.xml
+===================================================================
+--- .idea/libraries/Dart_Packages.xml	(revision 7edbf1c43740c261ac9d14957beca0b94a5252a4)
++++ .idea/libraries/Dart_Packages.xml	(revision 7edbf1c43740c261ac9d14957beca0b94a5252a4)
+@@ -1,188 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Dart Packages" type="DartPackagesLibraryType">
+-    <properties>
+-      <option name="packageNameToDirsMap">
+-        <entry key="async">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/async-2.6.1/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="boolean_selector">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="characters">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="charcode">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/charcode-1.2.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="clock">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="collection">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="cupertino_icons">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="fake_async">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="flutter">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/packages/flutter/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="flutter_test">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/packages/flutter_test/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="matcher">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="meta">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/meta-1.3.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="path">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="sky_engine">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/bin/cache/pkg/sky_engine/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="source_span">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="stack_trace">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.10.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="stream_channel">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.1.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="string_scanner">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.1.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="term_glyph">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="test_api">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/test_api-0.3.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="typed_data">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-        <entry key="vector_math">
+-          <value>
+-            <list>
+-              <option value="C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0/lib" />
+-            </list>
+-          </value>
+-        </entry>
+-      </option>
+-    </properties>
+-    <CLASSES>
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/async-2.6.1/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/charcode-1.2.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/meta-1.3.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.10.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.1.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.1.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/test_api-0.3.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0/lib" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/pkg/sky_engine/lib" />
+-      <root url="file://C:/src/flutterhotfix/packages/flutter/lib" />
+-      <root url="file://C:/src/flutterhotfix/packages/flutter_test/lib" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES />
+-  </library>
+-</component>
+\ No newline at end of file
+Index: sweet_pet_mobile.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"JAVA_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\n    <exclude-output />\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$/lib\" isTestSource=\"false\" />\n      <sourceFolder url=\"file://$MODULE_DIR$/test\" isTestSource=\"true\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/.dart_tool\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/.idea\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/.pub\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/build\" />\n    </content>\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n    <orderEntry type=\"library\" name=\"Dart SDK\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Flutter Plugins\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Dart Packages\" level=\"project\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- sweet_pet_mobile.iml	(revision 7edbf1c43740c261ac9d14957beca0b94a5252a4)
++++ sweet_pet_mobile.iml	(date 1628629255898)
+@@ -13,6 +13,5 @@
+     <orderEntry type="sourceFolder" forTests="false" />
+     <orderEntry type="library" name="Dart SDK" level="project" />
+     <orderEntry type="library" name="Flutter Plugins" level="project" />
+-    <orderEntry type="library" name="Dart Packages" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/libraries/Dart_SDK.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"Dart SDK\">\n    <CLASSES>\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/async\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/collection\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/convert\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/core\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/developer\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/html\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/io\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/isolate\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/math\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/mirrors\" />\n      <root url=\"file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/typed_data\" />\n    </CLASSES>\n    <JAVADOC />\n    <SOURCES />\n  </library>\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Dart_SDK.xml	(revision 7edbf1c43740c261ac9d14957beca0b94a5252a4)
++++ .idea/libraries/Dart_SDK.xml	(date 1628629255929)
+@@ -1,17 +1,26 @@
+ <component name="libraryTable">
+   <library name="Dart SDK">
+     <CLASSES>
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/async" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/collection" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/convert" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/core" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/developer" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/html" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/io" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/isolate" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/math" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/mirrors" />
+-      <root url="file://C:/src/flutterhotfix/bin/cache/dart-sdk/lib/typed_data" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/async" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/cli" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/collection" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/convert" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/core" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/developer" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/ffi" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/html" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/indexed_db" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/io" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/isolate" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/js" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/js_util" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/math" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/mirrors" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/svg" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/typed_data" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/web_audio" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/web_gl" />
++      <root url="file://$USER_HOME$/Documents/flutter/bin/cache/dart-sdk/lib/web_sql" />
+     </CLASSES>
+     <JAVADOC />
+     <SOURCES />
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"io.flutter\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 7edbf1c43740c261ac9d14957beca0b94a5252a4)
++++ .idea/misc.xml	(date 1628629156586)
+@@ -1,5 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="FrameworkDetectionExcludesConfiguration">
++    <type id="android" />
++  </component>
+   <component name="ProjectType">
+     <option name="id" value="io.flutter" />
+   </component>
