@@ -46,6 +46,12 @@ dependencies:
   share: 2.0.4
   quiver: 3.0.1
   sembast: 3.1.0+2
+  custom_navigation_bar: ^0.8.2
+  carousel_slider: 4.0.0
+  flutter_svg: 0.22.0
+  flutter_swiper: 1.1.6
+  simple_animations: 3.1.1
+  page_view_dot_indicator: 1.0.0
 
 dev_dependencies:
   flutter_modular_test: ^1.0.1
@@ -56,6 +62,7 @@ dev_dependencies:
   json_serializable: 4.1.4
   flutter_launcher_icons: 0.9.1
   build_runner: 2.0.4
+
 
 flutter_icons:
   android: true
@@ -84,6 +91,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icon/login/
+    - assets/icon/load/
+    - assets/icon/category/
 
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.

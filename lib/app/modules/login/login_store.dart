@@ -90,8 +90,11 @@ abstract class LoginStoreBase with Store {
         messagePasswordError == null &&
         !isLoading) {
       isLoading = true;
-      Future.delayed(Duration(seconds: 4));
-      isLoading = false;
+      // await auth.signIn();
+      Future.delayed(Duration(seconds: 3)).whenComplete(() {
+        isLoading = false;
+        Modular.to.pushReplacementNamed('/dashboard');
+      });
     }
   }
 }
