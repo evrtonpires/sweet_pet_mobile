@@ -1,4 +1,4 @@
-import 'package:sweet_pet_mobile/app/modules/login/util/logo_widget.dart';
+import 'package:sweet_pet_mobile/app/modules/login/widgets/logo_widget.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_modular_test/flutter_modular_test.dart';
 
