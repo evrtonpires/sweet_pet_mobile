@@ -8,24 +8,23 @@ part of 'user_model.dart';
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) {
   return UserModel(
-    Id: json['Id'] as int,
-    Name: json['Name'] as String,
-    Email: json['Email'] as String,
-    Password: json['Password'] as String,
-    CPF: json['CPF'] as String,
+    id: json['id'] as int,
+    name: json['name'] as String,
+    email: json['email'] as String,
+    password: json['password'] as String?,
     eType: _$enumDecode(_$eTypeUserEnumMap, json['eType']),
-    CRMV: json['CRMV'] as String,
+    crmv: json['crmv'] as String?,
   );
 }
 
-Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
-      'Id': instance.Id,
-      'Name': instance.Name,
-      'Email': instance.Email,
-      'Password': instance.Password,
-      'CPF': instance.CPF,
+Map<String, dynamic> _$UserModelToJson(UserModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'email': instance.email,
+      'password': instance.password,
       'eType': _$eTypeUserEnumMap[instance.eType],
-      'CRMV': instance.CRMV,
+      'crmv': instance.crmv,
     };
 
 K _$enumDecode<K, V>(
@@ -55,7 +54,7 @@ K _$enumDecode<K, V>(
 }
 
 const _$eTypeUserEnumMap = {
-  eTypeUser.DEVEPOLER: 'DEVEPOLER',
-  eTypeUser.USER: 'USER',
-  eTypeUser.VETERINARIAN: 'VETERINARIAN',
+  eTypeUser.DEVEPOLER: 7584,
+  eTypeUser.USER: 1,
+  eTypeUser.VETERINARIAN: 2,
 };

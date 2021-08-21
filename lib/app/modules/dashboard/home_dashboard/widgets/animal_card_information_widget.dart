@@ -15,7 +15,7 @@ class AnimalCardInformationWidget extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             border: Border.all(
-              color: SweetPetColors.blueLight.withOpacity(.3),
+              color: SweetPetColors.purpleLight.withOpacity(.3),
             ),
             borderRadius: BorderRadius.circular(15),
           ),

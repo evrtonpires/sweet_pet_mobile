@@ -32,8 +32,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "asn1lib",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/asn1lib-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "awesome_dialog",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/awesome_dialog-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -218,6 +230,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "encrypt",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/encrypt-5.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
       "packageUri": "lib/",
@@ -238,6 +256,12 @@
     {
       "name": "fixnum",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flare_flutter",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flare_flutter-3.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -532,6 +556,12 @@
     {
       "name": "plugin_platform_interface",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pointycastle",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/pointycastle-3.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -836,7 +866,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-08-18T23:21:26.279677Z",
+  "generated": "2021-08-20T16:10:24.371436Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

@@ -9,18 +9,18 @@ part of 'login_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$LoginStore on LoginStoreBase, Store {
-  final _$loginAtom = Atom(name: 'LoginStoreBase.login');
+  final _$userAtom = Atom(name: 'LoginStoreBase.user');
 
   @override
-  String? get login {
-    _$loginAtom.reportRead();
-    return super.login;
+  String? get user {
+    _$userAtom.reportRead();
+    return super.user;
   }
 
   @override
-  set login(String? value) {
-    _$loginAtom.reportWrite(value, super.login, () {
-      super.login = value;
+  set user(String? value) {
+    _$userAtom.reportWrite(value, super.user, () {
+      super.user = value;
     });
   }
 
@@ -113,11 +113,11 @@ mixin _$LoginStore on LoginStoreBase, Store {
       ActionController(name: 'LoginStoreBase');
 
   @override
-  void setLogin(String newLogin) {
+  void setLogin(String newUser) {
     final _$actionInfo = _$LoginStoreBaseActionController.startAction(
         name: 'LoginStoreBase.setLogin');
     try {
-      return super.setLogin(newLogin);
+      return super.setLogin(newUser);
     } finally {
       _$LoginStoreBaseActionController.endAction(_$actionInfo);
     }
@@ -137,7 +137,7 @@ mixin _$LoginStore on LoginStoreBase, Store {
   @override
   String toString() {
     return '''
-login: ${login},
+user: ${user},
 messageLoginError: ${messageLoginError},
 password: ${password},
 messagePasswordError: ${messagePasswordError},

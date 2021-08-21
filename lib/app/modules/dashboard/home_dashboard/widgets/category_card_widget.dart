@@ -19,7 +19,7 @@ class CategoryCardWidget extends StatelessWidget {
           children: [
             Card(
               elevation: 6.0,
-              color: SweetPetColors.blue,
+              color: SweetPetColors.purple,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),

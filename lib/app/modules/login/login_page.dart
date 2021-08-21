@@ -4,12 +4,17 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sweet_pet_mobile/app/modules/login/login_store.dart';
+import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
 import 'package:sweet_pet_mobile/util/constants/Icons_constants.dart';
+import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
 import 'package:sweet_pet_mobile/util/widgets/text_field_with_validation_widget.dart';
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatefulWidget {
+  LoginPage({required this.authController});
+
+  final AuthController authController;
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -35,12 +40,26 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
 
   var controllerStore = LoginStore();
 
+  TextEditingController loginController = TextEditingController();
+  TextEditingController senhaController = TextEditingController();
+
   @override
   void initState() {
     SystemChrome.setEnabledSystemUIOverlays([]);
     super.initState();
-
-    animationController.forward();
+    widget.authController
+        .getUserSharedPref(stringValue: 'userValue')
+        .then((value) {
+      store.setLogin(value);
+      loginController.text = value;
+    });
+    widget.authController
+        .getUserSharedPref(stringValue: 'passwordValue')
+        .then((value) {
+      store.setPassword(value);
+      senhaController.text = value;
+    });
+    // animationController.forward();
   }
 
   @override
@@ -49,35 +68,29 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
       children: [
         Scaffold(
           body: Container(
+            height: MediaQuery.of(context).size.height,
+            color: Colors.white,
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
                   Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height / 2.5,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: SweetPetColors.linearGradient,
-                      ),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(90),
-                        bottomRight: Radius.circular(90),
-                      ),
+                    padding: EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height * .2,
                     ),
+                    width: MediaQuery.of(context).size.width,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Align(
                           alignment: Alignment.center,
                           child: Container(
-                            height: 75,
-                            width: 75,
+                            height: MediaQuery.of(context).size.height * .2,
+                            width: MediaQuery.of(context).size.width * .5,
                             decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image:
-                                        AssetImage(IconConstant.iconDogPaw))),
+                              image: DecorationImage(
+                                image: AssetImage(IconConstant.iconLogo),
+                              ),
+                            ),
                           ),
                         ),
                       ],
@@ -91,15 +104,13 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                       children: <Widget>[
                         Expanded(
                           child: Container(
-                            margin: EdgeInsets.only(
-                                bottom:
-                                    MediaQuery.of(context).size.height * .07),
                             padding: EdgeInsets.only(
                                 left: MediaQuery.of(context).size.width * .1,
                                 right: MediaQuery.of(context).size.width * .1),
                             child: Observer(
                               builder: (_) {
                                 return TextFieldWithValidationWidget(
+                                  controller: loginController,
                                   focusNode: store.focusLogin,
                                   placeholder: 'Login',
                                   onChanged: (newLogin) {
@@ -124,11 +135,12 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                               left: MediaQuery.of(context).size.width * .1,
                               right: MediaQuery.of(context).size.width * .1,
                             ),
-                            child: Stack(
+                            child: Column(
                               children: [
                                 Observer(
                                   builder: (_) {
                                     return TextFieldWithValidationWidget(
+                                      controller: senhaController,
                                       focusNode: store.focusPassword,
                                       placeholder: 'Senha',
                                       onChanged: (newPassword) {
@@ -146,15 +158,16 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                   },
                                 ),
                                 Align(
-                                  alignment: Alignment(1, .8),
+                                  alignment: Alignment.topRight,
                                   child: Padding(
                                     padding: const EdgeInsets.only(
-                                        top: 16, bottom: 50),
+                                      top: 16,
+                                    ),
                                     child: GestureDetector(
                                       child: Text(
                                         'Esqueceu sua senha ?',
                                         style: TextStyle(
-                                            color: SweetPetColors.blueLight),
+                                            color: SweetPetColors.purpleLight),
                                       ),
                                     ),
                                   ),
@@ -163,36 +176,62 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(
-                            bottom: MediaQuery.of(context).size.width * .0,
-                            top: MediaQuery.of(context).size.width * .2,
-                          ),
-                          child: InkWell(
-                            onTap: () {
-                              store.autenticate(context);
-                            },
-                            child: Container(
-                              height: 45,
-                              width: MediaQuery.of(context).size.width / 1.2,
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: SweetPetColors.linearGradient,
-                                ),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(50),
-                                ),
+                        Column(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(
+                                bottom: MediaQuery.of(context).size.width * .0,
+                                top: MediaQuery.of(context).size.width * .2,
                               ),
-                              child: Center(
-                                child: Text(
-                                  'Entrar'.toUpperCase(),
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                              child: InkWell(
+                                onTap: () {
+                                  store.autenticate(context);
+                                },
+                                child: Container(
+                                  height: 45,
+                                  width:
+                                      MediaQuery.of(context).size.width / 1.2,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: SweetPetColors.linearGradient,
+                                    ),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(50),
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Entrar'.toUpperCase(),
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
+                            SizedBox(height: 10),
+                            Center(
+                              child: Text(
+                                'ou',
+                                style: TextStyle(
+                                    color: SweetPetColors.neutralGray),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Center(
+                              child: InkWell(
+                                onTap: () {},
+                                child: Text(
+                                  'Cadastre-se',
+                                  style: TextStyle(
+                                      color: SweetPetColors.purpleLight,
+                                      fontSize: getValueFont(
+                                          context: context, valueMin: 16)),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -225,7 +264,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                       children: [
                                         SvgPicture.asset(
                                           IconConstant.categoryDog,
-                                          color: SweetPetColors.blue,
+                                          color: SweetPetColors.purple,
                                           width: 60.0,
                                           height: 60.0,
                                         ),
@@ -234,7 +273,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                         ),
                                         SvgPicture.asset(
                                           IconConstant.categoryCat,
-                                          color: SweetPetColors.blue,
+                                          color: SweetPetColors.purple,
                                           width: 60.0,
                                           height: 60.0,
                                         )

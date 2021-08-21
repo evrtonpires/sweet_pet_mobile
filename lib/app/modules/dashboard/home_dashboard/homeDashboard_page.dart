@@ -73,7 +73,7 @@ class HomeDashboardPageState extends State<HomeDashboardPage> {
                         currentItem: store.currentTab,
                         count: 3,
                         unselectedColor: SweetPetColors.gray,
-                        selectedColor: SweetPetColors.blueLight,
+                        selectedColor: SweetPetColors.purpleLight,
                         size: Size(8, 8),
                         unselectedSize: Size(4, 4),
                       ),
@@ -83,7 +83,12 @@ class HomeDashboardPageState extends State<HomeDashboardPage> {
                 PainelControlWidget(),
                 Expanded(
                   child: Container(
-                    color: SweetPetColors.blue,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: SweetPetColors.linearGradient,
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight),
+                    ),
                     child: GridView(
                       scrollDirection: Axis.vertical,
                       padding: EdgeInsets.symmetric(vertical: 4.0),

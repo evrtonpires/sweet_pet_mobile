@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_repositories/auth_repository_interface.dart';
-import 'package:sweet_pet_mobile/app/modules/shared/models/login/login_model.dart';
+import 'package:sweet_pet_mobile/app/modules/shared/models/user/user_model.dart';
+import 'package:sweet_pet_mobile/util/constants/base_url.dart';
 
 class AuthRepository implements IAuthRepository {
   final Dio dio;
@@ -22,9 +23,17 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future getLogin() {
-    // TODO: implement getLogin
-    throw UnimplementedError();
+  Future<UserModel?> getLogin(
+      {required String user, required String password}) async {
+    try {
+      Response response = await dio.post('${BaseUrl.baseUrl}/Auth',
+          data: {'login': user, 'password': password}).catchError((e) {
+        print(e);
+      });
+      return UserModel.fromJson(response.data['user']);
+    } catch (e) {
+      print(e);
+    }
   }
 
   @override
@@ -34,16 +43,5 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future<LoginModel?> getUser() async {
-    try {
-      Response response = await dio
-          .get("https://run.mocky.io/v3/2c6665b0-f00f-4734-bc60-b5294a622e82")
-          .catchError((e) {
-        print(e);
-      });
-      return LoginModel.fromJson(response.data);
-    } catch (e) {
-      print(e);
-    }
-  }
+  Future<UserModel?> getUser() async {}
 }

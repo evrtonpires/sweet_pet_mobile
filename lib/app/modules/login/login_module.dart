@@ -7,12 +7,21 @@ import 'login_page.dart';
 class LoginModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => LoginStore()),
+    Bind.lazySingleton(
+      (i) => LoginStore(
+        authController: Modular.get(),
+      ),
+    ),
   ];
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute(Modular.initialRoute, child: (_, args) => LoginPage()),
+    ChildRoute(
+      Modular.initialRoute,
+      child: (_, args) => LoginPage(
+        authController: Modular.get(),
+      ),
+    ),
     ModuleRoute('/dashboard', module: DashboardModule())
   ];
 }

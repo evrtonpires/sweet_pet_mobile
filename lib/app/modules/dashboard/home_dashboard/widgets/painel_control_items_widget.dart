@@ -13,7 +13,7 @@ class PainelControlItemsWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(
-            color: SweetPetColors.blueLight,
+            color: SweetPetColors.purpleLight,
           ),
           borderRadius: BorderRadius.all(
             Radius.circular(15),
@@ -32,7 +32,7 @@ class PainelControlItemsWidget extends StatelessWidget {
               Container(
                 child: SvgPicture.asset(
                   IconConstant.categoryDog,
-                  color: SweetPetColors.blue,
+                  color: SweetPetColors.purple,
                 ),
                 height: MediaQuery.of(context).size.height * .09,
                 width: MediaQuery.of(context).size.width * .3,

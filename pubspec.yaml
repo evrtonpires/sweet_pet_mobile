@@ -52,6 +52,8 @@ dependencies:
   flutter_swiper: 1.1.6
   simple_animations: 3.1.1
   page_view_dot_indicator: 1.0.0
+  encrypt: 5.0.1
+  awesome_dialog: 2.1.1
 
 dev_dependencies:
   flutter_modular_test: ^1.0.1
@@ -67,15 +69,16 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/icon/icon_inicial.png"
-  adaptive_icon_background: "#504F51"
-  adaptive_icon_foreground: "assets/icon/icon_inicial.png"
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#474797"
+  adaptive_icon_foreground: "assets/icon/icon.png"
 #flutter pub run flutter_launcher_icons:main - comando para gerar icon
 #flutter pub pub run flutter_native_splash:create - comando para gerar splashArt
 
 flutter_native_splash:
-  image: assets/images/logo_afl_nova.png
-  color: "504F51"
+  image: assets/icon/icon.png
+  color: "474797"
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -90,9 +93,11 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/icon/
     - assets/icon/login/
     - assets/icon/load/
     - assets/icon/category/
+    - assets/icon/splash_art/
 
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.

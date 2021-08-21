@@ -11,7 +11,10 @@ class PainelControlWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: SweetPetColors.blue,
+        gradient: LinearGradient(
+            colors: SweetPetColors.linearGradient,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(25),
           topRight: Radius.circular(25),

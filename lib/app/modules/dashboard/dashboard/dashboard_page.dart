@@ -3,16 +3,19 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:sweet_pet_mobile/app/modules/dashboard/dashboard/dashboard_store.dart';
 import 'package:flutter/material.dart';
+import 'package:sweet_pet_mobile/app/modules/dashboard/dashboard/widgets/user_dialog_card_widget.dart';
 import 'package:sweet_pet_mobile/app/modules/dashboard/home_dashboard/homeDashboard_page.dart';
+import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
 import 'package:sweet_pet_mobile/util/constants/Icons_constants.dart';
 import 'package:sweet_pet_mobile/util/constants/style.dart';
 import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
 
 class DashboardPage extends StatefulWidget {
-  DashboardPage({Key? key}) : super(key: key);
+  DashboardPage({Key? key, required this.authController}) : super(key: key);
 
   final pageViewController = PageController(keepPage: true);
+  final AuthController authController;
 
   @override
   DashboardPageState createState() => DashboardPageState();
@@ -32,10 +35,11 @@ class DashboardPageState extends State<DashboardPage> {
             overflow: TextOverflow.ellipsis,
             text: TextSpan(
               style: TextStyle(
-                  fontSize: getValueFont(context: context, valueMin: 12)),
+                fontSize: getValueFont(context: context, valueMin: 12),
+              ),
               children: [
                 TextSpan(
-                  text: 'Olá, Lael Matos',
+                  text: 'Olá, ${widget.authController.userModel!.name}',
                   style: styleFontIconBottomNavigation,
                 ),
               ],
@@ -48,7 +52,7 @@ class DashboardPageState extends State<DashboardPage> {
           padding: EdgeInsets.only(left: 10),
           child: Container(
             decoration: BoxDecoration(
-              color: SweetPetColors.blue,
+              color: SweetPetColors.purple,
               shape: BoxShape.circle,
               image: DecorationImage(
                 fit: BoxFit.scaleDown,
@@ -57,14 +61,22 @@ class DashboardPageState extends State<DashboardPage> {
             ),
             child: InkWell(
               borderRadius: BorderRadius.all(Radius.circular(50)),
-              onTap: () {},
+              onTap: () {
+                showDialog(
+                    context: context,
+                    builder: (_) {
+                      return UserDialogCard(
+                        userModel: widget.authController.userModel!,
+                      );
+                    });
+              },
             ),
           ),
         ),
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 5),
-            color: SweetPetColors.blue,
+            color: SweetPetColors.purple,
             onPressed: () {},
             icon: Icon(Icons.notifications_active_sharp),
           ),
@@ -95,7 +107,7 @@ class DashboardPageState extends State<DashboardPage> {
           return CustomNavigationBar(
               backgroundColor: Colors.white,
               currentIndex: store.currentTab,
-              selectedColor: SweetPetColors.blueLight,
+              selectedColor: SweetPetColors.purpleLight,
               strokeColor: Colors.white,
               unSelectedColor: SweetPetColors.gray,
               iconSize: 30,
