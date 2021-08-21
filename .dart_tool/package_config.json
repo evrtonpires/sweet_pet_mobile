@@ -32,8 +32,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "asn1lib",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/asn1lib-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "awesome_dialog",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/awesome_dialog-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -88,6 +100,12 @@
     {
       "name": "built_value",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/built_value-8.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "carousel_slider",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_slider-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -176,6 +194,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "custom_navigation_bar",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/custom_navigation_bar-0.8.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "dart_style",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/dart_style-2.0.1",
       "packageUri": "lib/",
@@ -206,6 +230,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "encrypt",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/encrypt-5.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
       "packageUri": "lib/",
@@ -226,6 +256,12 @@
     {
       "name": "fixnum",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flare_flutter",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flare_flutter-3.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -290,10 +326,28 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_page_indicator",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_page_indicator-0.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "flutter_screenutil",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.0.0-nullsafety.11",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_svg",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.22.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_swiper",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_swiper-1.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
     },
     {
       "name": "flutter_test",
@@ -428,8 +482,26 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "page_view_dot_indicator",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/page_view_dot_indicator-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_drawing",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_parsing",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_parsing-0.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -484,6 +556,12 @@
     {
       "name": "plugin_platform_interface",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pointycastle",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/pointycastle-3.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -584,6 +662,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "simple_animations",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/simple_animations-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/camino/Documents/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -626,6 +710,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "supercharged",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/supercharged-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "supercharged_dart",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/supercharged_dart-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "synchronized",
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-3.0.0",
       "packageUri": "lib/",
@@ -648,6 +744,12 @@
       "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/timing-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "transformer_page_view",
+      "rootUri": "file:///Users/camino/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/transformer_page_view-0.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
     },
     {
       "name": "triple",
@@ -764,7 +866,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-08-10T21:14:17.723865Z",
+  "generated": "2021-08-20T16:10:24.371436Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

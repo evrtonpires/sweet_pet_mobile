@@ -1,10 +1,12 @@
 import 'dart:ui';
 
 abstract class SweetPetColors {
-  static const Color orange = Color(0xFFf45d27);
-  static const Color orangeLight = Color(0xFFf5851f);
-  static const Color blue = Color(0xFF4A62C9);
-  static const Color lightBlue = Color(0xFF4A62C9);
+  static const Color purple = Color(0xFF474797);
+
+  // static const Color blue = Color(0xFF006494);
+  static const Color purpleLight = Color(0xFF6D3E91);
+
+  // static const Color blueLight = Color(0xFF1b98e0);
   static const Color black = Color(0xFF000000);
   static const Color gray = Color(0xFF404040);
   static const Color grayLighter = Color(0xFFEAEAEA);
@@ -16,8 +18,8 @@ abstract class SweetPetColors {
   static const Color successLight = Color(0xFF51E572);
   static const Color success = Color(0xFF51E572);
 
-  static Color scrollBarColor = orange.withOpacity(0.8);
+  static Color scrollBarColor = purple.withOpacity(0.8);
   static const Color error = Color(0xFFF74237);
 
-  static List<Color> linearGradient = [Color(0xFFf45d27), Color(0xFFf5851f)];
+  static List<Color> linearGradient = [purple, purpleLight];
 }
