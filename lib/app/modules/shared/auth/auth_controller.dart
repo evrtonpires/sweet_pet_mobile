@@ -21,7 +21,11 @@ abstract class _AuthController with Store {
 
   UserModel? userModel = UserModel.padrao();
 
-  Future<bool?> signIn({required String user, required String password}) async {
+  Future<bool?> signIn({
+    required String user,
+    required String password,
+    required context,
+  }) async {
     try {
       var connectivityResult = await (Connectivity().checkConnectivity());
 
@@ -29,8 +33,8 @@ abstract class _AuthController with Store {
 
       if (connectivityResult == ConnectivityResult.mobile ||
           connectivityResult == ConnectivityResult.wifi) {
-        userModel =
-            await _authRepository.getLogin(user: user, password: password);
+        userModel = await _authRepository.getLogin(
+            user: user, password: password, context: context);
         if (userModel != null) {
           UserModel? listUserModel = await userSembast.get(userModel!);
           if (listUserModel == null) {

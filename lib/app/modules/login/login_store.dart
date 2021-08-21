@@ -94,10 +94,13 @@ abstract class LoginStoreBase with Store {
       bool? response = await authController!.signIn(
         user: user!.trim(),
         password: password!.trim(),
+        context: context,
       );
       if (response!) {
         isLoading = false;
         Modular.to.pushReplacementNamed('/dashboard');
+      } else {
+        isLoading = false;
       }
     }
   }
