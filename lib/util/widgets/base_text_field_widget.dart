@@ -13,6 +13,7 @@ class BaseTextFieldWidget extends StatefulWidget {
     this.onSubmitted,
     this.textInputAction,
     this.isError = false,
+    this.isEnable = true,
     this.focusNode,
     this.showCursor = true,
     this.floatingLabelBehavior,
@@ -26,6 +27,7 @@ class BaseTextFieldWidget extends StatefulWidget {
   final Function(String)? onSubmitted;
   final bool isPassword;
   final bool isError;
+  final bool? isEnable;
   final TextInputAction? textInputAction;
   final FocusNode? focusNode;
   final bool showCursor;
@@ -125,6 +127,7 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
         obscureText: _isObscured,
         textInputAction: widget.textInputAction,
         showCursor: widget.showCursor,
+        enabled: widget.isEnable,
         decoration:
             widget.isError ? _errorInputDecoration : _defaultInputDecoration,
         cursorColor: SweetPetColors.purple,

@@ -33,12 +33,13 @@ abstract class _AuthController with Store {
 
       if (connectivityResult == ConnectivityResult.mobile ||
           connectivityResult == ConnectivityResult.wifi) {
+        password = encrypt(password);
         userModel = await _authRepository.getLogin(
             user: user, password: password, context: context);
         if (userModel != null) {
           UserModel? listUserModel = await userSembast.get(userModel!);
           if (listUserModel == null) {
-            userModel!.password = encrypt(password);
+            userModel!.password = password;
             await userSembast.insert(userModel!);
           }
           saveUserSharedPrefs(stringValue: 'userValue', data: user);
@@ -71,6 +72,42 @@ abstract class _AuthController with Store {
           // builAwasomeDialog("msgValidacoesTelaLogin.msgSemConexao", context,
           //     title: 'Erro ao logar');
           // return false;
+        }
+      }
+    } catch (e) {
+      print(e);
+
+      return false;
+    }
+  }
+
+  //----------------------------------------------------------------------------
+  Future<bool?> signUp({
+    required UserModel user,
+    required context,
+  }) async {
+    try {
+      var connectivityResult = await (Connectivity().checkConnectivity());
+
+      UserSembast userSembast = UserSembast();
+
+      if (connectivityResult == ConnectivityResult.mobile ||
+          connectivityResult == ConnectivityResult.wifi) {
+        user.password = encrypt(user.password);
+        userModel =
+            await _authRepository.getSignUp(userModel: user, context: context);
+        if (userModel != null) {
+          UserModel? listUserModel = await userSembast.get(userModel!);
+          if (listUserModel == null) {
+            userModel!.password = user.password;
+            await userSembast.insert(userModel!);
+          }
+          saveUserSharedPrefs(stringValue: 'userValue', data: userModel!.email);
+          saveUserSharedPrefs(
+              stringValue: 'passwordValue', data: decrypt(userModel!.password));
+          return true;
+        } else {
+          return false;
         }
       }
     } catch (e) {
@@ -114,7 +151,5 @@ abstract class _AuthController with Store {
 
   //----------------------------------------------------------------------------
 
-  signUp() {}
-
-  logout() {}
+  signOut() {}
 }

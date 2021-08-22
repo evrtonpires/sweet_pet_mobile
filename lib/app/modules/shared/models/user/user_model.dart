@@ -5,20 +5,20 @@ part 'user_model.g.dart';
 
 @JsonSerializable()
 class UserModel {
-  late int id;
+  late int? id;
   late String name;
   late String email;
   late String? password;
-  late eTypeUser eType;
+  late int eType;
   late String? crmv;
 
   UserModel(
-      {required this.id,
+      {this.id,
       required this.name,
       required this.email,
       this.password,
       required this.eType,
-      required this.crmv});
+      this.crmv});
 
   UserModel.padrao();
 

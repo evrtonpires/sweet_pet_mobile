@@ -2,11 +2,7 @@ import 'dart:ui';
 
 abstract class SweetPetColors {
   static const Color purple = Color(0xFF474797);
-
-  // static const Color blue = Color(0xFF006494);
   static const Color purpleLight = Color(0xFF6D3E91);
-
-  // static const Color blueLight = Color(0xFF1b98e0);
   static const Color black = Color(0xFF000000);
   static const Color gray = Color(0xFF404040);
   static const Color grayLighter = Color(0xFFEAEAEA);

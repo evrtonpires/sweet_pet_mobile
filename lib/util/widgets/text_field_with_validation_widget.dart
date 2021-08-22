@@ -15,6 +15,7 @@ class TextFieldWithValidationWidget extends StatelessWidget {
     this.onValidator,
     this.focusNode,
     this.messageError,
+    this.isEnabled,
     this.floatingLabelBehavior = FloatingLabelBehavior.always,
   }) : super(key: key);
 
@@ -26,6 +27,7 @@ class TextFieldWithValidationWidget extends StatelessWidget {
   final Function(String)? onFieldSubmitted;
   final Function? onValidator;
   final bool isPassword;
+  final bool? isEnabled;
   final TextInputAction? textInputAction;
   final FocusNode? focusNode;
   final String? messageError;
@@ -77,6 +79,7 @@ class TextFieldWithValidationWidget extends StatelessWidget {
           isError: isError,
           placeholder: placeholder,
           textInputAction: textInputAction,
+          isEnable: isEnabled,
           onChanged: onChanged,
           onEditingComplete: () {
             if (textInputAction == TextInputAction.next) {
