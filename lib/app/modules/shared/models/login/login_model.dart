@@ -4,10 +4,10 @@ part 'login_model.g.dart';
 
 @JsonSerializable()
 class LoginModel {
-  int? id;
-  String? user;
+  String? Login;
+  String? Password;
 
-  LoginModel({required this.id, required this.user});
+  LoginModel({required this.Login, required this.Password});
 
   LoginModel.padrao();
 

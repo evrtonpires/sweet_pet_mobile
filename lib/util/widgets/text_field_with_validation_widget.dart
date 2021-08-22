@@ -4,6 +4,7 @@ import 'package:sweet_pet_mobile/util/widgets/base_text_field_widget.dart';
 class TextFieldWithValidationWidget extends StatelessWidget {
   const TextFieldWithValidationWidget({
     GlobalKey? key,
+    this.controller,
     this.initialValue,
     this.placeholder,
     this.isPassword = false,
@@ -14,9 +15,11 @@ class TextFieldWithValidationWidget extends StatelessWidget {
     this.onValidator,
     this.focusNode,
     this.messageError,
+    this.isEnabled,
     this.floatingLabelBehavior = FloatingLabelBehavior.always,
   }) : super(key: key);
 
+  final TextEditingController? controller;
   final String? initialValue;
   final String? placeholder;
   final Function(String)? onChanged;
@@ -24,6 +27,7 @@ class TextFieldWithValidationWidget extends StatelessWidget {
   final Function(String)? onFieldSubmitted;
   final Function? onValidator;
   final bool isPassword;
+  final bool? isEnabled;
   final TextInputAction? textInputAction;
   final FocusNode? focusNode;
   final String? messageError;
@@ -65,34 +69,32 @@ class TextFieldWithValidationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MergeSemantics(
-      child: Column(
-        children: [
-          BaseTextFieldWidget(
-            focusNode: focusNode,
-            initialValue: initialValue,
-            isPassword: isPassword,
-            isError: isError,
-            placeholder: placeholder,
-            textInputAction: textInputAction,
-            onChanged: onChanged,
-            onEditingComplete: () {
-              if (textInputAction == TextInputAction.next) {
-                FocusScope.of(context).nextFocus();
-              } else {
-                FocusScope.of(context).unfocus();
-              }
-              onValidator?.call();
-              onEditingComplete?.call();
-            },
-            onSubmitted: onFieldSubmitted,
-            floatingLabelBehavior: floatingLabelBehavior,
-          ),
-          Expanded(
-            child: _showValidation(context),
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        BaseTextFieldWidget(
+          controller: controller,
+          focusNode: focusNode,
+          initialValue: initialValue,
+          isPassword: isPassword,
+          isError: isError,
+          placeholder: placeholder,
+          textInputAction: textInputAction,
+          isEnable: isEnabled,
+          onChanged: onChanged,
+          onEditingComplete: () {
+            if (textInputAction == TextInputAction.next) {
+              FocusScope.of(context).nextFocus();
+            } else {
+              FocusScope.of(context).unfocus();
+            }
+            onValidator?.call();
+            onEditingComplete?.call();
+          },
+          onSubmitted: onFieldSubmitted,
+          floatingLabelBehavior: floatingLabelBehavior,
+        ),
+        _showValidation(context),
+      ],
     );
   }
 }

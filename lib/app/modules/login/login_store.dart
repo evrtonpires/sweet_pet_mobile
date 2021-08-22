@@ -8,24 +8,25 @@ part 'login_store.g.dart';
 class LoginStore = LoginStoreBase with _$LoginStore;
 
 abstract class LoginStoreBase with Store {
-  AuthController auth = Modular.get();
+  // AuthController auth = Modular.get();
 
   //----------------------------------------------------------------------------
-  LoginStoreBase() {
+  LoginStoreBase({this.authController}) {
     focusLogin = FocusNode();
     focusPassword = FocusNode();
   }
 
+  final AuthController? authController;
   late final FocusNode focusLogin;
   late final FocusNode focusPassword;
 
   //----------------------------------------------------------------------------
   @observable
-  String? login;
+  String? user;
 
   //----------------------------------------------------------------------------
   @action
-  void setLogin(String newLogin) => login = newLogin;
+  void setLogin(String newUser) => user = newUser;
 
   //----------------------------------------------------------------------------
   @observable
@@ -54,7 +55,7 @@ abstract class LoginStoreBase with Store {
   //----------------------------------------------------------------------------
   bool loginValidate(BuildContext context, {bool requestFocus = false}) {
     messageLoginError = null;
-    if (login == null || login!.isEmpty) {
+    if (user == null || user!.isEmpty) {
       messageLoginError = 'Campo obrigatório';
       if (requestFocus) {
         focusLogin.requestFocus();
@@ -90,8 +91,17 @@ abstract class LoginStoreBase with Store {
         messagePasswordError == null &&
         !isLoading) {
       isLoading = true;
-      Future.delayed(Duration(seconds: 4));
-      isLoading = false;
+      bool? response = await authController!.signIn(
+        user: user!.trim(),
+        password: password!.trim(),
+        context: context,
+      );
+      if (response!) {
+        isLoading = false;
+        Modular.to.pushReplacementNamed('/dashboard');
+      } else {
+        isLoading = false;
+      }
     }
   }
 }

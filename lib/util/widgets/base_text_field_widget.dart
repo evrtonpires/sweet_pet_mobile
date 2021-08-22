@@ -4,6 +4,7 @@ import 'package:sweet_pet_mobile/util/colors/colors.dart';
 
 class BaseTextFieldWidget extends StatefulWidget {
   const BaseTextFieldWidget({
+    this.controller,
     this.placeholder,
     this.initialValue,
     this.isPassword = false,
@@ -12,11 +13,13 @@ class BaseTextFieldWidget extends StatefulWidget {
     this.onSubmitted,
     this.textInputAction,
     this.isError = false,
+    this.isEnable = true,
     this.focusNode,
     this.showCursor = true,
     this.floatingLabelBehavior,
   });
 
+  final TextEditingController? controller;
   final String? initialValue;
   final String? placeholder;
   final Function(String)? onChanged;
@@ -24,6 +27,7 @@ class BaseTextFieldWidget extends StatefulWidget {
   final Function(String)? onSubmitted;
   final bool isPassword;
   final bool isError;
+  final bool? isEnable;
   final TextInputAction? textInputAction;
   final FocusNode? focusNode;
   final bool showCursor;
@@ -34,30 +38,32 @@ class BaseTextFieldWidget extends StatefulWidget {
 }
 
 class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
-  final _controller = TextEditingController();
-
   Widget get _iconPasswordHidden => Icon(
-        Icons.remove_red_eye_outlined,
+    Icons.remove_red_eye_outlined,
         semanticLabel: 'Exibir senha',
+        color: SweetPetColors.purple,
       );
 
-  Widget get _iconPasswordShowed => Icon(
+  Widget get _iconPasswordShowed =>
+      Icon(
         Icons.remove_red_eye,
         semanticLabel: 'Esconder senha',
+        color: SweetPetColors.purpleLight,
       );
 
   bool _isObscured = false;
 
-  Widget get _togglePasswordSuffix => ExcludeSemantics(
-        child: GestureDetector(
-          child: _isObscured ? _iconPasswordHidden : _iconPasswordShowed,
-          onTap: () => setState(
-            () => _isObscured = !_isObscured,
-          ),
-        ),
+  Widget get _togglePasswordSuffix =>
+      GestureDetector(
+        child: _isObscured ? _iconPasswordHidden : _iconPasswordShowed,
+        onTap: () =>
+            setState(
+                  () => _isObscured = !_isObscured,
+            ),
       );
 
-  InputDecoration get _errorInputDecoration => InputDecoration(
+  InputDecoration get _errorInputDecoration =>
+      InputDecoration(
         contentPadding: const EdgeInsets.only(
           top: 0,
           left: 10,
@@ -69,30 +75,31 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(
-            color: SweetPetColors.orange,
+            color: SweetPetColors.purple,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(
-            color: SweetPetColors.orange,
+            color: SweetPetColors.purple,
           ),
         ),
-        labelStyle: TextStyle(color: SweetPetColors.orange),
+        labelStyle: TextStyle(color: SweetPetColors.purple),
         suffixIcon: widget.isPassword ? _togglePasswordSuffix : null,
       );
 
   InputDecoration get _defaultInputDecoration => InputDecoration(
-        contentPadding:
+    contentPadding:
             const EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 0),
         alignLabelWithHint: true,
         labelText: widget.placeholder,
+        labelStyle: TextStyle(color: SweetPetColors.purple),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: SweetPetColors.orange),
+          borderSide: BorderSide(color: SweetPetColors.purple),
           borderRadius: BorderRadius.circular(10.0),
         ),
         border: OutlineInputBorder(
-          borderSide: BorderSide(color: SweetPetColors.orange),
+          borderSide: BorderSide(color: SweetPetColors.purple),
           borderRadius: BorderRadius.circular(10.0),
         ),
         floatingLabelBehavior: widget.floatingLabelBehavior,
@@ -104,7 +111,7 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
     if (widget.isPassword) {
       _isObscured = true;
     }
-    _controller.text = widget.initialValue ?? '';
+    widget.controller!.text = widget.initialValue ?? '';
     super.initState();
   }
 
@@ -112,17 +119,18 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData(
-        primaryColor: SweetPetColors.orange,
+        primaryColor: SweetPetColors.purple,
       ),
       child: TextFormField(
         focusNode: widget.focusNode,
-        controller: _controller,
+        controller: widget.controller,
         obscureText: _isObscured,
         textInputAction: widget.textInputAction,
         showCursor: widget.showCursor,
+        enabled: widget.isEnable,
         decoration:
             widget.isError ? _errorInputDecoration : _defaultInputDecoration,
-        cursorColor: SweetPetColors.orange,
+        cursorColor: SweetPetColors.purple,
         onChanged: widget.onChanged,
         onEditingComplete: widget.onEditingComplete,
         onFieldSubmitted: widget.onSubmitted,
@@ -132,7 +140,7 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
 
   @override
   void dispose() {
-    _controller.dispose();
+    widget.controller!.clear();
     if (widget.focusNode != null) {
       widget.focusNode!.dispose();
     }
