@@ -1,11 +1,14 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:encrypt/encrypt.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:encrypt/encrypt.dart' as Encrypt;
 import 'package:sweet_pet_mobile/app/modules/shared/models/user/user_model.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/sembast/login/user_sembast.dart';
+import 'package:sweet_pet_mobile/util/alert_awesome/alert_awesome_widget.dart';
 
 import 'auth_repositories/auth_repository_interface.dart';
 
@@ -43,7 +46,8 @@ abstract class _AuthController with Store {
             await userSembast.insert(userModel!);
           }
           saveUserSharedPrefs(stringValue: 'userValue', data: user);
-          saveUserSharedPrefs(stringValue: 'passwordValue', data: password);
+          saveUserSharedPrefs(
+              stringValue: 'passwordValue', data: decrypt(password));
           return true;
         } else {
           return false;
@@ -63,15 +67,28 @@ abstract class _AuthController with Store {
           if (autenticado) {
             return true;
           } else {
-            // builAwasomeDialog("msgValidacoesTelaLogin.msgSemConexao", context,
-            //     title: 'Erro ao logar');
+            AwesomeDialogWidget(
+                context: context,
+                animType: AnimType.SCALE,
+                dialogType: DialogType.NO_HEADER,
+                title: 'Erro ao obter acesso',
+                text:
+                    'Os dados de acesso para o login off-line estão incorretos.\nVerifique os dados e tente novamente!',
+                buttonColor: Colors.red.shade800,
+                btnOkOnPress: () {});
             return false;
           }
         } else {
-          // Navigator.of(context).pop();
-          // builAwasomeDialog("msgValidacoesTelaLogin.msgSemConexao", context,
-          //     title: 'Erro ao logar');
-          // return false;
+          AwesomeDialogWidget(
+              context: context,
+              animType: AnimType.SCALE,
+              dialogType: DialogType.NO_HEADER,
+              title: 'Erro ao obter acesso',
+              text:
+                  'Caso tenha um cadastro conosco, ative sua internet e realize o login para termos os dados necessarios em nossa base local.\n\nCaso não tenha, obtenha um cadastro em nosso aplicativo para realizar o login.',
+              buttonColor: Colors.red.shade800,
+              btnOkOnPress: () {});
+          return false;
         }
       }
     } catch (e) {
@@ -95,7 +112,7 @@ abstract class _AuthController with Store {
           connectivityResult == ConnectivityResult.wifi) {
         user.password = encrypt(user.password);
         userModel =
-            await _authRepository.getSignUp(userModel: user, context: context);
+        await _authRepository.getSignUp(userModel: user, context: context);
         if (userModel != null) {
           UserModel? listUserModel = await userSembast.get(userModel!);
           if (listUserModel == null) {
@@ -137,7 +154,7 @@ abstract class _AuthController with Store {
   String encrypt(senha) {
     final encrypter = Encrypter(AES(Encrypt.Key.fromUtf8(CHAVE)));
     final senhaEncrypted =
-        encrypter.encrypt(senha, iv: IV.fromLength(LENGHT_VETOR));
+    encrypter.encrypt(senha, iv: IV.fromLength(LENGHT_VETOR));
     return senhaEncrypted.base64;
   }
 
@@ -145,7 +162,7 @@ abstract class _AuthController with Store {
   String decrypt(senhaEncrypted) {
     final encrypter = Encrypter(AES(Encrypt.Key.fromUtf8(CHAVE)));
     final decrypted =
-        encrypter.decrypt64(senhaEncrypted, iv: IV.fromLength(LENGHT_VETOR));
+    encrypter.decrypt64(senhaEncrypted, iv: IV.fromLength(LENGHT_VETOR));
     return decrypted;
   }
 
