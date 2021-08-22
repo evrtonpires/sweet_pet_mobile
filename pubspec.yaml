@@ -76,7 +76,7 @@ flutter_icons:
 #flutter pub pub run flutter_native_splash:create - comando para gerar splashArt
 
 flutter_native_splash:
-  image: assets/icon/icon.png
+  image: assets/icon/splash_art/splash.png
   color: "474797"
 
 
