@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sweet_pet_mobile/app/modules/login/login_store.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
 import 'package:sweet_pet_mobile/util/constants/Icons_constants.dart';
+import 'package:sweet_pet_mobile/util/loading_page/loading_page_widget.dart';
 import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
 import 'package:sweet_pet_mobile/util/widgets/text_field_with_validation_widget.dart';
 
@@ -221,7 +221,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                             SizedBox(height: 10),
                             Center(
                               child: InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Modular.to.pushReplacementNamed('/signup');
+                                },
                                 child: Text(
                                   'Cadastre-se',
                                   style: TextStyle(
@@ -244,54 +246,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
         Observer(
           builder: (_) {
             return store.isLoading
-                ? Scaffold(
-                    backgroundColor: Colors.transparent,
-                    body: IgnorePointer(
-                      ignoring: store.isLoading,
-                      child: Container(
-                        padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height / 2),
-                        color: store.isLoading
-                            ? Colors.black.withOpacity(.90)
-                            : Colors.transparent,
-                        child: Center(
-                          child: store.isLoading
-                              ? Column(
-                                  children: <Widget>[
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        SvgPicture.asset(
-                                          IconConstant.categoryDog,
-                                          color: SweetPetColors.purple,
-                                          width: 60.0,
-                                          height: 60.0,
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        SvgPicture.asset(
-                                          IconConstant.categoryCat,
-                                          color: SweetPetColors.purple,
-                                          width: 60.0,
-                                          height: 60.0,
-                                        )
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                    Text(
-                                      'Entrando. Aguarde ...',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
-                                    )
-                                  ],
-                                )
-                              : SizedBox(),
-                        ),
-                      ),
-                    ))
+                ? LoadingPageWidget(
+                    store: store,
+                  )
                 : SizedBox();
           },
         )

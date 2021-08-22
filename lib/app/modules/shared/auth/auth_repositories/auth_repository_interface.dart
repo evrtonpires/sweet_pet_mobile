@@ -8,6 +8,9 @@ abstract class IAuthRepository {
 
   Future getGoogleLogin();
 
+  Future<UserModel?> getSignUp(
+      {required context, required UserModel userModel});
+
   Future getFacebookLogin();
 
   Future<String> getToken();

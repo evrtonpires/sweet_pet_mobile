@@ -26,11 +26,35 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future<UserModel?> getLogin(
-      {required String user, required String password, context}) async {
+  Future<UserModel?> getLogin({
+    required String user,
+    required String password,
+    context,
+  }) async {
     try {
       Response response = await dio.post('${BaseUrl.baseUrl}/Auth',
           data: {'login': user, 'password': password}).catchError((e) {
+        AwesomeDialogWidget(
+            context: context,
+            animType: AnimType.SCALE,
+            dialogType: DialogType.NO_HEADER,
+            text: e.response.data[0]['message'],
+            title: e.response.data[0]['title'],
+            buttonColor: Colors.red.shade800,
+            btnOkOnPress: () {});
+      });
+      return UserModel.fromJson(response.data['user']);
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  @override
+  Future<UserModel?> getSignUp({context, required userModel}) async {
+    try {
+      Response response = await dio
+          .post('${BaseUrl.baseUrl}/User', data: userModel)
+          .catchError((e) {
         AwesomeDialogWidget(
             context: context,
             animType: AnimType.SCALE,

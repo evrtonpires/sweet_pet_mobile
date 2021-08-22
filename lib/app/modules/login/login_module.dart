@@ -2,6 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:sweet_pet_mobile/app/modules/dashboard/dashboard/dashboard_module.dart';
 import '../login/login_store.dart';
 
+import 'cadastro_de_usuario/cadastro_de_usuario_module.dart';
 import 'login_page.dart';
 
 class LoginModule extends Module {
@@ -22,6 +23,7 @@ class LoginModule extends Module {
         authController: Modular.get(),
       ),
     ),
-    ModuleRoute('/dashboard', module: DashboardModule())
+    ModuleRoute('/dashboard', module: DashboardModule()),
+    ModuleRoute('/signup', module: CadastroDeUsuarioModule()),
   ];
 }
