@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:sweet_pet_mobile/app/modules/login/login_store.dart';
@@ -21,23 +22,6 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends ModularState<LoginPage, LoginStore>
     with SingleTickerProviderStateMixin {
-  late final AnimationController animationController =
-      AnimationController(duration: Duration(milliseconds: 2000), vsync: this);
-
-  late final Animation animationLogo = Tween<double>(begin: -50, end: 0)
-      .animate(CurvedAnimation(
-          parent: animationController, curve: Interval(0, 0.5)));
-
-  late final Animation animationLogoOpacidade = Tween<double>(begin: 0, end: 1)
-      .animate(CurvedAnimation(
-          parent: animationController, curve: Interval(0, 0.6)));
-  late final Animation animationBtnEntrar = Tween<double>(begin: 20, end: 0)
-      .animate(CurvedAnimation(
-          parent: animationController, curve: Interval(0.4, 0.7)));
-  late final Animation animationBtnEntrarOpacidade =
-      Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
-          parent: animationController, curve: Interval(0.7, 1)));
-
   var controllerStore = LoginStore();
 
   TextEditingController loginController = TextEditingController();
@@ -59,7 +43,6 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
       store.setPassword(value);
       senhaController.text = value;
     });
-    // animationController.forward();
   }
 
   @override
@@ -112,7 +95,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                 return TextFieldWithValidationWidget(
                                   controller: loginController,
                                   focusNode: store.focusLogin,
-                                  placeholder: 'Login',
+                                  placeholder: FlutterI18n.translate(
+                                      context, 'telaLogin.usuario'),
                                   onChanged: (newLogin) {
                                     store.setLogin(newLogin);
                                     store.loginValidate(context);
@@ -142,7 +126,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     return TextFieldWithValidationWidget(
                                       controller: senhaController,
                                       focusNode: store.focusPassword,
-                                      placeholder: 'Senha',
+                                      placeholder: FlutterI18n.translate(
+                                          context, 'telaLogin.senha'),
                                       onChanged: (newPassword) {
                                         store.setPassword(newPassword);
                                         store.passwordValidate(context);
@@ -165,7 +150,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     ),
                                     child: GestureDetector(
                                       child: Text(
-                                        'Esqueceu sua senha ?',
+                                        FlutterI18n.translate(context,
+                                            'telaLogin.esqueceuSuaSenha'),
                                         style: TextStyle(
                                             color: SweetPetColors.purpleLight),
                                       ),
@@ -201,7 +187,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                   ),
                                   child: Center(
                                     child: Text(
-                                      'Entrar'.toUpperCase(),
+                                      FlutterI18n.translate(
+                                              context, 'telaLogin.entrar')
+                                          .toUpperCase(),
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold),
@@ -213,7 +201,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                             SizedBox(height: 10),
                             Center(
                               child: Text(
-                                'ou',
+                                FlutterI18n.translate(context, 'telaLogin.ou'),
                                 style: TextStyle(
                                     color: SweetPetColors.neutralGray),
                               ),
@@ -225,7 +213,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                   Modular.to.pushReplacementNamed('/signup');
                                 },
                                 child: Text(
-                                  'Cadastre-se',
+                                  FlutterI18n.translate(
+                                      context, 'telaLogin.cadastrar'),
                                   style: TextStyle(
                                       color: SweetPetColors.purpleLight,
                                       fontSize: getValueFont(

@@ -39,7 +39,7 @@ dependencies:
   connectivity: 3.0.6
   shared_preferences: 2.0.6
   uuid: 3.0.4
-  flutter_i18n: 0.22.4
+  flutter_i18n: 0.30.0
   flutter_masked_text: 0.8.0
   device_info: 2.0.2
   url_launcher: 6.0.9
@@ -74,6 +74,8 @@ flutter_icons:
   adaptive_icon_foreground: "assets/icon/icon.png"
 #flutter pub run flutter_launcher_icons:main - comando para gerar icon
 #flutter pub pub run flutter_native_splash:create - comando para gerar splashArt
+#flutter pub run flutter_i18n validate - Este comando é usado para validar todos os arquivos de tradução dentro do projeto
+#flutter pub run flutter_i18n diff en.yaml it.json - Este comando é usado para encontrar as diferenças entre as chaves dos arquivos de tradução desejados
 
 flutter_native_splash:
   image: assets/icon/splash_art/splash.png
@@ -98,6 +100,7 @@ flutter:
     - assets/icon/load/
     - assets/icon/category/
     - assets/icon/splash_art/
+    - assets/i18n/
 
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.
