@@ -14,6 +14,7 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
   _CadastroDeUsuarioStoreBase({required this.authController}) {
     focusName = FocusNode();
     focusEmail = FocusNode();
+    focusEmailConfirmation = FocusNode();
     focusPassword = FocusNode();
     focusPasswordConfirmation = FocusNode();
     focusCRMV = FocusNode();
@@ -23,6 +24,7 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
 
   late final FocusNode focusName;
   late final FocusNode focusEmail;
+  late final FocusNode focusEmailConfirmation;
   late final FocusNode focusPassword;
   late final FocusNode focusPasswordConfirmation;
   late final FocusNode focusCRMV;
@@ -53,6 +55,17 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
 
   @observable
   String? messageEmailError;
+
+//----------------------------------------------------------------------------
+  @observable
+  String? emailConfirmation;
+
+  @action
+  void setEmailConfirmation(String newEmailConfirmation) =>
+      emailConfirmation = newEmailConfirmation;
+
+  @observable
+  String? messageEmailConfirmationError;
 
 //----------------------------------------------------------------------------
   @observable
@@ -111,12 +124,47 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
   //----------------------------------------------------------------------------
   bool emailValidate(BuildContext context, {bool requestFocus = false}) {
     messageEmailError = null;
+    RegExp regExp = RegExp(
+        r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
     if (email == null || email!.isEmpty) {
       messageEmailError = 'Campo obrigatório';
       if (requestFocus) {
         focusEmail.requestFocus();
       }
       return false;
+    } else if (regExp.hasMatch(email!)) {
+      messageEmailConfirmationError = null;
+      messageEmailError = null;
+
+      return true;
+    } else {
+      messageEmailError = 'Insira um email valido';
+      if (requestFocus) {
+        focusEmail.requestFocus();
+      }
+      return false;
+    }
+  }
+
+  //----------------------------------------------------------------------------
+  bool emailConfirmationValidate(BuildContext context,
+      {bool requestFocus = false}) {
+    messageEmailConfirmationError = null;
+    if (emailConfirmation == null || emailConfirmation!.isEmpty) {
+      messageEmailConfirmationError = 'Campo obrigatório';
+      if (requestFocus) {
+        focusEmailConfirmation.requestFocus();
+      }
+      return false;
+    } else if (email != emailConfirmation) {
+      messageEmailConfirmationError = 'Os emails não coincidem';
+      if (requestFocus) {
+        focusEmailConfirmation.requestFocus();
+      }
+      return false;
+    } else {
+      messageEmailConfirmationError = null;
+      messageEmailError = null;
     }
     return true;
   }
@@ -124,25 +172,28 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
   //----------------------------------------------------------------------------
   bool passwordValidate(BuildContext context, {bool requestFocus = false}) {
     messagePasswordError = null;
+    RegExp regExp = RegExp(
+        "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@\$%^&*-]).{8,}\$");
+
     if (password == null || password!.isEmpty) {
       messagePasswordError = 'Campo obrigatório';
       if (requestFocus) {
         focusPassword.requestFocus();
       }
       return false;
-    } else if ((passwordConfirmation != null &&
-            passwordConfirmation!.isNotEmpty) &&
-        password != passwordConfirmation) {
-      messagePasswordConfirmationError = 'As senhas não coincidem';
-      if (requestFocus) {
-        focusPasswordConfirmation.requestFocus();
-      }
-      return false;
-    } else {
+    } else if (regExp.hasMatch(password!)) {
       messagePasswordConfirmationError = null;
       messagePasswordError = null;
+
+      return true;
+    } else {
+      messagePasswordError =
+          'Utilize:\n* Minimo 8 caracteres.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais (Exemplo: !@#\$%&).';
+      if (requestFocus) {
+        focusPassword.requestFocus();
+      }
+      return false;
     }
-    return true;
   }
 
   //----------------------------------------------------------------------------
@@ -190,6 +241,9 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
       return;
     }
     if (!emailValidate(context, requestFocus: true)) {
+      return;
+    }
+    if (!emailConfirmationValidate(context, requestFocus: true)) {
       return;
     }
     if (!passwordValidate(context, requestFocus: true)) {

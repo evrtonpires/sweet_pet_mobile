@@ -102,6 +102,39 @@ mixin _$CadastroDeUsuarioStore on _CadastroDeUsuarioStoreBase, Store {
     });
   }
 
+  final _$emailConfirmationAtom =
+      Atom(name: '_CadastroDeUsuarioStoreBase.emailConfirmation');
+
+  @override
+  String? get emailConfirmation {
+    _$emailConfirmationAtom.reportRead();
+    return super.emailConfirmation;
+  }
+
+  @override
+  set emailConfirmation(String? value) {
+    _$emailConfirmationAtom.reportWrite(value, super.emailConfirmation, () {
+      super.emailConfirmation = value;
+    });
+  }
+
+  final _$messageEmailConfirmationErrorAtom =
+      Atom(name: '_CadastroDeUsuarioStoreBase.messageEmailConfirmationError');
+
+  @override
+  String? get messageEmailConfirmationError {
+    _$messageEmailConfirmationErrorAtom.reportRead();
+    return super.messageEmailConfirmationError;
+  }
+
+  @override
+  set messageEmailConfirmationError(String? value) {
+    _$messageEmailConfirmationErrorAtom
+        .reportWrite(value, super.messageEmailConfirmationError, () {
+      super.messageEmailConfirmationError = value;
+    });
+  }
+
   final _$passwordAtom = Atom(name: '_CadastroDeUsuarioStoreBase.password');
 
   @override
@@ -249,6 +282,17 @@ mixin _$CadastroDeUsuarioStore on _CadastroDeUsuarioStoreBase, Store {
   }
 
   @override
+  void setEmailConfirmation(String newEmailConfirmation) {
+    final _$actionInfo = _$_CadastroDeUsuarioStoreBaseActionController
+        .startAction(name: '_CadastroDeUsuarioStoreBase.setEmailConfirmation');
+    try {
+      return super.setEmailConfirmation(newEmailConfirmation);
+    } finally {
+      _$_CadastroDeUsuarioStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   void setPassword(String newPassword) {
     final _$actionInfo = _$_CadastroDeUsuarioStoreBaseActionController
         .startAction(name: '_CadastroDeUsuarioStoreBase.setPassword');
@@ -302,6 +346,8 @@ name: ${name},
 messageNameError: ${messageNameError},
 email: ${email},
 messageEmailError: ${messageEmailError},
+emailConfirmation: ${emailConfirmation},
+messageEmailConfirmationError: ${messageEmailConfirmationError},
 password: ${password},
 messagePasswordError: ${messagePasswordError},
 passwordConfirmation: ${passwordConfirmation},

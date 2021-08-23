@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:sweet_pet_mobile/app/modules/login/login_store.dart';
@@ -21,23 +22,6 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends ModularState<LoginPage, LoginStore>
     with SingleTickerProviderStateMixin {
-  late final AnimationController animationController =
-      AnimationController(duration: Duration(milliseconds: 2000), vsync: this);
-
-  late final Animation animationLogo = Tween<double>(begin: -50, end: 0)
-      .animate(CurvedAnimation(
-          parent: animationController, curve: Interval(0, 0.5)));
-
-  late final Animation animationLogoOpacidade = Tween<double>(begin: 0, end: 1)
-      .animate(CurvedAnimation(
-          parent: animationController, curve: Interval(0, 0.6)));
-  late final Animation animationBtnEntrar = Tween<double>(begin: 20, end: 0)
-      .animate(CurvedAnimation(
-          parent: animationController, curve: Interval(0.4, 0.7)));
-  late final Animation animationBtnEntrarOpacidade =
-      Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
-          parent: animationController, curve: Interval(0.7, 1)));
-
   var controllerStore = LoginStore();
 
   TextEditingController loginController = TextEditingController();
@@ -59,7 +43,6 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
       store.setPassword(value);
       senhaController.text = value;
     });
-    // animationController.forward();
   }
 
   @override
@@ -75,7 +58,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * .2,
+                      top: MediaQuery.of(context).size.height * .15,
                     ),
                     width: MediaQuery.of(context).size.width,
                     child: Column(
@@ -97,7 +80,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                     ),
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height / 2,
+                    height: MediaQuery.of(context).size.height * .6,
                     width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.only(top: 62),
                     child: Column(
@@ -112,7 +95,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                 return TextFieldWithValidationWidget(
                                   controller: loginController,
                                   focusNode: store.focusLogin,
-                                  placeholder: 'Login',
+                                  placeholder: FlutterI18n.translate(
+                                      context, 'telaLogin.usuario'),
                                   onChanged: (newLogin) {
                                     store.setLogin(newLogin);
                                     store.loginValidate(context);
@@ -142,7 +126,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     return TextFieldWithValidationWidget(
                                       controller: senhaController,
                                       focusNode: store.focusPassword,
-                                      placeholder: 'Senha',
+                                      placeholder: FlutterI18n.translate(
+                                          context, 'telaLogin.senha'),
                                       onChanged: (newPassword) {
                                         store.setPassword(newPassword);
                                         store.passwordValidate(context);
@@ -165,7 +150,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     ),
                                     child: GestureDetector(
                                       child: Text(
-                                        'Esqueceu sua senha ?',
+                                        FlutterI18n.translate(context,
+                                            'telaLogin.esqueceuSuaSenha'),
                                         style: TextStyle(
                                             color: SweetPetColors.purpleLight),
                                       ),
@@ -176,64 +162,75 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                             ),
                           ),
                         ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                bottom: MediaQuery.of(context).size.width * .0,
-                                top: MediaQuery.of(context).size.width * .2,
-                              ),
-                              child: InkWell(
-                                onTap: () {
-                                  store.autenticate(context);
-                                },
-                                child: Container(
-                                  height: 45,
-                                  width:
-                                      MediaQuery.of(context).size.width / 1.2,
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: SweetPetColors.linearGradient,
+                        Padding(
+                          padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.width * .1,
+                            top: MediaQuery.of(context).size.width * .0,
+                          ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  bottom:
+                                      MediaQuery.of(context).size.width * .0,
+                                  top: MediaQuery.of(context).size.width * .2,
+                                ),
+                                child: InkWell(
+                                  onTap: () {
+                                    store.autenticate(context);
+                                  },
+                                  child: Container(
+                                    height: 45,
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.2,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        colors: SweetPetColors.linearGradient,
+                                      ),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(50),
+                                      ),
                                     ),
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(50),
-                                    ),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      'Entrar'.toUpperCase(),
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                    child: Center(
+                                      child: Text(
+                                        FlutterI18n.translate(
+                                                context, 'telaLogin.entrar')
+                                            .toUpperCase(),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                            SizedBox(height: 10),
-                            Center(
-                              child: Text(
-                                'ou',
-                                style: TextStyle(
-                                    color: SweetPetColors.neutralGray),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            Center(
-                              child: InkWell(
-                                onTap: () {
-                                  Modular.to.pushReplacementNamed('/signup');
-                                },
+                              SizedBox(height: 10),
+                              Center(
                                 child: Text(
-                                  'Cadastre-se',
+                                  FlutterI18n.translate(
+                                      context, 'telaLogin.ou'),
                                   style: TextStyle(
-                                      color: SweetPetColors.purpleLight,
-                                      fontSize: getValueFont(
-                                          context: context, valueMin: 16)),
+                                      color: SweetPetColors.neutralGray),
                                 ),
                               ),
-                            ),
-                          ],
+                              SizedBox(height: 10),
+                              Center(
+                                child: InkWell(
+                                  onTap: () {
+                                    Modular.to.pushReplacementNamed('/signup');
+                                  },
+                                  child: Text(
+                                    FlutterI18n.translate(
+                                        context, 'telaLogin.cadastrar'),
+                                    style: TextStyle(
+                                        color: SweetPetColors.purpleLight,
+                                        fontSize: getValueFont(
+                                            context: context, valueMin: 16)),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
