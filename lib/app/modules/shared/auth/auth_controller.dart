@@ -73,7 +73,7 @@ abstract class _AuthController with Store {
                 dialogType: DialogType.NO_HEADER,
                 title: 'Erro ao obter acesso',
                 text:
-                    'Os dados de acesso para o login off-line estão incorretos.\nVerifique os dados e tente novamente!',
+                    'Os dados de acesso para o login off-line podem estar incorretos.\nVerifique os dados e tente novamente!\n\nCaso seja seu primeiro acesso neste dispositivo, ative sua conexão a internet para realizar o primeiro login.',
                 buttonColor: Colors.red.shade800,
                 btnOkOnPress: () {});
             return false;
@@ -112,7 +112,7 @@ abstract class _AuthController with Store {
           connectivityResult == ConnectivityResult.wifi) {
         user.password = encrypt(user.password);
         userModel =
-        await _authRepository.getSignUp(userModel: user, context: context);
+            await _authRepository.getSignUp(userModel: user, context: context);
         if (userModel != null) {
           UserModel? listUserModel = await userSembast.get(userModel!);
           if (listUserModel == null) {
@@ -154,7 +154,7 @@ abstract class _AuthController with Store {
   String encrypt(senha) {
     final encrypter = Encrypter(AES(Encrypt.Key.fromUtf8(CHAVE)));
     final senhaEncrypted =
-    encrypter.encrypt(senha, iv: IV.fromLength(LENGHT_VETOR));
+        encrypter.encrypt(senha, iv: IV.fromLength(LENGHT_VETOR));
     return senhaEncrypted.base64;
   }
 
@@ -162,7 +162,7 @@ abstract class _AuthController with Store {
   String decrypt(senhaEncrypted) {
     final encrypter = Encrypter(AES(Encrypt.Key.fromUtf8(CHAVE)));
     final decrypted =
-    encrypter.decrypt64(senhaEncrypted, iv: IV.fromLength(LENGHT_VETOR));
+        encrypter.decrypt64(senhaEncrypted, iv: IV.fromLength(LENGHT_VETOR));
     return decrypted;
   }
 

@@ -23,6 +23,11 @@ class AppWidget extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
+      supportedLocales: [
+        const Locale('pt'), // Português
+        const Locale('en'), // English
+        const Locale('es'), // Spanish
+      ],
     ).modular();
   }
 }

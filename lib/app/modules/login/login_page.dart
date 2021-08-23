@@ -58,7 +58,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * .2,
+                      top: MediaQuery.of(context).size.height * .15,
                     ),
                     width: MediaQuery.of(context).size.width,
                     child: Column(
@@ -80,7 +80,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                     ),
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height / 2,
+                    height: MediaQuery.of(context).size.height * .6,
                     width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.only(top: 62),
                     child: Column(
@@ -162,67 +162,75 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                             ),
                           ),
                         ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                bottom: MediaQuery.of(context).size.width * .0,
-                                top: MediaQuery.of(context).size.width * .2,
-                              ),
-                              child: InkWell(
-                                onTap: () {
-                                  store.autenticate(context);
-                                },
-                                child: Container(
-                                  height: 45,
-                                  width:
-                                      MediaQuery.of(context).size.width / 1.2,
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: SweetPetColors.linearGradient,
+                        Padding(
+                          padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.width * .1,
+                            top: MediaQuery.of(context).size.width * .0,
+                          ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  bottom:
+                                      MediaQuery.of(context).size.width * .0,
+                                  top: MediaQuery.of(context).size.width * .2,
+                                ),
+                                child: InkWell(
+                                  onTap: () {
+                                    store.autenticate(context);
+                                  },
+                                  child: Container(
+                                    height: 45,
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.2,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        colors: SweetPetColors.linearGradient,
+                                      ),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(50),
+                                      ),
                                     ),
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(50),
-                                    ),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      FlutterI18n.translate(
-                                              context, 'telaLogin.entrar')
-                                          .toUpperCase(),
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                    child: Center(
+                                      child: Text(
+                                        FlutterI18n.translate(
+                                                context, 'telaLogin.entrar')
+                                            .toUpperCase(),
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                            SizedBox(height: 10),
-                            Center(
-                              child: Text(
-                                FlutterI18n.translate(context, 'telaLogin.ou'),
-                                style: TextStyle(
-                                    color: SweetPetColors.neutralGray),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            Center(
-                              child: InkWell(
-                                onTap: () {
-                                  Modular.to.pushReplacementNamed('/signup');
-                                },
+                              SizedBox(height: 10),
+                              Center(
                                 child: Text(
                                   FlutterI18n.translate(
-                                      context, 'telaLogin.cadastrar'),
+                                      context, 'telaLogin.ou'),
                                   style: TextStyle(
-                                      color: SweetPetColors.purpleLight,
-                                      fontSize: getValueFont(
-                                          context: context, valueMin: 16)),
+                                      color: SweetPetColors.neutralGray),
                                 ),
                               ),
-                            ),
-                          ],
+                              SizedBox(height: 10),
+                              Center(
+                                child: InkWell(
+                                  onTap: () {
+                                    Modular.to.pushReplacementNamed('/signup');
+                                  },
+                                  child: Text(
+                                    FlutterI18n.translate(
+                                        context, 'telaLogin.cadastrar'),
+                                    style: TextStyle(
+                                        color: SweetPetColors.purpleLight,
+                                        fontSize: getValueFont(
+                                            context: context, valueMin: 16)),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
