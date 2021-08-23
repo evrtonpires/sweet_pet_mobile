@@ -6,7 +6,6 @@ class BaseTextFieldWidget extends StatefulWidget {
   const BaseTextFieldWidget({
     this.controller,
     this.placeholder,
-    this.initialValue,
     this.isPassword = false,
     this.onChanged,
     this.onEditingComplete,
@@ -20,7 +19,6 @@ class BaseTextFieldWidget extends StatefulWidget {
   });
 
   final TextEditingController? controller;
-  final String? initialValue;
   final String? placeholder;
   final Function(String)? onChanged;
   final Function()? onEditingComplete;
@@ -111,7 +109,6 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
     if (widget.isPassword) {
       _isObscured = true;
     }
-    widget.controller!.text = widget.initialValue ?? '';
     super.initState();
   }
 
@@ -136,14 +133,5 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
         onFieldSubmitted: widget.onSubmitted,
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    widget.controller!.clear();
-    if (widget.focusNode != null) {
-      widget.focusNode!.dispose();
-    }
-    super.dispose();
   }
 }

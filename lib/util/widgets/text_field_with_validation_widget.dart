@@ -5,7 +5,6 @@ class TextFieldWithValidationWidget extends StatelessWidget {
   const TextFieldWithValidationWidget({
     GlobalKey? key,
     this.controller,
-    this.initialValue,
     this.placeholder,
     this.isPassword = false,
     this.textInputAction,
@@ -20,7 +19,6 @@ class TextFieldWithValidationWidget extends StatelessWidget {
   }) : super(key: key);
 
   final TextEditingController? controller;
-  final String? initialValue;
   final String? placeholder;
   final Function(String)? onChanged;
   final VoidCallback? onEditingComplete;
@@ -74,7 +72,6 @@ class TextFieldWithValidationWidget extends StatelessWidget {
         BaseTextFieldWidget(
           controller: controller,
           focusNode: focusNode,
-          initialValue: initialValue,
           isPassword: isPassword,
           isError: isError,
           placeholder: placeholder,

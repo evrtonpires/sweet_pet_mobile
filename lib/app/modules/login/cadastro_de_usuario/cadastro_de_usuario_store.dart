@@ -265,6 +265,7 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
         etype = eTypeUser.VETERINARIAN.index;
       } else {
         etype = eTypeUser.USER.index;
+        crmv = null;
       }
 
       UserModel user = UserModel(
