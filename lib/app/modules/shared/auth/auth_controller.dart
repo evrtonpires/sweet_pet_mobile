@@ -22,6 +22,23 @@ abstract class _AuthController with Store {
 
   final IAuthRepository _authRepository = Modular.get();
 
+  @observable
+  bool isEnableConnecticonnectivity = true;
+
+  //----------------------------------------------------------------------------
+  @action
+  void checkConnectivityListen() {
+    Connectivity().onConnectivityChanged.listen((connectivity) {
+      if (connectivity == ConnectivityResult.wifi ||
+          connectivity == ConnectivityResult.mobile) {
+        isEnableConnecticonnectivity = true;
+      } else {
+        isEnableConnecticonnectivity = false;
+      }
+    });
+  }
+
+  //----------------------------------------------------------------------------
   UserModel? userModel = UserModel.padrao();
 
   Future<bool?> signIn({
@@ -30,12 +47,11 @@ abstract class _AuthController with Store {
     required context,
   }) async {
     try {
-      var connectivityResult = await (Connectivity().checkConnectivity());
+      var connectivityResult = await checkConnectivity();
 
       UserSembast userSembast = UserSembast();
 
-      if (connectivityResult == ConnectivityResult.mobile ||
-          connectivityResult == ConnectivityResult.wifi) {
+      if (connectivityResult) {
         password = encrypt(password);
         userModel = await _authRepository.getLogin(
             user: user, password: password, context: context);
@@ -74,6 +90,7 @@ abstract class _AuthController with Store {
                 title: 'Erro ao obter acesso',
                 text:
                     'Os dados de acesso para o login off-line podem estar incorretos.\nVerifique os dados e tente novamente!\n\nCaso seja seu primeiro acesso neste dispositivo, ative sua conexão a internet para realizar o primeiro login.',
+                borderColor: Colors.red,
                 buttonColor: Colors.red.shade800,
                 btnOkOnPress: () {});
             return false;
@@ -86,6 +103,7 @@ abstract class _AuthController with Store {
               title: 'Erro ao obter acesso',
               text:
                   'Caso tenha um cadastro conosco, ative sua internet e realize o login para termos os dados necessarios em nossa base local.\n\nCaso não tenha, obtenha um cadastro em nosso aplicativo para realizar o login.',
+              borderColor: Colors.red,
               buttonColor: Colors.red.shade800,
               btnOkOnPress: () {});
           return false;
@@ -104,12 +122,11 @@ abstract class _AuthController with Store {
     required context,
   }) async {
     try {
-      var connectivityResult = await (Connectivity().checkConnectivity());
+      var connectivityResult = await checkConnectivity();
 
       UserSembast userSembast = UserSembast();
 
-      if (connectivityResult == ConnectivityResult.mobile ||
-          connectivityResult == ConnectivityResult.wifi) {
+      if (connectivityResult) {
         user.password = encrypt(user.password);
         userModel =
             await _authRepository.getSignUp(userModel: user, context: context);
@@ -130,6 +147,17 @@ abstract class _AuthController with Store {
     } catch (e) {
       print(e);
 
+      return false;
+    }
+  }
+
+  //----------------------------------------------------------------------------
+  Future<bool> checkConnectivity() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.mobile ||
+        connectivityResult == ConnectivityResult.wifi) {
+      return true;
+    } else {
       return false;
     }
   }

@@ -1,15 +1,15 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
+import 'package:sweet_pet_mobile/util/alert_awesome/alert_awesome_widget.dart';
 
 part 'login_store.g.dart';
 
 class LoginStore = LoginStoreBase with _$LoginStore;
 
 abstract class LoginStoreBase with Store {
-  // AuthController auth = Modular.get();
-
   //----------------------------------------------------------------------------
   LoginStoreBase({this.authController}) {
     focusLogin = FocusNode();
@@ -63,6 +63,25 @@ abstract class LoginStoreBase with Store {
       return false;
     }
     return true;
+  }
+
+  //----------------------------------------------------------------------------
+  Future<void> checkConnectivitySignUp({context}) async {
+    var connectivityResult = await authController!.checkConnectivity();
+    if (connectivityResult) {
+      Modular.to.pushReplacementNamed('/signup');
+    } else {
+      AwesomeDialogWidget(
+          context: context,
+          animType: AnimType.SCALE,
+          dialogType: DialogType.NO_HEADER,
+          title: 'Aviso',
+          text:
+              'É necessario estar conectado a internet para realizar o cadrastro.',
+          borderColor: Colors.yellow,
+          buttonColor: Colors.yellow.shade800,
+          btnOkOnPress: () {});
+    }
   }
 
   //----------------------------------------------------------------------------

@@ -10,4 +10,6 @@ abstract class IconConstant {
   static String get categoryCat => 'assets/icon/category/cat_svg.svg';
 
   static String get loadingSvg => 'assets/icon/load/icon_app_loading.svg';
+
+  static String get noConnectionSvg => 'assets/icon/load/no_connection.svg';
 }

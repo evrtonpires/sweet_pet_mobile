@@ -38,8 +38,9 @@ class AuthRepository implements IAuthRepository {
             context: context,
             animType: AnimType.SCALE,
             dialogType: DialogType.NO_HEADER,
-            text: e.response.data[0]['message'],
-            title: e.response.data[0]['title'],
+            text: e.response.data['messages'][0]['message'],
+            title: e.response.data['title'],
+            borderColor: Colors.red,
             buttonColor: Colors.red.shade800,
             btnOkOnPress: () {});
       });
@@ -59,8 +60,9 @@ class AuthRepository implements IAuthRepository {
             context: context,
             animType: AnimType.SCALE,
             dialogType: DialogType.NO_HEADER,
-            text: e.response.data[0]['message'],
-            title: e.response.data[0]['title'],
+            text: e.response.data['messages'][0]['message'],
+            title: e.response.data['title'],
+            borderColor: Colors.red,
             buttonColor: Colors.red.shade800,
             btnOkOnPress: () {});
       });

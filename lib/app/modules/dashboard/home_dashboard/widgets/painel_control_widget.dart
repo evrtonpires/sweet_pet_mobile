@@ -23,11 +23,10 @@ class PainelControlWidget extends StatelessWidget {
       child: Center(
         child: Text(
           'Painel de Controle Animal',
-          style: GoogleFonts.graduate(
-            color: Colors.white,
-            fontSize: getValueFont(context: context, valueMin: 14),
-          ),
-        ),
+          style: GoogleFonts.sriracha(
+              color: Colors.white,
+              fontSize: getValueFont(context: context, valueMin: 14),
+            )),
       ),
       height: MediaQuery.of(context).size.height * .06,
     );

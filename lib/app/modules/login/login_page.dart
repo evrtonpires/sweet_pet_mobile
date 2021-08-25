@@ -22,8 +22,6 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends ModularState<LoginPage, LoginStore>
     with SingleTickerProviderStateMixin {
-  var controllerStore = LoginStore();
-
   TextEditingController loginController = TextEditingController();
   TextEditingController senhaController = TextEditingController();
 
@@ -31,6 +29,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
   void initState() {
     SystemChrome.setEnabledSystemUIOverlays([]);
     super.initState();
+    widget.authController.checkConnectivityListen();
     widget.authController
         .getUserSharedPref(stringValue: 'userValue')
         .then((value) {
@@ -217,7 +216,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                               Center(
                                 child: InkWell(
                                   onTap: () {
-                                    Modular.to.pushReplacementNamed('/signup');
+                                    store.checkConnectivitySignUp(
+                                        context: context);
                                   },
                                   child: Text(
                                     FlutterI18n.translate(

@@ -10,7 +10,7 @@ class AppModule extends Module {
   @override
   final List<Bind> binds = [
     Bind<IAuthRepository>((i) => AuthRepository(i.get())),
-    Bind((i) => AuthController()),
+    Bind.singleton((i) => AuthController()),
     Bind((i) => Dio()),
     Bind((i) => AppDatabase()),
   ];

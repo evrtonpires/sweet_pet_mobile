@@ -10,6 +10,7 @@ void AwesomeDialogWidget({
   required String text,
   required String title,
   required Color buttonColor,
+  required Color borderColor,
   required Function() btnOkOnPress,
 }) {
   AwesomeDialog(
@@ -19,7 +20,7 @@ void AwesomeDialogWidget({
     title: title,
     btnOkColor: buttonColor,
     btnOkOnPress: btnOkOnPress,
-    borderSide: BorderSide(color: Colors.red, width: 1),
+    borderSide: BorderSide(color: borderColor, width: 1),
     body: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [

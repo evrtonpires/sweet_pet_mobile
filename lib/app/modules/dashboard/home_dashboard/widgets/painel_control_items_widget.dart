@@ -39,7 +39,7 @@ class PainelControlItemsWidget extends StatelessWidget {
               ),
               Text(
                 'Medicamentos',
-                style: GoogleFonts.graduate(color: Colors.black, fontSize: 12),
+                style: GoogleFonts.sriracha(color: Colors.black, fontSize: 12),
               ),
             ],
           ),

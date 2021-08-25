@@ -14,25 +14,22 @@ class LogoWidget extends StatelessWidget {
         textAlign: TextAlign.center,
         text: TextSpan(
             text: 'Evol',
-            style: GoogleFonts.pacifico(
+            style: GoogleFonts.sriracha(
                 color: Colors.black54,
                 fontSize: MediaQuery.of(context).size.height * .05),
             children: [
               TextSpan(
-                  text: '2',
-                  style: TextStyle(color: Color.fromRGBO(255, 255, 255, .7))),
-              TextSpan(text: 'SP', style: TextStyle(color: Colors.black54))
+                text: '2',
+                style: TextStyle(
+                  color: Color.fromRGBO(255, 255, 255, .7),
+                ),
+              ),
+              TextSpan(
+                text: 'SP',
+                style: TextStyle(color: Colors.black54),
+              )
             ]),
       ),
-//       RichText(
-//         textAlign: TextAlign.center,
-//         text: TextSpan(
-//             text: 'Pet',
-//             style: GoogleFonts.pacifico(
-// //                            color: Color(0xffe46b10),
-//                 color: Colors.black,
-//                 fontSize: MediaQuery.of(context).size.height * .04)),
-//       )
     ]);
   }
 }
