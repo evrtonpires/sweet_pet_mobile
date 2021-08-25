@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/models/user/user_model.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
 import 'package:sweet_pet_mobile/util/constants/Icons_constants.dart';
+import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
 
 class UserDialogCard extends StatelessWidget {
   const UserDialogCard({Key? key, required this.userModel}) : super(key: key);
@@ -22,10 +24,11 @@ class UserDialogCard extends StatelessWidget {
         child: Container(
           width: MediaQuery.of(context).size.width -
               MediaQuery.of(context).size.width * .15,
+          height: MediaQuery.of(context).size.height * .13,
           child: Padding(
             padding: EdgeInsets.all(MediaQuery.of(context).size.width * .02),
             child: Row(
-              mainAxisSize: MainAxisSize.min,
+              // mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -40,7 +43,38 @@ class UserDialogCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text('${userModel.name}'),
+                Padding(
+                  padding: EdgeInsets.only(left: 30),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        '${userModel.name}',
+                        style: GoogleFonts.sriracha(
+                          fontSize:
+                              getValueFont(context: context, valueMin: 18),
+                        ),
+                      ),
+                      Text(
+                        '${userModel.email}',
+                        style: GoogleFonts.sriracha(
+                          fontSize:
+                              getValueFont(context: context, valueMin: 18),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.settings,
+                      color: SweetPetColors.purpleLight,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
