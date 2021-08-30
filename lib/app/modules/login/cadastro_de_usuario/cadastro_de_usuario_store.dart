@@ -173,7 +173,7 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
   bool passwordValidate(BuildContext context, {bool requestFocus = false}) {
     messagePasswordError = null;
     RegExp regExp = RegExp(
-        "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@\$%^&*-]).{8,}\$");
+        "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@\$%^&*.%()/-]).{8,}\$");
 
     if (password == null || password!.isEmpty) {
       messagePasswordError = 'Campo obrigatório';
@@ -188,7 +188,7 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
       return true;
     } else {
       messagePasswordError =
-          'Utilize:\n* Minimo 8 caracteres.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais (Exemplo: !@#\$%&).';
+          'Utilize:\n* Minimo 8 caracteres.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais (Exemplo: #?!@\$%^&*.%()/- ).';
       if (requestFocus) {
         focusPassword.requestFocus();
       }
