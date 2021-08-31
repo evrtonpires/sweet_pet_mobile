@@ -11,10 +11,6 @@ class PainelControlWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            colors: SweetPetColors.linearGradient,
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(25),
           topRight: Radius.circular(25),
@@ -24,9 +20,10 @@ class PainelControlWidget extends StatelessWidget {
         child: Text(
           'Painel de Controle Animal',
           style: GoogleFonts.sriracha(
-              color: Colors.white,
-              fontSize: getValueFont(context: context, valueMin: 14),
-            )),
+            color: Colors.white,
+            fontSize: getValueFont(context: context, valueMin: 16),
+          ),
+        ),
       ),
       height: MediaQuery.of(context).size.height * .06,
     );

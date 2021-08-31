@@ -1,5 +1,5 @@
 abstract class IconConstant {
-  static String get iconDogPaw => 'assets/icon/icon_app.png';
+  static String get iconDogPaw => 'assets/icon/icon_app_splash.png';
 
   static String get icon => 'assets/icon/icon.png';
 

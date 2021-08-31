@@ -9,30 +9,33 @@ class PainelControlItemsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: SweetPetColors.purpleLight,
-          ),
-          borderRadius: BorderRadius.all(
-            Radius.circular(15),
-          ),
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: SweetPetColors.dark,
         ),
-        margin: EdgeInsets.all(10),
-        child: Card(
-          margin: EdgeInsets.all(0),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          elevation: 1,
+        borderRadius: BorderRadius.all(
+          Radius.circular(15),
+        ),
+      ),
+      margin: EdgeInsets.all(10),
+      child: Card(
+        margin: EdgeInsets.all(0),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        elevation: 1,
+        child: InkWell(
+          onTap: () {},
+          borderRadius: BorderRadius.circular(15),
+          highlightColor: SweetPetColors.light,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 child: SvgPicture.asset(
                   IconConstant.categoryDog,
-                  color: SweetPetColors.purple,
+                  color: SweetPetColors.dark,
                 ),
                 height: MediaQuery.of(context).size.height * .09,
                 width: MediaQuery.of(context).size.width * .3,
@@ -45,8 +48,6 @@ class PainelControlItemsWidget extends StatelessWidget {
           ),
         ),
       ),
-      borderRadius: BorderRadius.circular(15),
-      onTap: () {},
     );
   }
 }

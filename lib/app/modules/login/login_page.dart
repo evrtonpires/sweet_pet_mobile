@@ -152,7 +152,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                         FlutterI18n.translate(context,
                                             'telaLogin.esqueceuSuaSenha'),
                                         style: TextStyle(
-                                            color: SweetPetColors.purpleLight),
+                                            color: SweetPetColors.darkest),
                                       ),
                                     ),
                                   ),
@@ -223,7 +223,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     FlutterI18n.translate(
                                         context, 'telaLogin.cadastrar'),
                                     style: TextStyle(
-                                        color: SweetPetColors.purpleLight,
+                                        color: SweetPetColors.darkest,
                                         fontSize: getValueFont(
                                             context: context, valueMin: 16)),
                                   ),

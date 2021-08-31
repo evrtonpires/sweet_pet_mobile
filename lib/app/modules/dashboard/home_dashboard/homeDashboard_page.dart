@@ -73,33 +73,43 @@ class HomeDashboardPageState extends State<HomeDashboardPage> {
                         currentItem: store.currentTab,
                         count: 3,
                         unselectedColor: SweetPetColors.gray,
-                        selectedColor: SweetPetColors.purpleLight,
+                        selectedColor: SweetPetColors.light,
                         size: Size(8, 8),
                         unselectedSize: Size(4, 4),
                       ),
                     ],
                   ),
                 ),
-                PainelControlWidget(),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          colors: SweetPetColors.linearGradient,
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30),
+                      ),
+                      gradient:
+                          LinearGradient(colors: SweetPetColors.linearGradient),
                     ),
-                    child: GridView(
-                      scrollDirection: Axis.vertical,
-                      padding: EdgeInsets.symmetric(vertical: 4.0),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 8.0,
-                      ),
-                      children: List.generate(
-                        7,
-                        (index) => PainelControlItemsWidget(),
-                      ),
+                    child: Column(
+                      children: [
+                        PainelControlWidget(),
+                        Container(
+                          height: MediaQuery.of(context).size.height * .35,
+                          child: GridView(
+                            scrollDirection: Axis.vertical,
+                            padding: EdgeInsets.symmetric(vertical: 4.0),
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 3,
+                              mainAxisSpacing: 8.0,
+                            ),
+                            children: List.generate(
+                              7,
+                              (index) => PainelControlItemsWidget(),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

@@ -39,14 +39,14 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
   Widget get _iconPasswordHidden => Icon(
     Icons.remove_red_eye_outlined,
         semanticLabel: 'Exibir senha',
-        color: SweetPetColors.purple,
+        color: SweetPetColors.darkest,
       );
 
   Widget get _iconPasswordShowed =>
       Icon(
         Icons.remove_red_eye,
         semanticLabel: 'Esconder senha',
-        color: SweetPetColors.purpleLight,
+        color: SweetPetColors.darkest,
       );
 
   bool _isObscured = false;
@@ -73,16 +73,16 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(
-            color: SweetPetColors.purple,
+            color: SweetPetColors.darkest,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(
-            color: SweetPetColors.purple,
+            color: SweetPetColors.darkest,
           ),
         ),
-        labelStyle: TextStyle(color: SweetPetColors.purple),
+        labelStyle: TextStyle(color: SweetPetColors.darkest),
         suffixIcon: widget.isPassword ? _togglePasswordSuffix : null,
       );
 
@@ -91,13 +91,13 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
             const EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 0),
         alignLabelWithHint: true,
         labelText: widget.placeholder,
-        labelStyle: TextStyle(color: SweetPetColors.purple),
+        labelStyle: TextStyle(color: SweetPetColors.darkest),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: SweetPetColors.purple),
+          borderSide: BorderSide(color: SweetPetColors.darkest),
           borderRadius: BorderRadius.circular(10.0),
         ),
         border: OutlineInputBorder(
-          borderSide: BorderSide(color: SweetPetColors.purple),
+          borderSide: BorderSide(color: SweetPetColors.darkest),
           borderRadius: BorderRadius.circular(10.0),
         ),
         floatingLabelBehavior: widget.floatingLabelBehavior,
@@ -116,7 +116,7 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData(
-        primaryColor: SweetPetColors.purple,
+        primaryColor: SweetPetColors.darkest,
       ),
       child: TextFormField(
         focusNode: widget.focusNode,
@@ -127,7 +127,7 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
         enabled: widget.isEnable,
         decoration:
             widget.isError ? _errorInputDecoration : _defaultInputDecoration,
-        cursorColor: SweetPetColors.purple,
+        cursorColor: SweetPetColors.darkest,
         onChanged: widget.onChanged,
         onEditingComplete: widget.onEditingComplete,
         onFieldSubmitted: widget.onSubmitted,

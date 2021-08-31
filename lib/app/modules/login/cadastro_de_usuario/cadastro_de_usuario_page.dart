@@ -344,7 +344,7 @@ class CadastroDeUsuarioPageState
                                             MediaQuery.of(context).size.width /
                                                 1.2,
                                         decoration: BoxDecoration(
-                                          color: Color(0xFFF9B233),
+                                          color: SweetPetColors.medium,
                                           borderRadius: BorderRadius.all(
                                             Radius.circular(50),
                                           ),
@@ -352,8 +352,8 @@ class CadastroDeUsuarioPageState
                                         child: Center(
                                           child: Text(
                                             'Cadastrar'.toUpperCase(),
-                                            style: GoogleFonts.sriracha(
-                                              color: SweetPetColors.purple,
+                                            style: GoogleFonts.capriola(
+                                              color: Colors.white,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),

@@ -52,7 +52,7 @@ class DashboardPageState extends State<DashboardPage> {
           padding: EdgeInsets.only(left: 10),
           child: Container(
             decoration: BoxDecoration(
-              color: SweetPetColors.purple,
+              color: SweetPetColors.dark,
               shape: BoxShape.circle,
               image: DecorationImage(
                 fit: BoxFit.scaleDown,
@@ -76,7 +76,7 @@ class DashboardPageState extends State<DashboardPage> {
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 5),
-            color: SweetPetColors.purple,
+            color: SweetPetColors.darkest,
             onPressed: () {},
             icon: Icon(Icons.notifications_active_sharp),
           ),
@@ -107,8 +107,8 @@ class DashboardPageState extends State<DashboardPage> {
           return CustomNavigationBar(
               backgroundColor: Colors.white,
               currentIndex: store.currentTab,
-              selectedColor: SweetPetColors.purpleLight,
-              strokeColor: Colors.white,
+              selectedColor: SweetPetColors.medium,
+              strokeColor: SweetPetColors.medium,
               unSelectedColor: SweetPetColors.gray,
               iconSize: 30,
               items: [

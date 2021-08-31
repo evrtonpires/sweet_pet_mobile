@@ -69,9 +69,9 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/icon/icon.png"
-  adaptive_icon_background: "#474797"
-  adaptive_icon_foreground: "assets/icon/icon.png"
+  image_path: "assets/icon/icon_app.png"
+  adaptive_icon_background: "#003528"
+  adaptive_icon_foreground: "assets/icon/icon_app.png"
 #flutter pub run flutter_launcher_icons:main - comando para gerar icon
 #flutter pub pub run flutter_native_splash:create - comando para gerar splashArt
 #flutter pub run flutter_i18n validate - Este comando é usado para validar todos os arquivos de tradução dentro do projeto
@@ -79,7 +79,7 @@ flutter_icons:
 
 flutter_native_splash:
   image: assets/icon/splash_art/splash.png
-  color: "474797"
+  color: "003528"
 
 
 # For information on the generic Dart part of this file, see the

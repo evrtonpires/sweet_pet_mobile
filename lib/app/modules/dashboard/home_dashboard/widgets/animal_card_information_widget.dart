@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
 
+import 'animal_card_information_data_pet_widget.dart';
+import 'animal_card_information_image_pet_widget.dart';
+
 class AnimalCardInformationWidget extends StatelessWidget {
   const AnimalCardInformationWidget({Key? key}) : super(key: key);
 
@@ -14,13 +17,21 @@ class AnimalCardInformationWidget extends StatelessWidget {
         child: Container(
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
+            // gradient: LinearGradient(colors: SweetPetColors.linearGradient),
+            color: SweetPetColors.dark,
             border: Border.all(
-              color: SweetPetColors.purpleLight.withOpacity(.3),
+              color: SweetPetColors.darkest,
             ),
             borderRadius: BorderRadius.circular(15),
           ),
+          child: Row(
+            children: [
+              AnimalCardInformationImagePetWidget(),
+              AnimalCardInformationDataWidget(),
+            ],
+          ),
         ),
-        elevation: 1,
+        elevation: 3,
       ),
       borderRadius: BorderRadius.circular(15),
       onTap: () {},

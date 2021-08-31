@@ -12,18 +12,29 @@ class CategoryCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Container(
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: InkWell(
+        onTap: () {},
+        highlightColor: SweetPetColors.medium.withOpacity(.2),
         child: Column(
           children: [
             Card(
               elevation: 6.0,
-              color: SweetPetColors.purple,
+              color: SweetPetColors.medium,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: SizedBox(
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ),
+                    // gradient:
+                    //     LinearGradient(colors: SweetPetColors.linearGradient),
+                    color: SweetPetColors.dark),
                 width: MediaQuery.of(context).size.width * .4,
                 height: 80.0,
                 child: Center(
