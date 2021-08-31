@@ -66,12 +66,12 @@ dev_dependencies:
   build_runner: 2.0.4
 
 
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/icon/icon_app.png"
-  adaptive_icon_background: "#003528"
-  adaptive_icon_foreground: "assets/icon/icon_app.png"
+#flutter_icons:
+#  android: true
+#  ios: true
+#  image_path: "assets/icon/icon_app.png"
+#  adaptive_icon_background: "#003528"
+#  adaptive_icon_foreground: "assets/icon/icon_app.png"
 #flutter pub run flutter_launcher_icons:main - comando para gerar icon
 #flutter pub pub run flutter_native_splash:create - comando para gerar splashArt
 #flutter pub run flutter_i18n validate - Este comando é usado para validar todos os arquivos de tradução dentro do projeto
