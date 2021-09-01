@@ -27,7 +27,6 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
 
   @override
   void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([]);
     super.initState();
     widget.authController.checkConnectivityListen();
     widget.authController
