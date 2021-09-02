@@ -36,7 +36,7 @@ class UserDialogCard extends StatelessWidget {
                   width: 75,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: SweetPetColors.dark,
+                    color: SweetPetColors.primary800,
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(IconConstant.iconDogPaw),
@@ -71,7 +71,7 @@ class UserDialogCard extends StatelessWidget {
                     onPressed: () {},
                     icon: Icon(
                       Icons.settings,
-                      color: SweetPetColors.dark,
+                      color: SweetPetColors.primary800,
                     ),
                   ),
                 ),

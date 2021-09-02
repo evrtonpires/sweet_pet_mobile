@@ -70,8 +70,8 @@ class CadastroDeUsuarioPageState
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: SweetPetColors.linearGradient,
-                        begin: Alignment.bottomRight,
-                        end: Alignment.topLeft,
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
                       ),
                     ),
                     child: Stack(
@@ -102,7 +102,7 @@ class CadastroDeUsuarioPageState
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * .1,
+                              top: MediaQuery.of(context).size.height * .14,
                               left: MediaQuery.of(context).size.width * .05,
                               right: MediaQuery.of(context).size.width * .05),
                           child: Card(
@@ -298,6 +298,8 @@ class CadastroDeUsuarioPageState
                                                 Text('Usuário'),
                                                 Radio(
                                                   value: 1,
+                                                  activeColor:
+                                                      SweetPetColors.primary800,
                                                   groupValue:
                                                       store.intETypeUser,
                                                   onChanged: (v) {
@@ -312,6 +314,8 @@ class CadastroDeUsuarioPageState
                                                 Text('Veterinário'),
                                                 Radio(
                                                   value: 2,
+                                                  activeColor:
+                                                      SweetPetColors.primary800,
                                                   groupValue:
                                                       store.intETypeUser,
                                                   onChanged: (v) {
@@ -344,7 +348,7 @@ class CadastroDeUsuarioPageState
                                             MediaQuery.of(context).size.width /
                                                 1.2,
                                         decoration: BoxDecoration(
-                                          color: SweetPetColors.medium,
+                                          color: SweetPetColors.secundary400,
                                           borderRadius: BorderRadius.all(
                                             Radius.circular(50),
                                           ),

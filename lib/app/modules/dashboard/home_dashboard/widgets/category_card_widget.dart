@@ -18,12 +18,12 @@ class CategoryCardWidget extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {},
-        highlightColor: SweetPetColors.medium.withOpacity(.2),
+        highlightColor: SweetPetColors.primary500.withOpacity(.2),
         child: Column(
           children: [
             Card(
               elevation: 6.0,
-              color: SweetPetColors.medium,
+              color: SweetPetColors.primary500,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
@@ -34,7 +34,7 @@ class CategoryCardWidget extends StatelessWidget {
                     ),
                     // gradient:
                     //     LinearGradient(colors: SweetPetColors.linearGradient),
-                    color: SweetPetColors.dark),
+                    color: SweetPetColors.primary800),
                 width: MediaQuery.of(context).size.width * .4,
                 height: 80.0,
                 child: Center(

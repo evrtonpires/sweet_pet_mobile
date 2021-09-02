@@ -12,7 +12,7 @@ class PainelControlItemsWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
-          color: SweetPetColors.dark,
+          color: SweetPetColors.primary800,
         ),
         borderRadius: BorderRadius.all(
           Radius.circular(15),
@@ -28,14 +28,14 @@ class PainelControlItemsWidget extends StatelessWidget {
         child: InkWell(
           onTap: () {},
           borderRadius: BorderRadius.circular(15),
-          highlightColor: SweetPetColors.light,
+          highlightColor: SweetPetColors.primary100,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 child: SvgPicture.asset(
                   IconConstant.categoryDog,
-                  color: SweetPetColors.dark,
+                  color: SweetPetColors.primary800,
                 ),
                 height: MediaQuery.of(context).size.height * .09,
                 width: MediaQuery.of(context).size.width * .3,

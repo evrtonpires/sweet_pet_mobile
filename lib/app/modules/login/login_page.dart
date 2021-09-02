@@ -85,76 +85,106 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                       children: <Widget>[
                         Expanded(
                           child: Container(
-                            padding: EdgeInsets.only(
-                                left: MediaQuery.of(context).size.width * .1,
-                                right: MediaQuery.of(context).size.width * .1),
-                            child: Observer(
-                              builder: (_) {
-                                return TextFieldWithValidationWidget(
-                                  controller: loginController,
-                                  focusNode: store.focusLogin,
-                                  placeholder: FlutterI18n.translate(
-                                      context, 'telaLogin.usuario'),
-                                  onChanged: (newLogin) {
-                                    store.setLogin(newLogin);
-                                    store.loginValidate(context);
-                                  },
-                                  textInputAction: TextInputAction.next,
-                                  messageError: store.messageLoginError,
-                                  onValidator: () =>
-                                      store.loginValidate(context),
-                                  onEditingComplete: () =>
-                                      FocusScope.of(context)
-                                          .requestFocus(store.focusPassword),
-                                );
-                              },
-                            ),
-                          ),
+                              padding: EdgeInsets.only(
+                                  left: MediaQuery.of(context).size.width * .1,
+                                  right:
+                                      MediaQuery.of(context).size.width * .0),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Observer(
+                                      builder: (_) {
+                                        return TextFieldWithValidationWidget(
+                                          controller: loginController,
+                                          focusNode: store.focusLogin,
+                                          placeholder: FlutterI18n.translate(
+                                              context, 'telaLogin.usuario'),
+                                          onChanged: (newLogin) {
+                                            store.setLogin(newLogin);
+                                            store.loginValidate(context);
+                                          },
+                                          textInputAction: TextInputAction.next,
+                                          messageError: store.messageLoginError,
+                                          onValidator: () =>
+                                              store.loginValidate(context),
+                                          onEditingComplete: () =>
+                                              FocusScope.of(context)
+                                                  .requestFocus(
+                                                      store.focusPassword),
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                  IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(Icons.help),
+                                    iconSize: 20,
+                                    color: SweetPetColors.primary100,
+                                  ),
+                                ],
+                              )),
                         ),
                         Expanded(
                           child: Container(
                             padding: EdgeInsets.only(
                               left: MediaQuery.of(context).size.width * .1,
-                              right: MediaQuery.of(context).size.width * .1,
+                              right: MediaQuery.of(context).size.width * .0,
                             ),
-                            child: Column(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Observer(
-                                  builder: (_) {
-                                    return TextFieldWithValidationWidget(
-                                      controller: senhaController,
-                                      focusNode: store.focusPassword,
-                                      placeholder: FlutterI18n.translate(
-                                          context, 'telaLogin.senha'),
-                                      onChanged: (newPassword) {
-                                        store.setPassword(newPassword);
-                                        store.passwordValidate(context);
-                                      },
-                                      textInputAction: TextInputAction.done,
-                                      messageError: store.messagePasswordError,
-                                      onValidator: () =>
-                                          store.passwordValidate(context),
-                                      onEditingComplete: () =>
-                                          store.autenticate(context),
-                                      isPassword: true,
-                                    );
-                                  },
-                                ),
-                                Align(
-                                  alignment: Alignment.topRight,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 16,
-                                    ),
-                                    child: GestureDetector(
-                                      child: Text(
-                                        FlutterI18n.translate(context,
-                                            'telaLogin.esqueceuSuaSenha'),
-                                        style: TextStyle(
-                                            color: SweetPetColors.darkest),
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Observer(
+                                        builder: (_) {
+                                          return TextFieldWithValidationWidget(
+                                            controller: senhaController,
+                                            focusNode: store.focusPassword,
+                                            placeholder: FlutterI18n.translate(
+                                                context, 'telaLogin.senha'),
+                                            onChanged: (newPassword) {
+                                              store.setPassword(newPassword);
+                                              store.passwordValidate(context);
+                                            },
+                                            textInputAction:
+                                                TextInputAction.done,
+                                            messageError:
+                                                store.messagePasswordError,
+                                            onValidator: () =>
+                                                store.passwordValidate(context),
+                                            onEditingComplete: () =>
+                                                store.autenticate(context),
+                                            isPassword: true,
+                                          );
+                                        },
                                       ),
-                                    ),
+                                      Align(
+                                        alignment: Alignment.topRight,
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                            top: 16,
+                                          ),
+                                          child: GestureDetector(
+                                            child: Text(
+                                              FlutterI18n.translate(context,
+                                                  'telaLogin.esqueceuSuaSenha'),
+                                              style: TextStyle(
+                                                  color: SweetPetColors
+                                                      .primary800),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
+                                ),
+                                IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(Icons.help),
+                                  iconSize: 20,
+                                  color: SweetPetColors.primary100,
                                 ),
                               ],
                             ),
@@ -222,7 +252,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     FlutterI18n.translate(
                                         context, 'telaLogin.cadastrar'),
                                     style: TextStyle(
-                                        color: SweetPetColors.darkest,
+                                        color: SweetPetColors.primary800,
                                         fontSize: getValueFont(
                                             context: context, valueMin: 16)),
                                   ),

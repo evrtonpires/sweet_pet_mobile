@@ -34,7 +34,7 @@ class _LoadingPageWidgetState extends State<LoadingPageWidget> {
                           children: [
                             SvgPicture.asset(
                               IconConstant.categoryDog,
-                              color: SweetPetColors.darkest,
+                              color: SweetPetColors.secundary500,
                               width: 60.0,
                               height: 60.0,
                             ),
@@ -43,7 +43,7 @@ class _LoadingPageWidgetState extends State<LoadingPageWidget> {
                             ),
                             SvgPicture.asset(
                               IconConstant.categoryCat,
-                              color: SweetPetColors.darkest,
+                              color: SweetPetColors.secundary500,
                               width: 60.0,
                               height: 60.0,
                             )
