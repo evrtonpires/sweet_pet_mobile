@@ -79,7 +79,7 @@ dev_dependencies:
 
 flutter_native_splash:
   image: assets/icon/splash_art/splash.png
-  color: "003528"
+  color: "2F2B7F"
 
 
 # For information on the generic Dart part of this file, see the

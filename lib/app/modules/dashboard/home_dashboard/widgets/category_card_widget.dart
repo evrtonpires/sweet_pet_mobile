@@ -18,12 +18,12 @@ class CategoryCardWidget extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {},
-        highlightColor: SweetPetColors.primary500.withOpacity(.2),
+        highlightColor: SweetPetColors.primary800.withOpacity(.2),
         child: Column(
           children: [
             Card(
               elevation: 6.0,
-              color: SweetPetColors.primary500,
+              color: SweetPetColors.primary800,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
@@ -40,7 +40,7 @@ class CategoryCardWidget extends StatelessWidget {
                 child: Center(
                   child: SvgPicture.asset(
                     category.Icon,
-                    color: Colors.white,
+                    color: SweetPetColors.white,
                     width: 60.0,
                     height: 60.0,
                   ),

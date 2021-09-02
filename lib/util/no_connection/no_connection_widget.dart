@@ -32,7 +32,7 @@ class NoConnectionWidget extends StatelessWidget {
                 },
                 icon: Icon(
                   Icons.arrow_back_sharp,
-                  color: Colors.white,
+                  color: SweetPetColors.white,
                   size: 30,
                 ),
               ),
@@ -48,7 +48,7 @@ class NoConnectionWidget extends StatelessWidget {
               child: Text(
                 'Sem Conexão',
                 style: GoogleFonts.sriracha(
-                  color: Colors.white,
+                  color: SweetPetColors.white,
                   fontSize: getValueFont(context: context, valueMin: 14),
                 ),
               ),

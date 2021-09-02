@@ -46,7 +46,7 @@ class DashboardPageState extends State<DashboardPage> {
             ),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: SweetPetColors.white,
         elevation: 0,
         leading: Padding(
           padding: EdgeInsets.only(left: 10),
@@ -105,10 +105,10 @@ class DashboardPageState extends State<DashboardPage> {
       bottomNavigationBar: Observer(
         builder: (_) {
           return CustomNavigationBar(
-              backgroundColor: Colors.white,
+              backgroundColor: SweetPetColors.white,
               currentIndex: store.currentTab,
-              selectedColor: SweetPetColors.primary500,
-              strokeColor: SweetPetColors.primary500,
+              selectedColor: SweetPetColors.primary800,
+              strokeColor: SweetPetColors.primary800,
               unSelectedColor: SweetPetColors.gray,
               iconSize: 30,
               items: [

@@ -53,7 +53,8 @@ class _LoadingPageWidgetState extends State<LoadingPageWidget> {
                         Text(
                           'Entrando. Aguarde ...',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.white),
+                              fontWeight: FontWeight.bold,
+                              color: SweetPetColors.white),
                         )
                       ],
                     )

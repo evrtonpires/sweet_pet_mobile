@@ -26,7 +26,7 @@ class HomeDashboardPageState extends State<HomeDashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: SweetPetColors.white,
       body: Observer(
         builder: (_) {
           return Container(
@@ -73,7 +73,7 @@ class HomeDashboardPageState extends State<HomeDashboardPage> {
                         currentItem: store.currentTab,
                         count: 3,
                         unselectedColor: SweetPetColors.gray,
-                        selectedColor: SweetPetColors.primary100,
+                        selectedColor: SweetPetColors.primary800,
                         size: Size(8, 8),
                         unselectedSize: Size(4, 4),
                       ),
@@ -94,7 +94,7 @@ class HomeDashboardPageState extends State<HomeDashboardPage> {
                       children: [
                         PainelControlWidget(),
                         Container(
-                          height: MediaQuery.of(context).size.height * .34,
+                          height: MediaQuery.of(context).size.height * .30,
                           child: GridView(
                             scrollDirection: Axis.vertical,
                             padding: EdgeInsets.symmetric(vertical: 4.0),

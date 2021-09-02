@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sweet_pet_mobile/app/modules/dashboard/home_dashboard/widgets/text_data_information_style.dart';
+import 'package:sweet_pet_mobile/util/colors/colors.dart';
 import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
 
 class AnimalCardInformationDataWidget extends StatelessWidget {
@@ -27,7 +28,7 @@ class AnimalCardInformationDataWidget extends StatelessWidget {
                     context: context,
                     valueMin: 40,
                   ),
-                  color: Colors.white,
+                  color: SweetPetColors.white,
                 ),
               ),
             ),
@@ -36,14 +37,14 @@ class AnimalCardInformationDataWidget extends StatelessWidget {
               child: rowDataPetInformation(
                 iconOne: Icon(
                   Icons.style,
-                  color: Colors.white,
+                  color: SweetPetColors.white,
                 ),
                 textOne: TextDataInformation(
                   text: 'idade',
                 ),
                 iconTwo: Icon(
                   Icons.style,
-                  color: Colors.white,
+                  color: SweetPetColors.white,
                 ),
                 textTwo: TextDataInformation(
                   text: 'sexo',
@@ -55,14 +56,14 @@ class AnimalCardInformationDataWidget extends StatelessWidget {
               child: rowDataPetInformation(
                 iconOne: Icon(
                   Icons.style,
-                  color: Colors.white,
+                  color: SweetPetColors.white,
                 ),
                 textOne: TextDataInformation(
                   text: 'raca',
                 ),
                 iconTwo: Icon(
                   Icons.style,
-                  color: Colors.white,
+                  color: SweetPetColors.white,
                 ),
                 textTwo: TextDataInformation(
                   text: 'aniversario',
@@ -75,7 +76,7 @@ class AnimalCardInformationDataWidget extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.style,
-                    color: Colors.white,
+                    color: SweetPetColors.white,
                   ),
                   TextDataInformation(
                     text: 'peso',

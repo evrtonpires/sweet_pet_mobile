@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sweet_pet_mobile/util/colors/colors.dart';
 import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
 
 class TextDataInformation extends StatelessWidget {
@@ -15,7 +16,7 @@ class TextDataInformation extends StatelessWidget {
       text,
       style: style ??
           GoogleFonts.capriola(
-            color: Colors.white,
+            color: SweetPetColors.white,
             fontSize: getValueFont(context: context, valueMin: 16),
           ),
     );

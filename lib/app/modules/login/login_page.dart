@@ -50,7 +50,13 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
         Scaffold(
           body: Container(
             height: MediaQuery.of(context).size.height,
-            color: Colors.white,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: SweetPetColors.linearGradient,
+              ),
+            ),
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
@@ -120,7 +126,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     onPressed: () {},
                                     icon: Icon(Icons.help),
                                     iconSize: 20,
-                                    color: SweetPetColors.primary100,
+                                    color: SweetPetColors.yellow,
                                   ),
                                 ],
                               )),
@@ -171,8 +177,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                               FlutterI18n.translate(context,
                                                   'telaLogin.esqueceuSuaSenha'),
                                               style: TextStyle(
-                                                  color: SweetPetColors
-                                                      .primary800),
+                                                  color: SweetPetColors.yellow),
                                             ),
                                           ),
                                         ),
@@ -184,7 +189,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                   onPressed: () {},
                                   icon: Icon(Icons.help),
                                   iconSize: 20,
-                                  color: SweetPetColors.primary100,
+                                  color: SweetPetColors.yellow,
                                 ),
                               ],
                             ),
@@ -212,9 +217,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     width:
                                         MediaQuery.of(context).size.width / 1.2,
                                     decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        colors: SweetPetColors.linearGradient,
-                                      ),
+                                      color: SweetPetColors.yellow,
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(50),
                                       ),
@@ -225,7 +228,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                                 context, 'telaLogin.entrar')
                                             .toUpperCase(),
                                         style: TextStyle(
-                                            color: Colors.white,
+                                            color: SweetPetColors.white,
                                             fontWeight: FontWeight.bold),
                                       ),
                                     ),
@@ -252,7 +255,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     FlutterI18n.translate(
                                         context, 'telaLogin.cadastrar'),
                                     style: TextStyle(
-                                        color: SweetPetColors.primary800,
+                                        color: SweetPetColors.yellow,
                                         fontSize: getValueFont(
                                             context: context, valueMin: 16)),
                                   ),

@@ -28,7 +28,7 @@ class PainelControlItemsWidget extends StatelessWidget {
         child: InkWell(
           onTap: () {},
           borderRadius: BorderRadius.circular(15),
-          highlightColor: SweetPetColors.primary100,
+          highlightColor: SweetPetColors.primary800,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [

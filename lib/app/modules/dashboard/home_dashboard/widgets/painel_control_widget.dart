@@ -20,7 +20,7 @@ class PainelControlWidget extends StatelessWidget {
         child: Text(
           'Painel de Controle Animal',
           style: GoogleFonts.sriracha(
-            color: Colors.white,
+            color: SweetPetColors.white,
             fontSize: getValueFont(context: context, valueMin: 16),
           ),
         ),

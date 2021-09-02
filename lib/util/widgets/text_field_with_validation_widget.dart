@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sweet_pet_mobile/util/colors/colors.dart';
 import 'package:sweet_pet_mobile/util/widgets/base_text_field_widget.dart';
 
 class TextFieldWithValidationWidget extends StatelessWidget {
@@ -46,7 +47,7 @@ class TextFieldWithValidationWidget extends StatelessWidget {
         children: [
           Icon(
             Icons.error_outline,
-            color: Theme.of(context).errorColor,
+            color: SweetPetColors.white,
             size: 15,
           ),
           SizedBox(
@@ -57,7 +58,9 @@ class TextFieldWithValidationWidget extends StatelessWidget {
               messageError!,
               textAlign: TextAlign.left,
               softWrap: true,
-              style: TextStyle(color: Theme.of(context).errorColor),
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
           ),
         ],
