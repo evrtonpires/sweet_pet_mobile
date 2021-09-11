@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:speech_balloon/speech_balloon.dart';
 import 'package:sweet_pet_mobile/app/modules/login/login_store.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
@@ -10,6 +12,8 @@ import 'package:sweet_pet_mobile/util/constants/Icons_constants.dart';
 import 'package:sweet_pet_mobile/util/loading_page/loading_page_widget.dart';
 import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
 import 'package:sweet_pet_mobile/util/widgets/text_field_with_validation_widget.dart';
+
+import 'widgets/help_dialog.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({required this.authController});
@@ -51,11 +55,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
           body: Container(
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: SweetPetColors.linearGradient,
-              ),
+              color: SweetPetColors.white,
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -70,14 +70,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                       children: <Widget>[
                         Align(
                           alignment: Alignment.center,
-                          child: Container(
-                            height: MediaQuery.of(context).size.height * .2,
-                            width: MediaQuery.of(context).size.width * .5,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(IconConstant.iconLogo),
-                              ),
-                            ),
+                          child: SvgPicture.asset(
+                            IconConstant.iconLogoSvg,
+                            height: MediaQuery.of(context).size.height * .14,
                           ),
                         ),
                       ],
@@ -123,10 +118,23 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     ),
                                   ),
                                   IconButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return HelpDialog(
+                                              text: 'Email ou CPF',
+                                              y: -.55,
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  .1,
+                                            );
+                                          });
+                                    },
                                     icon: Icon(Icons.help),
                                     iconSize: 20,
-                                    color: SweetPetColors.yellow,
+                                    color: SweetPetColors.orangeLight,
                                   ),
                                 ],
                               )),
@@ -177,7 +185,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                               FlutterI18n.translate(context,
                                                   'telaLogin.esqueceuSuaSenha'),
                                               style: TextStyle(
-                                                  color: SweetPetColors.yellow),
+                                                color:
+                                                    SweetPetColors.primary800,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -186,10 +196,24 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return HelpDialog(
+                                            text:
+                                                '* Minimo 8 caracteres.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais: #?!@\$%^&*.%()/-',
+                                            y: -.25,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                .13,
+                                          );
+                                        });
+                                  },
                                   icon: Icon(Icons.help),
                                   iconSize: 20,
-                                  color: SweetPetColors.yellow,
+                                  color: SweetPetColors.orangeLight,
                                 ),
                               ],
                             ),
@@ -217,7 +241,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     width:
                                         MediaQuery.of(context).size.width / 1.2,
                                     decoration: BoxDecoration(
-                                      color: SweetPetColors.yellow,
+                                      gradient: LinearGradient(
+                                          colors: SweetPetColors
+                                              .linearGradientButton),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(50),
                                       ),
@@ -255,7 +281,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                     FlutterI18n.translate(
                                         context, 'telaLogin.cadastrar'),
                                     style: TextStyle(
-                                        color: SweetPetColors.yellow,
+                                        color: SweetPetColors.primary800,
                                         fontSize: getValueFont(
                                             context: context, valueMin: 16)),
                                   ),

@@ -70,9 +70,17 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
           borderRadius: BorderRadius.circular(10.0),
           borderSide: BorderSide(
             color: Theme.of(context).errorColor,
+            width: .5,
           ),
         ),
-        labelStyle: TextStyle(color: SweetPetColors.primary800),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.0),
+          borderSide: BorderSide(
+            color: Theme.of(context).errorColor,
+            width: .5,
+          ),
+        ),
+        labelStyle: TextStyle(color: Theme.of(context).errorColor),
         suffixIcon: widget.isPassword ? _togglePasswordSuffix : null,
       );
 
@@ -82,18 +90,29 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
         alignLabelWithHint: true,
         hintStyle: TextStyle(color: SweetPetColors.primary800),
         labelText: widget.placeholder,
-        labelStyle: TextStyle(color: SweetPetColors.primary800, height: 2),
+        labelStyle: TextStyle(color: SweetPetColors.primary800),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: SweetPetColors.primary800),
+          borderSide: BorderSide(
+            color: SweetPetColors.primary800,
+            width: .5,
+          ),
           borderRadius: BorderRadius.circular(10.0),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: SweetPetColors.primary800),
+          borderSide: BorderSide(
+            color: SweetPetColors.primary800,
+            width: .5,
+          ),
           borderRadius: BorderRadius.circular(10.0),
         ),
         border: OutlineInputBorder(
-          borderSide: BorderSide(color: SweetPetColors.primary800),
-          borderRadius: BorderRadius.circular(10.0),
+          borderSide: BorderSide(
+            color: SweetPetColors.primary800,
+            width: .5,
+          ),
+          borderRadius: BorderRadius.circular(
+            10.0,
+          ),
         ),
         floatingLabelBehavior: widget.floatingLabelBehavior,
         suffixIcon: widget.isPassword ? _togglePasswordSuffix : null,
@@ -111,7 +130,7 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData(
-        primaryColor: SweetPetColors.white,
+        primaryColor: SweetPetColors.LARANJASGS,
       ),
       child: Container(
         decoration: BoxDecoration(

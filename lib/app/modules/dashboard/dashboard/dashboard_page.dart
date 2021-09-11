@@ -1,15 +1,14 @@
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:sweet_pet_mobile/app/modules/dashboard/dashboard/dashboard_store.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:sweet_pet_mobile/app/modules/dashboard/dashboard/widgets/user_dialog_card_widget.dart';
-import 'package:sweet_pet_mobile/app/modules/dashboard/home_dashboard/homeDashboard_page.dart';
+import 'package:sweet_pet_mobile/app/modules/home/home_page.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
-import 'package:sweet_pet_mobile/util/constants/Icons_constants.dart';
 import 'package:sweet_pet_mobile/util/constants/style.dart';
-import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
+
+import 'dashboard_store.dart';
 
 class DashboardPage extends StatefulWidget {
   DashboardPage({Key? key, required this.authController}) : super(key: key);
@@ -28,55 +27,24 @@ class DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Container(
-          width: MediaQuery.of(context).size.width,
-          child: RichText(
-            textAlign: TextAlign.left,
-            overflow: TextOverflow.ellipsis,
-            text: TextSpan(
-              style: TextStyle(
-                fontSize: getValueFont(context: context, valueMin: 12),
-              ),
-              children: [
-                TextSpan(
-                  text: 'Olá, ${widget.authController.userModel!.name}',
-                  style: styleFontIconBottomNavigation,
-                ),
-              ],
-            ),
-          ),
+        centerTitle: true,
+        title: Text(
+          '${widget.authController.userModel!.name}',
+          style: GoogleFonts.sriracha(color: SweetPetColors.PRETOSGS),
         ),
         backgroundColor: SweetPetColors.white,
         elevation: 0,
-        leading: Padding(
-          padding: EdgeInsets.only(left: 10),
-          child: Container(
-            decoration: BoxDecoration(
-              color: SweetPetColors.primary800,
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                fit: BoxFit.scaleDown,
-                image: AssetImage(IconConstant.iconDogPaw),
-              ),
-            ),
-            child: InkWell(
-              borderRadius: BorderRadius.all(Radius.circular(50)),
-              onTap: () {
-                showDialog(
-                    context: context,
-                    builder: (_) {
-                      return UserDialogCard(
-                        userModel: widget.authController.userModel!,
-                      );
-                    });
-              },
-            ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.menu,
+            color: SweetPetColors.PRETOSGS,
           ),
         ),
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 5),
-            color: SweetPetColors.primary800,
+            color: SweetPetColors.PRETOSGS,
             onPressed: () {},
             icon: Icon(Icons.notifications_active_sharp),
           ),
@@ -89,7 +57,7 @@ class DashboardPageState extends State<DashboardPage> {
           store.setCurrentTab(id);
         },
         children: [
-          HomeDashboardPage(),
+          HomePage(),
           Container(
             child: Center(
               child: Text('Page 2'),
@@ -105,11 +73,11 @@ class DashboardPageState extends State<DashboardPage> {
       bottomNavigationBar: Observer(
         builder: (_) {
           return CustomNavigationBar(
-              backgroundColor: SweetPetColors.white,
+              backgroundColor: SweetPetColors.PRETOSGS,
               currentIndex: store.currentTab,
-              selectedColor: SweetPetColors.primary800,
-              strokeColor: SweetPetColors.primary800,
-              unSelectedColor: SweetPetColors.gray,
+              selectedColor: SweetPetColors.orange800,
+              strokeColor: SweetPetColors.orange800,
+              unSelectedColor: SweetPetColors.grey400,
               iconSize: 30,
               items: [
                 CustomNavigationBarItem(

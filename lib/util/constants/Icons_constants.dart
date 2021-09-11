@@ -5,11 +5,44 @@ abstract class IconConstant {
 
   static String get iconLogo => 'assets/icon/login/logo.png';
 
+  static String get iconLogoSvg => 'assets/icon/login/logo.svg';
+
+  static String get iconLogoTextSvg => 'assets/icon/login/sweetpetlogo.svg';
+
+  static String get iconBalaoDialogo => 'assets/icon/login/balao_dialogo.svg';
+
+  //----------------------------------------------------------------------------
+
   static String get categoryDog => 'assets/icon/category/dog_svg.svg';
 
   static String get categoryCat => 'assets/icon/category/cat_svg.svg';
 
+  static String get alimentacao => 'assets/icon/category/alimentacao.png';
+
+  static String get alimentacao2 => 'assets/icon/category/alimentacao2.png';
+
+  static String get banhoETosa => 'assets/icon/category/banhoetosa.png';
+
+  static String get home => 'assets/icon/category/home.png';
+
+  static String get passeio => 'assets/icon/category/home.png';
+
+  static String get vacina => 'assets/icon/category/vacina.png';
+
+  static String get veterinario => 'assets/icon/category/veterinario.png';
+
+  static String get veterinario2 => 'assets/icon/category/veterinario2.png';
+
+  static String get dogAndCat => 'assets/icon/category/dogandcat.png';
+
+  static String get medicamento => 'assets/icon/category/medicamento.png';
+
+  static String get lembrete => 'assets/icon/category/lembrete.png';
+
+  //----------------------------------------------------------------------------
+
   static String get loadingSvg => 'assets/icon/load/icon_app_loading.svg';
 
   static String get noConnectionSvg => 'assets/icon/load/no_connection.svg';
+//----------------------------------------------------------------------------
 }

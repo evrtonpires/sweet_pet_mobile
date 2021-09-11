@@ -59,7 +59,7 @@ class TextFieldWithValidationWidget extends StatelessWidget {
               textAlign: TextAlign.left,
               softWrap: true,
               style: TextStyle(
-                color: Colors.white,
+                color: Theme.of(context).errorColor,
               ),
             ),
           ),

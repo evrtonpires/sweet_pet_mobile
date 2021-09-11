@@ -1,15 +1,17 @@
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sweet_pet_mobile/app/modules/login/cadastro_de_usuario/cadastro_de_usuario_store.dart';
 import 'package:flutter/material.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
+import 'package:sweet_pet_mobile/util/constants/Icons_constants.dart';
 import 'package:sweet_pet_mobile/util/loading_page/loading_page_widget.dart';
 import 'package:sweet_pet_mobile/util/no_connection/no_connection_widget.dart';
 import 'package:sweet_pet_mobile/util/widgets/size_font.dart';
 import 'package:sweet_pet_mobile/util/widgets/text_field_with_validation_widget.dart';
 
+import 'cadastro_de_usuario_store.dart';
 import 'widgets/padding_with_observer_widget.dart';
 
 class CadastroDeUsuarioPage extends StatefulWidget {
@@ -67,13 +69,7 @@ class CadastroDeUsuarioPageState
                   body: Container(
                     height: MediaQuery.of(context).size.height,
                     width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: SweetPetColors.linearGradient,
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                    ),
+                    color: SweetPetColors.white,
                     child: Stack(
                       children: [
                         Align(
@@ -84,7 +80,7 @@ class CadastroDeUsuarioPageState
                             },
                             icon: Icon(
                               Icons.arrow_back_sharp,
-                              color: SweetPetColors.white,
+                              color: SweetPetColors.primary800,
                               size: 30,
                             ),
                           ),
@@ -94,7 +90,7 @@ class CadastroDeUsuarioPageState
                           child: Text(
                             'Cadastro',
                             style: GoogleFonts.sriracha(
-                              color: SweetPetColors.white,
+                              color: SweetPetColors.primary800,
                               fontSize:
                                   getValueFont(context: context, valueMin: 24),
                             ),
@@ -283,15 +279,18 @@ class CadastroDeUsuarioPageState
                                               Text(
                                                 'Usuário',
                                                 style: TextStyle(
-                                                    color:
-                                                        SweetPetColors.white),
+                                                    color: SweetPetColors
+                                                        .primary800),
                                               ),
                                               Radio(
                                                 value: 1,
-                                                fillColor: MaterialStateProperty
-                                                    .all(store.intETypeUser == 1
-                                                        ? SweetPetColors.yellow
-                                                        : SweetPetColors.white),
+                                                fillColor:
+                                                    MaterialStateProperty.all(
+                                                        store.intETypeUser == 1
+                                                            ? SweetPetColors
+                                                                .yellow
+                                                            : SweetPetColors
+                                                                .grey500),
                                                 groupValue: store.intETypeUser,
                                                 onChanged: (v) {
                                                   store.setUserOrCRMV(v as int);
@@ -304,15 +303,18 @@ class CadastroDeUsuarioPageState
                                               Text(
                                                 'Veterinário',
                                                 style: TextStyle(
-                                                    color:
-                                                        SweetPetColors.white),
+                                                    color: SweetPetColors
+                                                        .primary800),
                                               ),
                                               Radio(
                                                 value: 2,
-                                                fillColor: MaterialStateProperty
-                                                    .all(store.intETypeUser == 2
-                                                        ? SweetPetColors.yellow
-                                                        : SweetPetColors.white),
+                                                fillColor:
+                                                    MaterialStateProperty.all(
+                                                        store.intETypeUser == 2
+                                                            ? SweetPetColors
+                                                                .yellow
+                                                            : SweetPetColors
+                                                                .grey500),
                                                 groupValue: store.intETypeUser,
                                                 onChanged: (v) {
                                                   store.setUserOrCRMV(v as int);
@@ -340,7 +342,9 @@ class CadastroDeUsuarioPageState
                                       width: MediaQuery.of(context).size.width /
                                           1.2,
                                       decoration: BoxDecoration(
-                                        color: SweetPetColors.yellow,
+                                        gradient: LinearGradient(
+                                            colors: SweetPetColors
+                                                .linearGradientButton),
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(50),
                                         ),
@@ -357,6 +361,18 @@ class CadastroDeUsuarioPageState
                                     ),
                                   ),
                                 ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    bottom:
+                                        MediaQuery.of(context).size.height * .1,
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: SvgPicture.asset(
+                                      IconConstant.iconLogoTextSvg,
+                                    ),
+                                  ),
+                                )
                               ],
                             ),
                           ),
