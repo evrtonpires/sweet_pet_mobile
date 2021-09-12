@@ -1,15 +1,18 @@
 import 'dart:convert';
 
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:sembast/sembast.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/models/user/user_model.dart';
 
 import '../sambest.dart';
 
 class UserSembast {
-  static const String folderNameLogin = "Users";
+  static const String folderNameLogin = "User";
   final _nameFolder = stringMapStoreFactory.store(folderNameLogin);
 
-  Future<Database> get _db async => await AppDatabase.instance.database;
+  AppDatabase _appDatabase = Modular.get();
+
+  Future<Database> get _db async => await _appDatabase.database;
 
   Future insert(UserModel user) async {
     Database db = await _db;

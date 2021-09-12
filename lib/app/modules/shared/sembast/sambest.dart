@@ -4,11 +4,16 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 import 'package:sembast/sembast.dart';
 import 'package:sembast/sembast_io.dart';
+import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 
 class AppDatabase {
-  static final AppDatabase _singleton = AppDatabase();
+  // static final AppDatabase _singleton = AppDatabase();
+  //
+  // static AppDatabase get instance => _singleton;
 
-  static AppDatabase get instance => _singleton;
+  final AuthController authController;
+
+  AppDatabase({required this.authController});
 
   Future<Database> get database async {
     return _openDatabase();
@@ -19,8 +24,8 @@ class AppDatabase {
 
     // Obtenha um diretório específico da plataforma onde os dados persistentes do aplicativo podem ser armazenados
     final appDocumentDir = await getApplicationDocumentsDirectory();
-    final Directory _appDocDirFolder =
-        Directory('${appDocumentDir.path}/SweetPet/1/Data/');
+    final Directory _appDocDirFolder = Directory(
+        '${appDocumentDir.path}/SweetPet/${authController.userModel!.email}/Data/');
 
     if (await _appDocDirFolder.exists()) {
       // Caminho com o formato: /platform-specific-directory/demo.db
