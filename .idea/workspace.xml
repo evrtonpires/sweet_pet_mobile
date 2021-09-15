@@ -35,10 +35,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b748d0-d0cb-410a-848d-e65c6dccff74" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet_pet_mobile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet_pet_mobile.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/recovery_password/recovery_password_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/recovery_password/recovery_password_store.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +84,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/icon/category" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -87,9 +93,11 @@
       <recent name="C:\Users\prisc\AndroidStudioProjects\sweet_pet_mobile\lib\util\theme" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\prisc\AndroidStudioProjects\sweet_pet_mobile\lib\util\widgets" />
-      <recent name="C:\Users\prisc\AndroidStudioProjects\sweet_pet_mobile\lib\app\modules\login\util" />
-      <recent name="C:\Users\prisc\AndroidStudioProjects\sweet_pet_mobile\lib\util" />
+      <recent name="$PROJECT_DIR$/assets/icon/category" />
+      <recent name="$PROJECT_DIR$/assets/icon/login" />
+      <recent name="$PROJECT_DIR$/ios/Runner/Assets.xcassets" />
+      <recent name="$PROJECT_DIR$/android/app/src/main/res" />
+      <recent name="$PROJECT_DIR$/android/app/src/main" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -153,7 +161,133 @@
       <option name="project" value="LOCAL" />
       <updated>1629603646961</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix(dev_juan): alteracao da splash art">
+      <created>1629671161318</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629671161319</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feature(dev_juan): adicionando tratamento de erro no login">
+      <created>1629673462805</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629673462805</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feature(dev_juan): adicionando bloqueio de rotacao de tela">
+      <created>1629674968703</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1629674968703</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feature(dev_juan): adicionando translated">
+      <created>1629677172600</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629677172600</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feature(dev_juan): adicionando validacao de email e senha no cadastro de usuario">
+      <created>1629693655026</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1629693655027</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix(dex_juan): valor crmv null ajustado">
+      <created>1629734703341</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1629734703341</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feature(dev_juan): adicionando bloqueio ao metodo de cadastro">
+      <created>1629850089113</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1629850089115</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feature(dev_juan): finalizado card de usuario">
+      <created>1629852475817</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1629852475820</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chore(dev_juan): adicionando novos caracteres especiais ao password">
+      <created>1630356621106</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1630356621106</updated>
+    </task>
+    <task id="LOCAL-00017" summary="chore(dev_juan): mudando cor de tema e criando card do pet">
+      <created>1630370759650</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1630370759651</updated>
+    </task>
+    <task id="LOCAL-00018" summary="chore(dev_juan): alterando icone android e ios">
+      <created>1630423029621</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1630423029621</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix(dev_juan): remocao do SystemChrome.setEnabledSystemUIOverlays([]);">
+      <created>1630519328711</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1630519328712</updated>
+    </task>
+    <task id="LOCAL-00020" summary="mudanca de cor">
+      <created>1630544019154</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1630544019155</updated>
+    </task>
+    <task id="LOCAL-00021" summary="mudanca de tema">
+      <created>1630608939857</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1630608939857</updated>
+    </task>
+    <task id="LOCAL-00022" summary="mudanca de tema e adicao do botao help">
+      <created>1631391171005</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1631391171005</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feature(dev_juan): banco de dados individual para cada usuario">
+      <created>1631405290521</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1631405290521</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix(dev_juan): removendo pasta duplicada">
+      <created>1631405702891</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1631405702891</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feature(dev_juan): inclusao do modulo de recuperar senha">
+      <created>1631665241162</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1631665241163</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,95 +322,122 @@
     <MESSAGE value="Ajuste na Arquitetura do Projeto" />
     <MESSAGE value="feature(dev_juan): correcao e ajustes de problemas na branch dev_everton" />
     <MESSAGE value="feature(dev_juan): correcao e ajustes de problemas na branch dev_everton 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature(dev_juan): correcao e ajustes de problemas na branch dev_everton 2" />
+    <MESSAGE value="fix(dev_juan): alteracao da splash art" />
+    <MESSAGE value="feature(dev_juan): adicionando tratamento de erro no login" />
+    <MESSAGE value="feature(dev_juan): adicionando bloqueio de rotacao de tela" />
+    <MESSAGE value="feature(dev_juan): adicionando translated" />
+    <MESSAGE value="feature(dev_juan): adicionando validacao de email e senha no cadastro de usuario" />
+    <MESSAGE value="fix(dex_juan): valor crmv null ajustado" />
+    <MESSAGE value="feature(dev_juan): adicionando bloqueio ao metodo de cadastro" />
+    <MESSAGE value="feature(dev_juan): finalizado card de usuario" />
+    <MESSAGE value="chore(dev_juan): adicionando novos caracteres especiais ao password" />
+    <MESSAGE value="chore(dev_juan): mudando cor de tema e criando card do pet" />
+    <MESSAGE value="chore(dev_juan): alterando icone android e ios" />
+    <MESSAGE value="fix(dev_juan): remocao do SystemChrome.setEnabledSystemUIOverlays([]);" />
+    <MESSAGE value="mudanca de cor" />
+    <MESSAGE value="mudanca de tema" />
+    <MESSAGE value="mudanca de tema e adicao do botao help" />
+    <MESSAGE value="feature(dev_juan): banco de dados individual para cada usuario" />
+    <MESSAGE value="fix(dev_juan): removendo pasta duplicada" />
+    <MESSAGE value="feature(dev_juan): inclusao do modulo de recuperar senha" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(dev_juan): inclusao do modulo de recuperar senha" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="667" y="282" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1622589060732">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="667" y="282" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.834@0.0.1536.834" timestamp="1622589060732" />
     <state x="2560" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1624716206475">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2560" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1624716206475" />
-    <state x="439" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622591719525">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="439" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1622591719525" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625255795143">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625255795143" />
-    <state x="319" y="13" key="CommitChangelistDialog2" timestamp="1622591842679">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="319" y="13" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1622591842678" />
-    <state width="499" height="466" key="DebuggerActiveHint" timestamp="1629599681561">
+    <state x="412" y="385" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1631381344895">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="499" height="466" key="DebuggerActiveHint/0.25.1440.875@0.25.1440.875" timestamp="1629599681561" />
+    <state x="412" y="385" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.25.1440.875@0.25.1440.875" timestamp="1631381344895" />
+    <state x="468" y="197" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631664993947">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625255795143" />
+    <state x="468" y="197" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875@0.25.1440.875" timestamp="1631664993947" />
+    <state width="626" height="466" key="DebuggerActiveHint" timestamp="1631663702134">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="626" height="466" key="DebuggerActiveHint/0.25.1440.875@0.25.1440.875" timestamp="1631663702134" />
     <state x="592" y="222" key="FileChooserDialogImpl" timestamp="1625258521136">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="592" y="222" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625258521136" />
     <state x="2660" y="280" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625249594121" />
-    <state width="1398" height="264" key="GridCell.Tab.0.bottom" timestamp="1629605054253">
+    <state width="1398" height="250" key="GridCell.Tab.0.bottom" timestamp="1631665747085">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1491" height="219" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625254398969" />
     <state width="1877" height="331" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625268765572" />
-    <state width="1398" height="264" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1629605054253" />
-    <state width="1398" height="264" key="GridCell.Tab.0.center" timestamp="1629605054253">
+    <state width="1398" height="250" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1631665747085" />
+    <state width="1398" height="250" key="GridCell.Tab.0.center" timestamp="1631665747084">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1491" height="219" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625254398967" />
     <state width="1877" height="331" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625268765557" />
-    <state width="1398" height="264" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1629605054253" />
-    <state width="1398" height="264" key="GridCell.Tab.0.left" timestamp="1629605054253">
+    <state width="1398" height="250" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1631665747084" />
+    <state width="1398" height="250" key="GridCell.Tab.0.left" timestamp="1631665747083">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1491" height="219" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625254398967" />
     <state width="1877" height="331" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625268765557" />
-    <state width="1398" height="264" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1629605054253" />
-    <state width="1398" height="264" key="GridCell.Tab.0.right" timestamp="1629605054253">
+    <state width="1398" height="250" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1631665747083" />
+    <state width="1398" height="250" key="GridCell.Tab.0.right" timestamp="1631665747084">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1491" height="219" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1625254398967" />
     <state width="1877" height="331" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625268765557" />
-    <state width="1398" height="264" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1629605054253" />
-    <state x="393" y="67" key="SettingsEditor" timestamp="1622590422123">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="393" y="67" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1622590422123" />
-    <state x="338" y="171" key="Vcs.Push.Dialog.v2" timestamp="1629603648590">
+    <state width="1398" height="250" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1631665747084" />
+    <state x="338" y="171" key="Vcs.Push.Dialog.v2" timestamp="1631665244704">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="361" y="139" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1622591847643" />
-    <state x="338" y="171" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1629603648590" />
+    <state x="338" y="171" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1631665244704" />
     <state x="2501" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1625245447765">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2501" y="303" key="com.intellij.ide.util.TipDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1625245447765" />
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1622583293362" />
-    <state x="399" y="114" width="738" height="606" key="find.popup" timestamp="1622583299398">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="374" y="145" width="801" height="636" key="find.popup" timestamp="1631663389848">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="399" y="114" width="738" height="606" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1622583299398" />
-    <state x="472" y="209" key="git4idea.merge.GitPullDialog" timestamp="1622584294309">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="374" y="145" width="801" height="636" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1631663389848" />
+    <state x="373" y="210" key="run.anything.popup" timestamp="1629680080020">
+      <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="472" y="209" key="git4idea.merge.GitPullDialog/0.0.1536.834@0.0.1536.834" timestamp="1622584294309" />
+    <state x="373" y="210" key="run.anything.popup/0.25.1440.875@0.25.1440.875" timestamp="1629680080020" />
+    <state x="585" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1631585033717">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="585" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1631585033717" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
           <url>file://$PROJECT_DIR$/lib/app/modules/shared/auth/auth_repositories/auth_repository.dart</url>
-          <line>47</line>
-          <option name="timeStamp" value="3" />
+          <line>98</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/app/modules/shared/auth/auth_controller.dart</url>
+          <line>43</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/app/modules/shared/auth/auth_controller.dart</url>
+          <line>264</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint suspend="THREAD" type="dart-exception" />
+      </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="FlutterRunConfigurationType">
+        <watch expression="encrypter.encrypt(senha, iv: iv)" language="Dart" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

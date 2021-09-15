@@ -1,9 +1,6 @@
-import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
-import 'package:sweet_pet_mobile/util/alert_awesome/alert_awesome_widget.dart';
 
 part 'recovery_password_store.g.dart';
 
