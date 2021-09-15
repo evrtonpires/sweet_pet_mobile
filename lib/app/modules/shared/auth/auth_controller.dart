@@ -54,12 +54,13 @@ abstract class _AuthController with Store {
       UserSembast userSembast = UserSembast();
 
       if (connectivityResult) {
+        password = encrypt(password);
         userModel = await _authRepository.getLogin(
-            user: user, password: encrypt(password), context: context);
+            user: user, password: password, context: context);
         if (userModel != null) {
           UserModel? uModel = await userSembast.get(userModel!);
           if (uModel == null) {
-            userModel!.password = encrypt(password);
+            userModel!.password = password;
             await userSembast.insert(userModel!);
           }
           saveUserSharedPrefs(stringValue: 'userValue', data: user);
@@ -75,7 +76,7 @@ abstract class _AuthController with Store {
           bool autenticado = false;
           for (UserModel umodel in listUserModel) {
             if (umodel.email.toLowerCase() == user.toLowerCase() &&
-                umodel.password == encrypt(password)) {
+                umodel.password == password) {
               userModel = umodel;
               autenticado = true;
             }
@@ -164,19 +165,8 @@ abstract class _AuthController with Store {
             email: email, context: context);
         if (validate) {
           return true;
-        } else {
-          AwesomeDialogWidget(
-              context: context,
-              animType: AnimType.SCALE,
-              dialogType: DialogType.NO_HEADER,
-              title: 'Erro ao obter acesso',
-              text:
-                  'Os dados de acesso para o login off-line podem estar incorretos.\nVerifique os dados e tente novamente!\n\nCaso seja seu primeiro acesso neste dispositivo, ative sua conexão a internet para realizar o primeiro login.',
-              borderColor: Colors.red,
-              buttonColor: Colors.red.shade800,
-              btnOkOnPress: () {});
-          return false;
         }
+        return false;
       }
     } catch (e) {
       print(e);
@@ -267,12 +257,11 @@ abstract class _AuthController with Store {
   }
 
   //----------------------------------------------------------------------------
-  String decrypt(senha) {
+  String decrypt(senhaEncrypted) {
     final key = Encrypt.Key.fromUtf8(keySTR);
     final iv = Encrypt.IV.fromUtf8(ivSTR);
     final encrypter = Encrypter(AES(key, mode: AESMode.cbc, padding: 'PKCS7'));
-    final senhaEncrypted = encrypter.encrypt(senha, iv: iv);
-    final decrypted = encrypter.decrypt(senhaEncrypted, iv: iv);
+    final decrypted = encrypter.decrypt64(senhaEncrypted, iv: iv);
     return decrypted;
   }
 
