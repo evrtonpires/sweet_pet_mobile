@@ -66,10 +66,15 @@ abstract class LoginStoreBase with Store {
   }
 
   //----------------------------------------------------------------------------
-  Future<void> checkConnectivitySignUp({context}) async {
+  Future<void> checkConnectivityPushReplacementNamed(
+      {context, required String rout, bool isReplacement = true}) async {
     var connectivityResult = await authController!.checkConnectivity();
     if (connectivityResult) {
-      Modular.to.pushReplacementNamed('/signup');
+      if (isReplacement) {
+        Modular.to.pushReplacementNamed('/$rout');
+      } else {
+        Modular.to.pushNamed('/$rout');
+      }
     } else {
       AwesomeDialogWidget(
           context: context,

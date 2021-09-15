@@ -26,30 +26,6 @@ class DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          '${widget.authController.userModel!.name}',
-          style: GoogleFonts.sriracha(color: SweetPetColors.PRETOSGS),
-        ),
-        backgroundColor: SweetPetColors.white,
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.menu,
-            color: SweetPetColors.PRETOSGS,
-          ),
-        ),
-        actions: [
-          IconButton(
-            padding: EdgeInsets.only(right: 5),
-            color: SweetPetColors.PRETOSGS,
-            onPressed: () {},
-            icon: Icon(Icons.notifications_active_sharp),
-          ),
-        ],
-      ),
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
         controller: widget.pageViewController,
@@ -57,7 +33,7 @@ class DashboardPageState extends State<DashboardPage> {
           store.setCurrentTab(id);
         },
         children: [
-          HomePage(),
+          HomePage(authController: Modular.get()),
           Container(
             child: Center(
               child: Text('Page 2'),
@@ -72,45 +48,62 @@ class DashboardPageState extends State<DashboardPage> {
       ),
       bottomNavigationBar: Observer(
         builder: (_) {
-          return CustomNavigationBar(
-              backgroundColor: SweetPetColors.PRETOSGS,
-              currentIndex: store.currentTab,
-              selectedColor: SweetPetColors.orange800,
-              strokeColor: SweetPetColors.orange800,
-              unSelectedColor: SweetPetColors.grey400,
-              iconSize: 30,
-              items: [
-                CustomNavigationBarItem(
-                  badgeCount: 2,
-                  showBadge: false,
-                  icon: Icon(Icons.home),
-                  title: Text(
-                    'Home',
-                    style: styleFontIconBottomNavigation,
+          return Row(
+            children: [
+              IconButton(
+                padding: EdgeInsets.all(20),
+                onPressed: () {},
+                icon: Icon(
+                  Icons.home_outlined,
+                  color: SweetPetColors.grey900,
+                  size: 30,
+                ),
+              ),
+              IconButton(
+                padding: EdgeInsets.all(20),
+                onPressed: () {},
+                icon: Icon(
+                  Icons.person_outline_sharp,
+                  color: SweetPetColors.grey900,
+                  size: 30,
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(left: 40, right: 40),
+                  height: 30,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: SweetPetColors.linearGradientButton,
+                    ),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Icon(
+                    Icons.add,
+                    color: SweetPetColors.white,
                   ),
                 ),
-                CustomNavigationBarItem(
-                  badgeCount: 2,
-                  showBadge: false,
-                  icon: Icon(Icons.library_books),
-                  title: Text(
-                    'Agenda',
-                    style: styleFontIconBottomNavigation,
-                  ),
+              ),
+              IconButton(
+                padding: EdgeInsets.all(20),
+                onPressed: () {},
+                icon: Icon(
+                  Icons.home_outlined,
+                  color: SweetPetColors.grey900,
+                  size: 30,
                 ),
-                CustomNavigationBarItem(
-                  badgeCount: 2,
-                  showBadge: false,
-                  icon: Icon(Icons.adb_sharp),
-                  title: Text(
-                    'Veterinarios',
-                    style: styleFontIconBottomNavigation,
-                  ),
+              ),
+              IconButton(
+                padding: EdgeInsets.all(20),
+                onPressed: () {},
+                icon: Icon(
+                  Icons.person_outline_sharp,
+                  color: SweetPetColors.grey900,
+                  size: 30,
                 ),
-              ],
-              onTap: (index) {
-                changePage(index);
-              });
+              ),
+            ],
+          );
         },
       ),
     );

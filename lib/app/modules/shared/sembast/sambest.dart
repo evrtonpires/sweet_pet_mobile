@@ -7,10 +7,6 @@ import 'package:sembast/sembast_io.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 
 class AppDatabase {
-  // static final AppDatabase _singleton = AppDatabase();
-  //
-  // static AppDatabase get instance => _singleton;
-
   final AuthController authController;
 
   AppDatabase({required this.authController});

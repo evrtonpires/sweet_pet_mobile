@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:sweet_pet_mobile/util/constants/enums.dart';
 
 part 'user_model.g.dart';
 

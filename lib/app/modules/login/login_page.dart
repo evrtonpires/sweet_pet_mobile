@@ -4,7 +4,6 @@ import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:speech_balloon/speech_balloon.dart';
 import 'package:sweet_pet_mobile/app/modules/login/login_store.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/auth/auth_controller.dart';
 import 'package:sweet_pet_mobile/util/colors/colors.dart';
@@ -189,6 +188,14 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                                     SweetPetColors.primary800,
                                               ),
                                             ),
+                                            onTap: () {
+                                              store
+                                                  .checkConnectivityPushReplacementNamed(
+                                                context: context,
+                                                rout: 'recoveryPassword',
+                                                isReplacement: false,
+                                              );
+                                            },
                                           ),
                                         ),
                                       ),
@@ -274,8 +281,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                               Center(
                                 child: InkWell(
                                   onTap: () {
-                                    store.checkConnectivitySignUp(
-                                        context: context);
+                                    store.checkConnectivityPushReplacementNamed(
+                                        context: context, rout: 'signup');
                                   },
                                   child: Text(
                                     FlutterI18n.translate(

@@ -42,8 +42,9 @@ class UserSembast {
     }
   }
 
-  Future<UserModel?> getFilter(user) async {
-    var finder = Finder(filter: Filter.equals('user', user, anyInList: false));
+  Future<UserModel?> getFilter({filter, dataSearch}) async {
+    var finder =
+        Finder(filter: Filter.equals(filter, dataSearch, anyInList: false));
     final recordSnapshot =
         await _nameFolder.findFirst(await _db, finder: finder);
     if (recordSnapshot != null) {

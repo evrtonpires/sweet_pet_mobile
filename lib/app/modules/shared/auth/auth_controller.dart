@@ -17,8 +17,10 @@ part 'auth_controller.g.dart';
 class AuthController = _AuthController with _$AuthController;
 
 abstract class _AuthController with Store {
-  final CHAVE = '4Rtv9UH56xWtAyNcS5Yr3jrPmWs26Wa6';
   final LENGHT_VETOR = 16;
+
+  String keySTR = "4Rtv9UH56xWtAyNcS5Yr3jrPmWs26Wa6";
+  String ivSTR = "anhsudrmfo29xuc8";
 
   final IAuthRepository _authRepository = Modular.get();
 
@@ -52,13 +54,12 @@ abstract class _AuthController with Store {
       UserSembast userSembast = UserSembast();
 
       if (connectivityResult) {
-        password = encrypt(password);
         userModel = await _authRepository.getLogin(
-            user: user, password: password, context: context);
+            user: user, password: encrypt(password), context: context);
         if (userModel != null) {
-          UserModel? listUserModel = await userSembast.get(userModel!);
-          if (listUserModel == null) {
-            userModel!.password = password;
+          UserModel? uModel = await userSembast.get(userModel!);
+          if (uModel == null) {
+            userModel!.password = encrypt(password);
             await userSembast.insert(userModel!);
           }
           saveUserSharedPrefs(stringValue: 'userValue', data: user);
@@ -152,6 +153,84 @@ abstract class _AuthController with Store {
   }
 
   //----------------------------------------------------------------------------
+  Future<bool?> recoveryPasswordValidadeEmail({
+    required String email,
+    required context,
+  }) async {
+    try {
+      var connectivityResult = await checkConnectivity();
+      if (connectivityResult) {
+        final validate = await _authRepository.getRecoverPasswordValidadeEmail(
+            email: email, context: context);
+        if (validate) {
+          return true;
+        } else {
+          AwesomeDialogWidget(
+              context: context,
+              animType: AnimType.SCALE,
+              dialogType: DialogType.NO_HEADER,
+              title: 'Erro ao obter acesso',
+              text:
+                  'Os dados de acesso para o login off-line podem estar incorretos.\nVerifique os dados e tente novamente!\n\nCaso seja seu primeiro acesso neste dispositivo, ative sua conexão a internet para realizar o primeiro login.',
+              borderColor: Colors.red,
+              buttonColor: Colors.red.shade800,
+              btnOkOnPress: () {});
+          return false;
+        }
+      }
+    } catch (e) {
+      print(e);
+
+      return false;
+    }
+  }
+
+  //----------------------------------------------------------------------------
+  Future<bool> recoveryPassword({
+    required String password,
+    required String passwordConfirmation,
+    required String code,
+    required String email,
+    required context,
+  }) async {
+    try {
+      var connectivityResult = await checkConnectivity();
+      UserSembast userSembast = UserSembast();
+      if (connectivityResult) {
+        final success = await _authRepository.getRecoveryPassword(
+          context: context,
+          password: password,
+          passwordConfirmation: passwordConfirmation,
+          code: code,
+        );
+        if (success) {
+          UserModel user = UserModel.padrao();
+          user.email = email;
+          this.userModel = user;
+          UserModel? userModel =
+              await userSembast.getFilter(filter: 'email', dataSearch: email);
+          if (userModel != null) {
+            userModel.password = encrypt(password);
+            await userSembast.insert(userModel);
+            saveUserSharedPrefs(
+                stringValue: 'passwordValue',
+                data: decrypt(userModel.password));
+          }
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        return false;
+      }
+    } catch (e) {
+      print(e);
+
+      return false;
+    }
+  }
+
+  //----------------------------------------------------------------------------
   Future<bool> checkConnectivity() async {
     var connectivityResult = await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.mobile ||
@@ -180,17 +259,20 @@ abstract class _AuthController with Store {
 
   //----------------------------------------------------------------------------
   String encrypt(senha) {
-    final encrypter = Encrypter(AES(Encrypt.Key.fromUtf8(CHAVE)));
-    final senhaEncrypted =
-        encrypter.encrypt(senha, iv: IV.fromLength(LENGHT_VETOR));
+    final key = Encrypt.Key.fromUtf8(keySTR);
+    final iv = Encrypt.IV.fromUtf8(ivSTR);
+    final encrypter = Encrypter(AES(key, mode: AESMode.cbc, padding: 'PKCS7'));
+    final senhaEncrypted = encrypter.encrypt(senha, iv: iv);
     return senhaEncrypted.base64;
   }
 
   //----------------------------------------------------------------------------
-  String decrypt(senhaEncrypted) {
-    final encrypter = Encrypter(AES(Encrypt.Key.fromUtf8(CHAVE)));
-    final decrypted =
-        encrypter.decrypt64(senhaEncrypted, iv: IV.fromLength(LENGHT_VETOR));
+  String decrypt(senha) {
+    final key = Encrypt.Key.fromUtf8(keySTR);
+    final iv = Encrypt.IV.fromUtf8(ivSTR);
+    final encrypter = Encrypter(AES(key, mode: AESMode.cbc, padding: 'PKCS7'));
+    final senhaEncrypted = encrypter.encrypt(senha, iv: iv);
+    final decrypted = encrypter.decrypt(senhaEncrypted, iv: iv);
     return decrypted;
   }
 

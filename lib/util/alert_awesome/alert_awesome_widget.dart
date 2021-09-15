@@ -11,7 +11,7 @@ void AwesomeDialogWidget({
   required String title,
   required Color buttonColor,
   required Color borderColor,
-  required Function() btnOkOnPress,
+  required Function()? btnOkOnPress,
 }) {
   AwesomeDialog(
     context: context,

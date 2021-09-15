@@ -39,6 +39,10 @@ abstract class IconConstant {
 
   static String get lembrete => 'assets/icon/category/lembrete.png';
 
+  static String get iconFemaleSvg => 'assets/icon/category/female_genre.svg';
+
+  static String get iconMaleSvg => 'assets/icon/category/male_genre.svg';
+
   //----------------------------------------------------------------------------
 
   static String get loadingSvg => 'assets/icon/load/icon_app_loading.svg';
