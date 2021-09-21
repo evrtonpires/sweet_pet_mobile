@@ -170,10 +170,11 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
   }
 
   //----------------------------------------------------------------------------
+  RegExp _regExp = RegExp(
+      "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@\$%^&*.%()/-]).{8,}\$");
+
   bool passwordValidate(BuildContext context, {bool requestFocus = false}) {
     messagePasswordError = null;
-    RegExp regExp = RegExp(
-        "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@\$%^&*.%()/-]).{8,}\$");
 
     if (password == null || password!.isEmpty) {
       messagePasswordError = 'Campo obrigatório';
@@ -181,9 +182,20 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
         focusPassword.requestFocus();
       }
       return false;
-    } else if (regExp.hasMatch(password!)) {
-      messagePasswordConfirmationError = null;
-      messagePasswordError = null;
+    } else if (_regExp.hasMatch(password!)) {
+      if (passwordConfirmation != null &&
+          passwordConfirmation!.isNotEmpty &&
+          password != passwordConfirmation) {
+        messagePasswordConfirmationError = 'As senhas não coincidem';
+
+        if (requestFocus) {
+          focusPasswordConfirmation.requestFocus();
+        }
+        return false;
+      } else {
+        messagePasswordConfirmationError = null;
+        messagePasswordError = null;
+      }
 
       return true;
     } else {
