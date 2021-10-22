@@ -122,7 +122,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                           context: context,
                                           builder: (context) {
                                             return HelpDialog(
-                                              text: 'Email ou CPF',
+                                              text: 'Insira seu email',
                                               y: -.55,
                                               height: MediaQuery.of(context)
                                                       .size

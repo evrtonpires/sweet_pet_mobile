@@ -34,17 +34,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b748d0-d0cb-410a-848d-e65c6dccff74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/modules/cadastro_pet/cadastro_pet_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/cadastro_pet/cadastro_pet_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/modules/cadastro_pet/cadastro_pet_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/cadastro_pet/cadastro_pet_store.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/modules/cadastro_pet/cadastro_pet_store.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/cadastro_pet/cadastro_pet_store.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/modules/shared/auth/pet_repository/pet_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/shared/auth/pet_repository/pet_repository.dart" afterDir="false" />
-    </list>
+    <list default="true" id="78b748d0-d0cb-410a-848d-e65c6dccff74" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,7 +284,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634904945491</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="push tudo atualizado">
+      <created>1634910316660</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1634910316660</updated>
+    </task>
+    <task id="LOCAL-00028" summary="push tudo atualizado">
+      <created>1634910361634</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1634910361634</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,7 +326,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ajustando Projeto para Arquitetura Modular" />
     <MESSAGE value="Adicionando configuração dos scripts" />
     <MESSAGE value="Ajustando Interface e Repository de Login" />
     <MESSAGE value="Ajuste na Arquitetura do Projeto" />
@@ -347,7 +350,8 @@
     <MESSAGE value="fix(dev_juan): removendo pasta duplicada" />
     <MESSAGE value="feature(dev_juan): inclusao do modulo de recuperar senha" />
     <MESSAGE value="push tudo" />
-    <option name="LAST_COMMIT_MESSAGE" value="push tudo" />
+    <MESSAGE value="push tudo atualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="push tudo atualizado" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -357,11 +361,6 @@
           <url>file://$PROJECT_DIR$/lib/app/modules/shared/auth/auth_repositories/auth_repository.dart</url>
           <line>107</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/app/modules/shared/auth/pet_repository/pet_repository.dart</url>
-          <line>44</line>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
