@@ -55,7 +55,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$messageNameErrorAtom =
-  Atom(name: '_CadastroPetStoreBase.messageNameError');
+      Atom(name: '_CadastroPetStoreBase.messageNameError');
 
   @override
   String? get messageNameError {
@@ -86,7 +86,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$messageBirthdayErrorAtom =
-  Atom(name: '_CadastroPetStoreBase.messageBirthdayError');
+      Atom(name: '_CadastroPetStoreBase.messageBirthdayError');
 
   @override
   String? get messageBirthdayError {
@@ -97,9 +97,9 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   @override
   set messageBirthdayError(String? value) {
     _$messageBirthdayErrorAtom.reportWrite(value, super.messageBirthdayError,
-            () {
-          super.messageBirthdayError = value;
-        });
+        () {
+      super.messageBirthdayError = value;
+    });
   }
 
   final _$breedAtom = Atom(name: '_CadastroPetStoreBase.breed');
@@ -118,7 +118,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$messageBreedErrorAtom =
-  Atom(name: '_CadastroPetStoreBase.messageBreedError');
+      Atom(name: '_CadastroPetStoreBase.messageBreedError');
 
   @override
   String? get messageBreedError {
@@ -149,7 +149,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$messageWeightErrorAtom =
-  Atom(name: '_CadastroPetStoreBase.messageWeightError');
+      Atom(name: '_CadastroPetStoreBase.messageWeightError');
 
   @override
   String? get messageWeightError {
@@ -195,7 +195,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$autenticateAsyncAction =
-  AsyncAction('_CadastroPetStoreBase.autenticate');
+      AsyncAction('_CadastroPetStoreBase.autenticate');
 
   @override
   Future<void> autenticate(BuildContext context, {PetModel? petModelEditing}) {
@@ -213,7 +213,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$_CadastroPetStoreBaseActionController =
-  ActionController(name: '_CadastroPetStoreBase');
+      ActionController(name: '_CadastroPetStoreBase');
 
   @override
   void setName(String newName) {
