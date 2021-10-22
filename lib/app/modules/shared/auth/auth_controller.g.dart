@@ -26,6 +26,21 @@ mixin _$AuthController on _AuthController, Store {
     });
   }
 
+  final _$userModelAtom = Atom(name: '_AuthController.userModel');
+
+  @override
+  UserModel? get userModel {
+    _$userModelAtom.reportRead();
+    return super.userModel;
+  }
+
+  @override
+  set userModel(UserModel? value) {
+    _$userModelAtom.reportWrite(value, super.userModel, () {
+      super.userModel = value;
+    });
+  }
+
   final _$_AuthControllerActionController =
       ActionController(name: '_AuthController');
 
@@ -43,7 +58,8 @@ mixin _$AuthController on _AuthController, Store {
   @override
   String toString() {
     return '''
-isEnableConnecticonnectivity: ${isEnableConnecticonnectivity}
+isEnableConnecticonnectivity: ${isEnableConnecticonnectivity},
+userModel: ${userModel}
     ''';
   }
 }

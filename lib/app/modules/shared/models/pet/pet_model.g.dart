@@ -8,64 +8,24 @@ part of 'pet_model.dart';
 
 PetModel _$PetModelFromJson(Map<String, dynamic> json) {
   return PetModel(
-    Id: json['Id'] as int,
-    Name: json['Name'] as String,
-    Birth: json['Birth'] as String,
-    Age: json['Age'] as int,
-    Birthday: json['Birthday'] as String,
-    Specie: _$enumDecode(_$eSpecieEnumMap, json['Specie']),
-    Breed: json['Breed'] as String,
-    Gender: _$enumDecode(_$eGenderEnumMap, json['Gender']),
-    Peso: (json['Peso'] as num).toDouble(),
+    id: json['id'] as int?,
+    name: json['name'] as String,
+    birthday: json['birthday'] as String,
+    eSpecie: json['eSpecie'] as int,
+    breed: json['breed'] as String,
+    eGender: json['eGender'] as int,
+    weight: (json['weight'] as num).toDouble(),
+    userId: json['userId'] as int,
   );
 }
 
 Map<String, dynamic> _$PetModelToJson(PetModel instance) => <String, dynamic>{
-      'Id': instance.Id,
-      'Name': instance.Name,
-      'Birth': instance.Birth,
-      'Age': instance.Age,
-      'Birthday': instance.Birthday,
-      'Specie': _$eSpecieEnumMap[instance.Specie],
-      'Breed': instance.Breed,
-      'Gender': _$eGenderEnumMap[instance.Gender],
-      'Peso': instance.Peso,
+      'id': instance.id,
+      'name': instance.name,
+      'birthday': instance.birthday,
+      'eSpecie': instance.eSpecie,
+      'breed': instance.breed,
+      'eGender': instance.eGender,
+      'weight': instance.weight,
+      'userId': instance.userId,
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-const _$eSpecieEnumMap = {
-  eSpecie.OTHER: 'OTHER',
-  eSpecie.CANINE: 'CANINE',
-  eSpecie.FELINE: 'FELINE',
-};
-
-const _$eGenderEnumMap = {
-  eGender.UNDEFINED: 'UNDEFINED',
-  eGender.MALE: 'MALE',
-  eGender.FEMALE: 'FEMALE',
-};

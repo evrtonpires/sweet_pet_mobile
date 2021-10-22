@@ -1,10 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:sweet_pet_mobile/app/modules/cadastro_de_usuario/cadastro_de_usuario_module.dart';
-import 'package:sweet_pet_mobile/app/modules/dashboard/dashboard_module.dart';
+import 'package:sweet_pet_mobile/app/modules/home/home_module.dart';
 import 'package:sweet_pet_mobile/app/modules/recovery_password/recovery_password_module.dart';
-import 'package:sweet_pet_mobile/app/modules/shared/sembast/sambest.dart';
-import '../login/login_store.dart';
 
+import '../login/login_store.dart';
 import 'login_page.dart';
 
 class LoginModule extends Module {
@@ -25,7 +24,7 @@ class LoginModule extends Module {
         authController: Modular.get(),
       ),
     ),
-    ModuleRoute('/dashboard', module: DashboardModule()),
+    ModuleRoute('/home', module: HomeModule()),
     ModuleRoute('/signup', module: CadastroDeUsuarioModule()),
     ModuleRoute('/recoveryPassword', module: RecoveryPasswordModule()),
   ];

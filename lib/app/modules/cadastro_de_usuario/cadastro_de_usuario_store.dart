@@ -295,7 +295,7 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
       );
       if (response!) {
         isLoading = false;
-        Modular.to.pushReplacementNamed('/dashboard');
+        Modular.to.pushReplacementNamed('/home');
       } else {
         isLoading = false;
       }

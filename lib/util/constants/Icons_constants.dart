@@ -43,10 +43,32 @@ abstract class IconConstant {
 
   static String get iconMaleSvg => 'assets/icon/category/male_genre.svg';
 
+  static String get iconBirthday => 'assets/icon/category/birthday.png';
+
+  static String get iconBirth => 'assets/icon/category/birth.png';
+
+  static String get iconDog => 'assets/icon/category/dog.png';
+
+  static String get iconCat => 'assets/icon/category/cat.png';
+
+  static String get iconWeigth => 'assets/icon/category/weight.png';
+
   //----------------------------------------------------------------------------
 
   static String get loadingSvg => 'assets/icon/load/icon_app_loading.svg';
 
+  static String get catBg => 'assets/icon/catBg.jpg';
+
+  static String get dogBg => 'assets/icon/dogBg.jpg';
+
+  static String get dogDefault => 'assets/icon/dogDefault.png';
+
+  static String get catDefault => 'assets/icon/catDefault.png';
+
   static String get noConnectionSvg => 'assets/icon/load/no_connection.svg';
+
+//----------------------------------------------------------------------------
+  static String get backgroundSvgFirstPet =>
+      'assets/icon/splash_art/bgpatas.svg';
 //----------------------------------------------------------------------------
 }

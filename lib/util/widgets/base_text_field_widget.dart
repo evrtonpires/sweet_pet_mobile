@@ -16,6 +16,8 @@ class BaseTextFieldWidget extends StatefulWidget {
     this.focusNode,
     this.showCursor = true,
     this.floatingLabelBehavior,
+    this.maxLength,
+    this.textInputType,
   });
 
   final TextEditingController? controller;
@@ -26,7 +28,9 @@ class BaseTextFieldWidget extends StatefulWidget {
   final bool isPassword;
   final bool isError;
   final bool? isEnable;
+  final int? maxLength;
   final TextInputAction? textInputAction;
+  final TextInputType? textInputType;
   final FocusNode? focusNode;
   final bool showCursor;
   final FloatingLabelBehavior? floatingLabelBehavior;
@@ -144,12 +148,14 @@ class _BaseTextFieldWidgetState extends State<BaseTextFieldWidget> {
           textInputAction: widget.textInputAction,
           showCursor: widget.showCursor,
           enabled: widget.isEnable,
+          maxLength: widget.maxLength,
           decoration:
               widget.isError ? _errorInputDecoration : _defaultInputDecoration,
           cursorColor: SweetPetColors.yellow,
           onChanged: widget.onChanged,
           onEditingComplete: widget.onEditingComplete,
           onFieldSubmitted: widget.onSubmitted,
+          keyboardType: widget.textInputType,
         ),
       ),
     );

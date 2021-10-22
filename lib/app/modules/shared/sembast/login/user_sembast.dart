@@ -19,7 +19,7 @@ class UserSembast {
     db.transaction((transaction) async {
       await _nameFolder
           .record(user.id.toString())
-          .put(transaction, user.toJson());
+          .put(transaction, json.decode(jsonEncode(user)));
     });
   }
 

@@ -14,6 +14,9 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) {
     password: json['password'] as String?,
     eType: json['eType'] as int,
     crmv: json['crmv'] as String?,
+    pets: (json['pets'] as List<dynamic>?)
+        ?.map((e) => PetModel.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
@@ -24,4 +27,5 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'password': instance.password,
       'eType': instance.eType,
       'crmv': instance.crmv,
+      'pets': instance.pets,
     };

@@ -40,13 +40,12 @@ dependencies:
   shared_preferences: 2.0.6
   uuid: 3.0.4
   flutter_i18n: 0.30.0
-  flutter_masked_text: 0.8.0
+  flutter_masked_text2: ^0.9.1
   device_info: 2.0.2
   url_launcher: 6.0.9
   share: 2.0.4
-  quiver: 3.0.1
+  speech_balloon: 0.0.4
   sembast: 3.1.0+2
-  custom_navigation_bar: ^0.8.2
   carousel_slider: 4.0.0
   flutter_svg: 0.22.0
   flutter_swiper: 1.1.6
@@ -54,8 +53,8 @@ dependencies:
   page_view_dot_indicator: 1.0.0
   encrypt: 5.0.1
   awesome_dialog: 2.1.1
-  flip_card: ^0.5.0
-  speech_balloon: 0.0.4
+  datetime_picker_formfield: ^2.0.0
+  image_picker: ^0.8.4+2
 
 dev_dependencies:
   flutter_modular_test: ^1.0.1

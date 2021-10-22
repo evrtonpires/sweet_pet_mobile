@@ -1,11 +1,11 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:encrypt/encrypt.dart';
+import 'package:encrypt/encrypt.dart' as Encrypt;
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:encrypt/encrypt.dart' as Encrypt;
 import 'package:sweet_pet_mobile/app/modules/shared/models/user/user_model.dart';
 import 'package:sweet_pet_mobile/app/modules/shared/sembast/login/user_sembast.dart';
 import 'package:sweet_pet_mobile/util/alert_awesome/alert_awesome_widget.dart';
@@ -21,6 +21,8 @@ abstract class _AuthController with Store {
 
   String keySTR = "4Rtv9UH56xWtAyNcS5Yr3jrPmWs26Wa6";
   String ivSTR = "anhsudrmfo29xuc8";
+
+  String? token;
 
   final IAuthRepository _authRepository = Modular.get();
 
@@ -41,6 +43,7 @@ abstract class _AuthController with Store {
   }
 
   //----------------------------------------------------------------------------
+  @observable
   UserModel? userModel = UserModel.padrao();
 
   Future<bool?> signIn({
@@ -56,7 +59,10 @@ abstract class _AuthController with Store {
       if (connectivityResult) {
         password = encrypt(password);
         userModel = await _authRepository.getLogin(
-            user: user, password: password, context: context);
+            user: user,
+            password: password,
+            context: context,
+            authController: Modular.get());
         if (userModel != null) {
           UserModel? uModel = await userSembast.get(userModel!);
           if (uModel == null) {
@@ -130,8 +136,8 @@ abstract class _AuthController with Store {
 
       if (connectivityResult) {
         user.password = encrypt(user.password);
-        userModel =
-            await _authRepository.getSignUp(userModel: user, context: context);
+        userModel = await _authRepository.getSignUp(
+            userModel: user, authController: Modular.get(), context: context);
         if (userModel != null) {
           UserModel? listUserModel = await userSembast.get(userModel!);
           if (listUserModel == null) {

@@ -6,10 +6,12 @@ import 'package:sweet_pet_mobile/app/modules/shared/models/user/user_model.dart'
 import 'package:sweet_pet_mobile/util/alert_awesome/alert_awesome_widget.dart';
 import 'package:sweet_pet_mobile/util/constants/base_url.dart';
 
+import '../auth_controller.dart';
+
 class AuthRepository implements IAuthRepository {
   final Dio dio;
 
-  AuthRepository(this.dio) {
+  AuthRepository({required this.dio}) {
     dio.options.receiveTimeout = 36000;
   }
 
@@ -18,6 +20,7 @@ class AuthRepository implements IAuthRepository {
   Future<UserModel?> getLogin({
     required String user,
     required String password,
+    required AuthController authController,
     context,
   }) async {
     try {
@@ -33,6 +36,7 @@ class AuthRepository implements IAuthRepository {
             buttonColor: Colors.red.shade800,
             btnOkOnPress: () {});
       });
+      authController.token = response.data['token'];
       return UserModel.fromJson(response.data['user']);
     } catch (e) {
       print(e);
@@ -41,7 +45,11 @@ class AuthRepository implements IAuthRepository {
 
 //----------------------------------------------------------------------------
   @override
-  Future<UserModel?> getSignUp({context, required userModel}) async {
+  Future<UserModel?> getSignUp({
+    context,
+    required userModel,
+    required AuthController authController,
+  }) async {
     try {
       Response response = await dio
           .post('${BaseUrl.baseUrl}/User', data: userModel)
@@ -56,6 +64,7 @@ class AuthRepository implements IAuthRepository {
             buttonColor: Colors.red.shade800,
             btnOkOnPress: () {});
       });
+      authController.token = response.data['token'];
       return UserModel.fromJson(response.data['user']);
     } catch (e) {
       print(e);

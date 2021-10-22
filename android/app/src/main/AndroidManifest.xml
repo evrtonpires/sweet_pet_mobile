@@ -5,6 +5,7 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="Sweet Pet"
+        android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true">
 
         <activity

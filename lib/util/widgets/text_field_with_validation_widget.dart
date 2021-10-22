@@ -17,6 +17,8 @@ class TextFieldWithValidationWidget extends StatelessWidget {
     this.messageError,
     this.isEnabled,
     this.floatingLabelBehavior = FloatingLabelBehavior.always,
+    this.maxLength,
+    this.textInputType,
   }) : super(key: key);
 
   final TextEditingController? controller;
@@ -28,7 +30,9 @@ class TextFieldWithValidationWidget extends StatelessWidget {
   final bool isPassword;
   final bool? isEnabled;
   final TextInputAction? textInputAction;
+  final TextInputType? textInputType;
   final FocusNode? focusNode;
+  final int? maxLength;
   final String? messageError;
   final FloatingLabelBehavior floatingLabelBehavior;
 
@@ -79,8 +83,10 @@ class TextFieldWithValidationWidget extends StatelessWidget {
           isError: isError,
           placeholder: placeholder,
           textInputAction: textInputAction,
+          textInputType: textInputType,
           isEnable: isEnabled,
           onChanged: onChanged,
+          maxLength: maxLength,
           onEditingComplete: () {
             if (textInputAction == TextInputAction.next) {
               FocusScope.of(context).nextFocus();
