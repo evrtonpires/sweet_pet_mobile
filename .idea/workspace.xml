@@ -34,7 +34,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b748d0-d0cb-410a-848d-e65c6dccff74" name="Default Changelist" comment="" />
+    <list default="true" id="78b748d0-d0cb-410a-848d-e65c6dccff74" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/home/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/home/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/login/login_page.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -298,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634910361634</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="push tudo atualizado">
+      <created>1634910569681</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1634910569684</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

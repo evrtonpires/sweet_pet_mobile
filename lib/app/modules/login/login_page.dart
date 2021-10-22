@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
@@ -48,273 +50,291 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Scaffold(
-          body: Container(
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(
-              color: SweetPetColors.white,
-            ),
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * .15,
-                    ),
-                    width: MediaQuery.of(context).size.width,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.center,
-                          child: SvgPicture.asset(
-                            IconConstant.iconLogoSvg,
-                            height: MediaQuery.of(context).size.height * .14,
-                          ),
+    return SafeArea(
+        top: Platform.isAndroid,
+        child: Stack(
+          children: [
+            Scaffold(
+              body: Container(
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                  color: SweetPetColors.white,
+                ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.only(
+                          top: MediaQuery.of(context).size.height * .15,
                         ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * .6,
-                    width: MediaQuery.of(context).size.width,
-                    padding: EdgeInsets.only(top: 62),
-                    child: Column(
-                      children: <Widget>[
-                        Expanded(
-                          child: Container(
-                              padding: EdgeInsets.only(
-                                  left: MediaQuery.of(context).size.width * .1,
-                                  right:
-                                      MediaQuery.of(context).size.width * .0),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Observer(
-                                      builder: (_) {
-                                        return TextFieldWithValidationWidget(
-                                          controller: loginController,
-                                          focusNode: store.focusLogin,
-                                          placeholder: FlutterI18n.translate(
-                                              context, 'telaLogin.usuario'),
-                                          onChanged: (newLogin) {
-                                            store.setLogin(newLogin);
-                                            store.loginValidate(context);
-                                          },
-                                          textInputAction: TextInputAction.next,
-                                          messageError: store.messageLoginError,
-                                          onValidator: () =>
-                                              store.loginValidate(context),
-                                          onEditingComplete: () =>
-                                              FocusScope.of(context)
-                                                  .requestFocus(
-                                                      store.focusPassword),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {
-                                      showDialog(
-                                          context: context,
-                                          builder: (context) {
-                                            return HelpDialog(
-                                              text: 'Insira seu email',
-                                              y: -.55,
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  .1,
-                                            );
-                                          });
-                                    },
-                                    icon: Icon(Icons.help),
-                                    iconSize: 20,
-                                    color: SweetPetColors.orangeLight,
-                                  ),
-                                ],
-                              )),
-                        ),
-                        Expanded(
-                          child: Container(
-                            padding: EdgeInsets.only(
-                              left: MediaQuery.of(context).size.width * .1,
-                              right: MediaQuery.of(context).size.width * .0,
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Align(
+                              alignment: Alignment.center,
+                              child: SvgPicture.asset(
+                                IconConstant.iconLogoSvg,
+                                height:
+                                    MediaQuery.of(context).size.height * .14,
+                              ),
                             ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  child: Column(
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * .6,
+                        width: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.only(top: 62),
+                        child: Column(
+                          children: <Widget>[
+                            Expanded(
+                              child: Container(
+                                  padding: EdgeInsets.only(
+                                      left: MediaQuery.of(context).size.width *
+                                          .1,
+                                      right: MediaQuery.of(context).size.width *
+                                          .0),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Observer(
-                                        builder: (_) {
-                                          return TextFieldWithValidationWidget(
-                                            controller: senhaController,
-                                            focusNode: store.focusPassword,
-                                            placeholder: FlutterI18n.translate(
-                                                context, 'telaLogin.senha'),
-                                            onChanged: (newPassword) {
-                                              store.setPassword(newPassword);
-                                              store.passwordValidate(context);
-                                            },
-                                            textInputAction:
-                                                TextInputAction.done,
-                                            messageError:
-                                                store.messagePasswordError,
-                                            onValidator: () =>
-                                                store.passwordValidate(context),
-                                            onEditingComplete: () =>
-                                                store.autenticate(context),
-                                            isPassword: true,
-                                          );
-                                        },
+                                      Expanded(
+                                        child: Observer(
+                                          builder: (_) {
+                                            return TextFieldWithValidationWidget(
+                                              controller: loginController,
+                                              focusNode: store.focusLogin,
+                                              placeholder:
+                                                  FlutterI18n.translate(context,
+                                                      'telaLogin.usuario'),
+                                              onChanged: (newLogin) {
+                                                store.setLogin(newLogin);
+                                                store.loginValidate(context);
+                                              },
+                                              textInputAction:
+                                                  TextInputAction.next,
+                                              messageError:
+                                                  store.messageLoginError,
+                                              onValidator: () =>
+                                                  store.loginValidate(context),
+                                              onEditingComplete: () =>
+                                                  FocusScope.of(context)
+                                                      .requestFocus(
+                                                          store.focusPassword),
+                                            );
+                                          },
+                                        ),
                                       ),
-                                      Align(
-                                        alignment: Alignment.topRight,
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(
-                                            top: 16,
-                                          ),
-                                          child: GestureDetector(
-                                            child: Text(
-                                              FlutterI18n.translate(context,
-                                                  'telaLogin.esqueceuSuaSenha'),
-                                              style: TextStyle(
-                                                color:
-                                                    SweetPetColors.primary800,
-                                              ),
-                                            ),
-                                            onTap: () {
-                                              store
-                                                  .checkConnectivityPushReplacementNamed(
-                                                context: context,
-                                                rout: 'recoveryPassword',
-                                                isReplacement: false,
+                                      IconButton(
+                                        onPressed: () {
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return HelpDialog(
+                                                  text: 'Insira seu email',
+                                                  y: -.55,
+                                                  height: MediaQuery.of(context)
+                                                          .size
+                                                          .height *
+                                                      .1,
+                                                );
+                                              });
+                                        },
+                                        icon: Icon(Icons.help),
+                                        iconSize: 20,
+                                        color: SweetPetColors.orangeLight,
+                                      ),
+                                    ],
+                                  )),
+                            ),
+                            Expanded(
+                              child: Container(
+                                padding: EdgeInsets.only(
+                                  left: MediaQuery.of(context).size.width * .1,
+                                  right: MediaQuery.of(context).size.width * .0,
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        children: [
+                                          Observer(
+                                            builder: (_) {
+                                              return TextFieldWithValidationWidget(
+                                                controller: senhaController,
+                                                focusNode: store.focusPassword,
+                                                placeholder:
+                                                    FlutterI18n.translate(
+                                                        context,
+                                                        'telaLogin.senha'),
+                                                onChanged: (newPassword) {
+                                                  store
+                                                      .setPassword(newPassword);
+                                                  store.passwordValidate(
+                                                      context);
+                                                },
+                                                textInputAction:
+                                                    TextInputAction.done,
+                                                messageError:
+                                                    store.messagePasswordError,
+                                                onValidator: () => store
+                                                    .passwordValidate(context),
+                                                onEditingComplete: () =>
+                                                    store.autenticate(context),
+                                                isPassword: true,
                                               );
                                             },
                                           ),
+                                          Align(
+                                            alignment: Alignment.topRight,
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 16,
+                                              ),
+                                              child: GestureDetector(
+                                                child: Text(
+                                                  FlutterI18n.translate(context,
+                                                      'telaLogin.esqueceuSuaSenha'),
+                                                  style: TextStyle(
+                                                    color: SweetPetColors
+                                                        .primary800,
+                                                  ),
+                                                ),
+                                                onTap: () {
+                                                  store
+                                                      .checkConnectivityPushReplacementNamed(
+                                                    context: context,
+                                                    rout: 'recoveryPassword',
+                                                    isReplacement: false,
+                                                  );
+                                                },
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    IconButton(
+                                      onPressed: () {
+                                        showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return HelpDialog(
+                                                text:
+                                                    '* Minimo 8 caracteres.\n* Números de 0-9.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais: #?!@\$%^&*.%()/-',
+                                                y: -.25,
+                                                height: MediaQuery.of(context)
+                                                        .size
+                                                        .height *
+                                                    .13,
+                                              );
+                                            });
+                                      },
+                                      icon: Icon(Icons.help),
+                                      iconSize: 20,
+                                      color: SweetPetColors.orangeLight,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                bottom: MediaQuery.of(context).size.width * .1,
+                                top: MediaQuery.of(context).size.width * .0,
+                              ),
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.width *
+                                              .0,
+                                      top: MediaQuery.of(context).size.width *
+                                          .2,
+                                    ),
+                                    child: InkWell(
+                                      onTap: () {
+                                        store.autenticate(context);
+                                      },
+                                      child: Container(
+                                        height: 45,
+                                        width:
+                                            MediaQuery.of(context).size.width /
+                                                1.2,
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                              colors: SweetPetColors
+                                                  .linearGradientButton),
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(50),
+                                          ),
+                                        ),
+                                        child: Center(
+                                          child: Text(
+                                            FlutterI18n.translate(
+                                                    context, 'telaLogin.entrar')
+                                                .toUpperCase(),
+                                            style: TextStyle(
+                                                color: SweetPetColors.white,
+                                                fontWeight: FontWeight.bold),
+                                          ),
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return HelpDialog(
-                                            text:
-                                                '* Minimo 8 caracteres.\n* Números de 0-9.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais: #?!@\$%^&*.%()/-',
-                                            y: -.25,
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                .13,
-                                          );
-                                        });
-                                  },
-                                  icon: Icon(Icons.help),
-                                  iconSize: 20,
-                                  color: SweetPetColors.orangeLight,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(
-                            bottom: MediaQuery.of(context).size.width * .1,
-                            top: MediaQuery.of(context).size.width * .0,
-                          ),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(
-                                  bottom:
-                                      MediaQuery.of(context).size.width * .0,
-                                  top: MediaQuery.of(context).size.width * .2,
-                                ),
-                                child: InkWell(
-                                  onTap: () {
-                                    store.autenticate(context);
-                                  },
-                                  child: Container(
-                                    height: 45,
-                                    width:
-                                        MediaQuery.of(context).size.width / 1.2,
-                                    decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                          colors: SweetPetColors
-                                              .linearGradientButton),
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(50),
-                                      ),
                                     ),
-                                    child: Center(
+                                  ),
+                                  SizedBox(height: 10),
+                                  Center(
+                                    child: Text(
+                                      FlutterI18n.translate(
+                                          context, 'telaLogin.ou'),
+                                      style: TextStyle(
+                                          color: SweetPetColors.neutralGray),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Center(
+                                    child: InkWell(
+                                      onTap: () {
+                                        store
+                                            .checkConnectivityPushReplacementNamed(
+                                                context: context,
+                                                rout: 'signup');
+                                      },
                                       child: Text(
                                         FlutterI18n.translate(
-                                                context, 'telaLogin.entrar')
-                                            .toUpperCase(),
+                                            context, 'telaLogin.cadastrar'),
                                         style: TextStyle(
-                                            color: SweetPetColors.white,
-                                            fontWeight: FontWeight.bold),
+                                            color: SweetPetColors.primary800,
+                                            fontSize: getValueFont(
+                                                context: context,
+                                                valueMin: 16)),
                                       ),
                                     ),
                                   ),
-                                ),
+                                ],
                               ),
-                              SizedBox(height: 10),
-                              Center(
-                                child: Text(
-                                  FlutterI18n.translate(
-                                      context, 'telaLogin.ou'),
-                                  style: TextStyle(
-                                      color: SweetPetColors.neutralGray),
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              Center(
-                                child: InkWell(
-                                  onTap: () {
-                                    store.checkConnectivityPushReplacementNamed(
-                                        context: context, rout: 'signup');
-                                  },
-                                  child: Text(
-                                    FlutterI18n.translate(
-                                        context, 'telaLogin.cadastrar'),
-                                    style: TextStyle(
-                                        color: SweetPetColors.primary800,
-                                        fontSize: getValueFont(
-                                            context: context, valueMin: 16)),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  )
-                ],
+                      )
+                    ],
+                  ),
+                ),
               ),
             ),
-          ),
-        ),
-        Observer(
-          builder: (_) {
-            return store.isLoading
-                ? LoadingPageWidget(
-                    store: store,
-                  )
-                : SizedBox();
-          },
-        )
-      ],
-    );
+            Observer(
+              builder: (_) {
+                return store.isLoading
+                    ? LoadingPageWidget(
+                        store: store,
+                      )
+                    : SizedBox();
+              },
+            )
+          ],
+        ));
   }
 }
