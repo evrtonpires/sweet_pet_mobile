@@ -209,7 +209,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginStore>
                                         builder: (context) {
                                           return HelpDialog(
                                             text:
-                                                '* Minimo 8 caracteres.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais: #?!@\$%^&*.%()/-',
+                                                '* Minimo 8 caracteres.\n* Números de 0-9.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais: #?!@\$%^&*.%()/-',
                                             y: -.25,
                                             height: MediaQuery.of(context)
                                                     .size

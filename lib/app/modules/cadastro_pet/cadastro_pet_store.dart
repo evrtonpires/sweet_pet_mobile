@@ -35,6 +35,12 @@ abstract class _CadastroPetStoreBase with Store {
   late final FocusNode focusBreed;
   late final FocusNode focusWeight;
 
+  //----------------------------------------------------------------------------
+  @observable
+  bool isEditing = false;
+
+  //----------------------------------------------------------------------------
+
   @observable
   bool isLoading = false;
 
@@ -124,6 +130,12 @@ abstract class _CadastroPetStoreBase with Store {
         focusWeight.requestFocus();
       }
       return false;
+    } else if (double.parse(weight!) <= 0.0) {
+      messageWeightError = 'Insira um valor maior que 0.0';
+      if (requestFocus) {
+        focusWeight.requestFocus();
+      }
+      return false;
     }
     return true;
   }
@@ -144,7 +156,8 @@ abstract class _CadastroPetStoreBase with Store {
 
 //----------------------------------------------------------------------------
   @action
-  Future<void> autenticate(BuildContext context) async {
+  Future<void> autenticate(BuildContext context,
+      {PetModel? petModelEditing}) async {
     if (!nameValidate(context, requestFocus: true)) {
       return;
     }
@@ -162,7 +175,7 @@ abstract class _CadastroPetStoreBase with Store {
         messageBreedError == null &&
         messageWeightError == null &&
         !isLoading) {
-      await setPet(context: context);
+      await setPet(context: context, petModelEditing: petModelEditing);
     }
   }
 
@@ -170,6 +183,7 @@ abstract class _CadastroPetStoreBase with Store {
   @action
   Future<bool?> setPet({
     required context,
+    required PetModel? petModelEditing,
   }) async {
     try {
       var connectivityResult = await authController.checkConnectivity();
@@ -177,21 +191,26 @@ abstract class _CadastroPetStoreBase with Store {
       UserSembast userSembast = UserSembast();
 
       PetModel? petModel;
-      PetModel petModelMockUp = PetModel(
-          id: null,
-          name: name!,
-          birthday: birthday!.toIso8601String().substring(0, 10),
-          eSpecie: specie.index,
-          breed: breed!,
-          eGender: gender.index,
-          weight: double.parse(weight!),
-          userId: authController.userModel!.id!);
 
       if (connectivityResult) {
+        PetModel petModelMockUp = PetModel(
+            id: (isEditing && petModelEditing != null)
+                ? petModelEditing.id
+                : null,
+            name: name!,
+            birthday: birthday!.toIso8601String().substring(0, 10),
+            eSpecie: specie.index,
+            breed: breed!,
+            eGender: gender.index,
+            weight: double.parse(weight!),
+            userId: authController.userModel!.id!);
+
         petModel = await petRepository.setPet(
-            petModel: petModelMockUp,
-            context: context,
-            authController: authController);
+          petModel: petModelMockUp,
+          context: context,
+          authController: authController,
+          isEditing: isEditing,
+        );
         if (petModel != null) {
           List<PetModel> listPets = [];
           UserModel? uModel = await userSembast.get(authController.userModel!);

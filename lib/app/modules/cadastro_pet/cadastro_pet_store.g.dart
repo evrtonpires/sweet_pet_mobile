@@ -9,6 +9,21 @@ part of 'cadastro_pet_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
+  final _$isEditingAtom = Atom(name: '_CadastroPetStoreBase.isEditing');
+
+  @override
+  bool get isEditing {
+    _$isEditingAtom.reportRead();
+    return super.isEditing;
+  }
+
+  @override
+  set isEditing(bool value) {
+    _$isEditingAtom.reportWrite(value, super.isEditing, () {
+      super.isEditing = value;
+    });
+  }
+
   final _$isLoadingAtom = Atom(name: '_CadastroPetStoreBase.isLoading');
 
   @override
@@ -40,7 +55,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$messageNameErrorAtom =
-      Atom(name: '_CadastroPetStoreBase.messageNameError');
+  Atom(name: '_CadastroPetStoreBase.messageNameError');
 
   @override
   String? get messageNameError {
@@ -71,7 +86,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$messageBirthdayErrorAtom =
-      Atom(name: '_CadastroPetStoreBase.messageBirthdayError');
+  Atom(name: '_CadastroPetStoreBase.messageBirthdayError');
 
   @override
   String? get messageBirthdayError {
@@ -82,9 +97,9 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   @override
   set messageBirthdayError(String? value) {
     _$messageBirthdayErrorAtom.reportWrite(value, super.messageBirthdayError,
-        () {
-      super.messageBirthdayError = value;
-    });
+            () {
+          super.messageBirthdayError = value;
+        });
   }
 
   final _$breedAtom = Atom(name: '_CadastroPetStoreBase.breed');
@@ -103,7 +118,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$messageBreedErrorAtom =
-      Atom(name: '_CadastroPetStoreBase.messageBreedError');
+  Atom(name: '_CadastroPetStoreBase.messageBreedError');
 
   @override
   String? get messageBreedError {
@@ -134,7 +149,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$messageWeightErrorAtom =
-      Atom(name: '_CadastroPetStoreBase.messageWeightError');
+  Atom(name: '_CadastroPetStoreBase.messageWeightError');
 
   @override
   String? get messageWeightError {
@@ -180,22 +195,25 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   }
 
   final _$autenticateAsyncAction =
-      AsyncAction('_CadastroPetStoreBase.autenticate');
+  AsyncAction('_CadastroPetStoreBase.autenticate');
 
   @override
-  Future<void> autenticate(BuildContext context) {
-    return _$autenticateAsyncAction.run(() => super.autenticate(context));
+  Future<void> autenticate(BuildContext context, {PetModel? petModelEditing}) {
+    return _$autenticateAsyncAction.run(
+        () => super.autenticate(context, petModelEditing: petModelEditing));
   }
 
   final _$setPetAsyncAction = AsyncAction('_CadastroPetStoreBase.setPet');
 
   @override
-  Future<bool?> setPet({required dynamic context}) {
-    return _$setPetAsyncAction.run(() => super.setPet(context: context));
+  Future<bool?> setPet(
+      {required dynamic context, required PetModel? petModelEditing}) {
+    return _$setPetAsyncAction.run(
+        () => super.setPet(context: context, petModelEditing: petModelEditing));
   }
 
   final _$_CadastroPetStoreBaseActionController =
-      ActionController(name: '_CadastroPetStoreBase');
+  ActionController(name: '_CadastroPetStoreBase');
 
   @override
   void setName(String newName) {
@@ -266,6 +284,7 @@ mixin _$CadastroPetStore on _CadastroPetStoreBase, Store {
   @override
   String toString() {
     return '''
+isEditing: ${isEditing},
 isLoading: ${isLoading},
 name: ${name},
 messageNameError: ${messageNameError},

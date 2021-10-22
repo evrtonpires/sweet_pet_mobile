@@ -49,6 +49,7 @@ class CadastroPetPageState extends State<CadastroPetPage> {
         MoneyMaskedTextController(decimalSeparator: '.', precision: 2);
 
     if (widget.petModel != null) {
+      store.isEditing = true;
       nameController.text = widget.petModel!.name;
 
       breedController.text = widget.petModel!.breed;
@@ -62,6 +63,8 @@ class CadastroPetPageState extends State<CadastroPetPage> {
           widget.petModel!.eSpecie == 1 ? eSpecie.CANINE : eSpecie.FELINE;
       store.gender =
           widget.petModel!.eGender == 1 ? eGender.MALE : eGender.FEMALE;
+    } else {
+      store.isEditing = false;
     }
   }
 
@@ -180,7 +183,7 @@ class CadastroPetPageState extends State<CadastroPetPage> {
                                       store.weightValidate(context);
                                     },
                                     textInputAction: TextInputAction.next,
-                                    maxLength: 6,
+                                    maxLength: 5,
                                     messageError: store.messageWeightError,
                                     onValidator: () =>
                                         store.weightValidate(context),
@@ -321,7 +324,8 @@ class CadastroPetPageState extends State<CadastroPetPage> {
                               ),
                               child: InkWell(
                                 onTap: () {
-                                  store.autenticate(context);
+                                  store.autenticate(context,
+                                      petModelEditing: widget.petModel);
                                 },
                                 child: Container(
                                   height: 45,

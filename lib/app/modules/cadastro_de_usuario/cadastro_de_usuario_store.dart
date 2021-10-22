@@ -200,7 +200,7 @@ abstract class _CadastroDeUsuarioStoreBase with Store {
       return true;
     } else {
       messagePasswordError =
-          'Utilize:\n* Minimo 8 caracteres.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais (Exemplo: #?!@\$%^&*.%()/- ).';
+          'Utilize:\n* Minimo 8 caracteres.\n* Números de 0-9.\n* Letras maiusculas.\n* Letras minusculas.\n* Caracteres especiais (Exemplo: #?!@\$%^&*.%()/- ).';
       if (requestFocus) {
         focusPassword.requestFocus();
       }

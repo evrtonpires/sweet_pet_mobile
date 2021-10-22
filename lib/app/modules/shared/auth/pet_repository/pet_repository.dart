@@ -18,29 +18,53 @@ class PetRepository {
   Future<PetModel?> setPet({
     required PetModel petModel,
     required AuthController authController,
+    required bool isEditing,
     context,
   }) async {
     try {
-      Response response = await dio
-          .post('${BaseUrl.baseUrl}/Pet',
-              data: petModel,
-              options: Options(
-                headers: {
-                  "Authorization": "Bearer ${authController.token}",
-                },
-              ))
-          .catchError((e) {
-        AwesomeDialogWidget(
-            context: context,
-            animType: AnimType.SCALE,
-            dialogType: DialogType.NO_HEADER,
-            text: e.response.data['messages'][0]['message'],
-            title: e.response.data['title'],
-            borderColor: Colors.red,
-            buttonColor: Colors.red.shade800,
-            btnOkOnPress: () {});
-      });
-      return PetModel.fromJson(response.data);
+      if (isEditing) {
+        Response response = await dio
+            .put('${BaseUrl.baseUrl}/Pet',
+                data: petModel,
+                options: Options(
+                  headers: {
+                    "Authorization": "Bearer ${authController.token}",
+                  },
+                ))
+            .catchError((e) {
+          AwesomeDialogWidget(
+              context: context,
+              animType: AnimType.SCALE,
+              dialogType: DialogType.NO_HEADER,
+              text: e.response.data['messages'][0]['message'],
+              title: e.response.data['title'],
+              borderColor: Colors.red,
+              buttonColor: Colors.red.shade800,
+              btnOkOnPress: () {});
+        });
+        return PetModel.fromJson(response.data);
+      } else {
+        Response response = await dio
+            .post('${BaseUrl.baseUrl}/Pet',
+                data: petModel,
+                options: Options(
+                  headers: {
+                    "Authorization": "Bearer ${authController.token}",
+                  },
+                ))
+            .catchError((e) {
+          AwesomeDialogWidget(
+              context: context,
+              animType: AnimType.SCALE,
+              dialogType: DialogType.NO_HEADER,
+              text: e.response.data['messages'][0]['message'],
+              title: e.response.data['title'],
+              borderColor: Colors.red,
+              buttonColor: Colors.red.shade800,
+              btnOkOnPress: () {});
+        });
+        return PetModel.fromJson(response.data);
+      }
     } catch (e) {
       print(e);
     }
